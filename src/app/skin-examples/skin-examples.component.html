@@ -1,0 +1,14 @@
+<div class="skinPreviewDisplay">
+  <div class="imageContainer">
+    <picture *ngFor="let item of previewImages">
+      <source srcset="{{item.fileName}}.webp" type="image/webp" />
+      <source srcset="{{item.fileName}}.png" type="image/png" />
+      <img
+        class="card-image"
+        mat-card-image
+        src="{{ item.fileName }}.png"
+        alt="{{ item.alt }}"
+      />
+    </picture>
+  </div>
+</div>

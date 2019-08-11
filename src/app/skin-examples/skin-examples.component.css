@@ -1,0 +1,15 @@
+.skinPreviewDisplay {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  overflow: hidden;
+}
+
+.imageContainer {
+  display: flex;
+}
+
+/* Remove line spacing beneath image */
+img {
+  vertical-align: bottom;
+}
