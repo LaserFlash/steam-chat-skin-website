@@ -7,3 +7,10 @@ $warn:    mat-palette($mat-deep-orange);
 $theme:  mat-dark-theme($primary, $accent, $warn);
 
 @include angular-material-theme($theme);
+
+
+:root {
+    --color-primary: #{mat-color($primary)};
+    --color-accent: #{mat-color($accent)};
+    --color-warn: #{mat-color($warn)};
+  }
