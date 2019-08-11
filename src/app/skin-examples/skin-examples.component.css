@@ -1,15 +1,38 @@
+:host {
+  --top-padding: 0px;
+  --full-height: calc(100vh - var(--top-padding));
+}
+
 .skinPreviewDisplay {
+  margin-top: var(--top-padding);
+  width: 100%;
+  height: var(--full-height);
   display: flex;
   justify-content: center;
-  width: 100%;
   overflow: hidden;
 }
 
 .imageContainer {
   display: flex;
+  filter: blur(2px);
+  -webkit-filter: blur(2px);
 }
 
 /* Remove line spacing beneath image */
 img {
+  height: var(--full-height);
   vertical-align: bottom;
+}
+
+.stacked {
+  height: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.landingText {
+  display: flex;
+  flex-direction: column;
 }
