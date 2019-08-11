@@ -5,6 +5,10 @@ import { NgModule } from "@angular/core";
 import { OverlayContainer } from "@angular/cdk/overlay";
 
 import { AppComponent } from "./app.component";
+
+import { MatToolbarModule } from "@angular/material/toolbar";
+import { MatListModule } from "@angular/material/list";
+
 import { FooterComponent } from "./footer/footer.component";
 import { SkinExamplesComponent } from './skin-examples/skin-examples.component';
 
@@ -13,6 +17,8 @@ import { SkinExamplesComponent } from './skin-examples/skin-examples.component';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    MatToolbarModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
