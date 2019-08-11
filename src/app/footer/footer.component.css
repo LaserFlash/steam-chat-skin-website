@@ -1,0 +1,10 @@
+.footer {
+  font-size: 10px;
+  height: 100%;
+}
+
+::ng-deep .mat-list .mat-list-item {
+  word-wrap: break-word;
+  white-space: pre-line;
+  line-height: 1.5;
+}
