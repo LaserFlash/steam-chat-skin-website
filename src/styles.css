@@ -2,4 +2,36 @@
 body {
     margin: 0;
     font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+    background: var(--color-background);
+    color: var(--default-text);
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    padding-left: 16px;
+    padding-right: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+}
+
+.no-link-style {
+    color: initial;
+    text-decoration: inherit;
+}
+
+.button-spacer{
+    padding: 0;
+    margin: 0;
+    width: 0.5em;
+}
+
+@media only screen and (min-width: 600px) {
+    .content {
+        max-width: 800px;
+    }
 }

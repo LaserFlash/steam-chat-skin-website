@@ -1,6 +1,7 @@
 .footer {
   font-size: 10px;
   height: 100%;
+  background: var(--color-secondary);
 }
 
 ::ng-deep .mat-list .mat-list-item {
