@@ -22,7 +22,7 @@ export class AppComponent implements OnInit {
       document.documentElement.scrollTop ||
       document.body.scrollTop ||
       0;
-    if (scrollPosition <= screenHeight * 0.5) {
+    if (scrollPosition <= screenHeight * 0.45) {
       document.querySelector("body").style.cssText = "--visibility: hidden";
     } else {
       document.querySelector("body").style.cssText = "--visibility: visible";
