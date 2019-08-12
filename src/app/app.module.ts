@@ -8,17 +8,27 @@ import { AppComponent } from "./app.component";
 
 import { MatToolbarModule } from "@angular/material/toolbar";
 import { MatListModule } from "@angular/material/list";
+import { MatButtonModule } from "@angular/material/button";
+import { MatIconModule } from "@angular/material/icon";
 
 import { FooterComponent } from "./footer/footer.component";
-import { SkinExamplesComponent } from './skin-examples/skin-examples.component';
+import { SkinExamplesComponent } from "./skin-examples/skin-examples.component";
+import { SkinInstallationComponent } from "./skin-installation/skin-installation.component";
 
 @NgModule({
-  declarations: [AppComponent, FooterComponent, SkinExamplesComponent],
+  declarations: [
+    AppComponent,
+    FooterComponent,
+    SkinExamplesComponent,
+    SkinInstallationComponent
+  ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     MatToolbarModule,
-    MatListModule
+    MatListModule,
+    MatButtonModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
