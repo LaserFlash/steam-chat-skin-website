@@ -11,3 +11,35 @@
        Every toolbar row uses a flexbox row layout. */
   flex: 1 1 auto;
 }
+
+.description-holder {
+  display: flex;
+  flex-direction: column;
+}
+.description-text {
+  height: auto;
+  text-align: center;
+  margin: auto;
+  padding-right: 8px; 
+}
+.description-image {
+  display: flex;
+  justify-content: center;
+}
+.description-image img{
+  width: 80vw;
+}
+
+@media only screen and (min-width: 800px){
+  .description-holder {
+    flex-direction: row;
+  }
+
+  .description-text {
+    text-align: left;
+  }
+
+  .description-image img{
+    width: 40vw;
+  }
+}
