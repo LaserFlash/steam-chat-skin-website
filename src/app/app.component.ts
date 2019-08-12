@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
 import { HostListener, Inject } from "@angular/core";
 
 @Component({
@@ -6,25 +6,26 @@ import { HostListener, Inject } from "@angular/core";
   templateUrl: "./app.component.html",
   styleUrls: ["./app.component.css"]
 })
-export class AppComponent {
-  title = "steam-chat-skin-website";
-  screenHeight: number;
+export class AppComponent implements OnInit {
+  title = "Steam Chat Skinning";
+
+  ngOnInit(): void {
+    this.onWindowScroll();
+  }
 
   @HostListener("window:scroll", [])
   onWindowScroll() {
-    this.screenHeight = window.innerHeight;
-    const number =
+    /* Hide top toolbar when the main page title is on page */
+    let screenHeight = window.innerHeight;
+    let scrollPosition =
       window.pageYOffset ||
       document.documentElement.scrollTop ||
       document.body.scrollTop ||
       0;
-    if (number == 0) {
+    if (scrollPosition <= screenHeight * 0.5) {
       document.querySelector("body").style.cssText = "--visibility: hidden";
-    } else if (number > this.screenHeight * 0.3) {
-      document.querySelector("body").style.cssText =
-        "--visibility: visible";
+    } else {
+      document.querySelector("body").style.cssText = "--visibility: visible";
     }
-    console.log("scroll" + number)
-    console.log("height" +  this.screenHeight)
   }
 }
