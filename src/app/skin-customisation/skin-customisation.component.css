@@ -27,20 +27,21 @@
   flex-direction: row;
 }
 
-.content {
+.content-holder {
   display: flex;
   flex-direction: row;
   width: auto;
   height: 80vh;
+}
+.content { 
   background-color: var(--color-secondary);
 }
 
 @media only screen and (max-width: 959px) {
-  .content {
+  .content-holder {
     flex-direction: column;
     height: auto;
     padding: 0;
-    height:  auto;
   }
   .customisation-area {
     width: 100%;
