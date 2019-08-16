@@ -14,9 +14,15 @@
   margin: auto auto;
 }
 
-@media only screen and (max-width: 959px){
-    .preview-holder {
-        flex-direction: column;
-        height: 100vh;
-    }
+.previewBorder {
+  border-color: var(--color-background);
+  border-width: 2px;
+  border-style: solid;
+}
+
+@media only screen and (max-width: 959px) {
+  .preview-holder {
+    flex-direction: column;
+    height: 100vh;
+  }
 }
