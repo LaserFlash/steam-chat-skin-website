@@ -5,3 +5,16 @@
   visibility: var(--visibility);
   background: var(--color-secondary);
 }
+
+.actions{ 
+  display: flex;
+  flex-grow: 1;
+  justify-content: flex-end;
+}
+
+@media only screen and (max-width: 959px) {
+  .sticky-toolbar {
+    flex-direction: column;
+    height: auto;
+  }
+}

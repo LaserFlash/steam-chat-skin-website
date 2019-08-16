@@ -16,8 +16,8 @@ export class AppComponent implements OnInit {
   @HostListener("window:scroll", [])
   onWindowScroll() {
     /* Hide top toolbar when the main page title is on page */
-    let screenHeight = window.innerHeight;
-    let scrollPosition =
+    const screenHeight = window.innerHeight;
+    const scrollPosition =
       window.pageYOffset ||
       document.documentElement.scrollTop ||
       document.body.scrollTop ||

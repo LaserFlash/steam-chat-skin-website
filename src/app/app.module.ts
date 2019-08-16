@@ -1,7 +1,7 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { NgModule } from "@angular/core";
-
+import { RouterModule } from "@angular/router";
 import { OverlayContainer } from "@angular/cdk/overlay";
 
 import { AppComponent } from "./app.component";
@@ -37,6 +37,10 @@ import { SkinInstallationComponent } from "./skin-installation/skin-installation
     SkinInstallationComponent
   ],
   imports: [
+    RouterModule.forRoot([], {
+      scrollPositionRestoration: "enabled",
+      anchorScrolling: "enabled"
+    }),
     BrowserModule,
     BrowserAnimationsModule,
     FlexLayoutModule,
