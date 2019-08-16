@@ -1,0 +1,35 @@
+.customisation-radio-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.customisation-area {
+
+}
+
+.customisation-step-area {
+    display: flex;
+    flex-direction: row;
+}
+.customisation-radio-group {
+    display: flex;
+    width: 30%;
+}
+.customisation-radio-button {
+    margin-bottom: 0.5em; 
+}
+
+.customisation-image-area {
+    display: inline-flex;
+    float: right;
+    width: 100%;
+}
+
+.customisation-image-area img {
+    display: flex;
+    float: right;
+}
+
+.customisation-navigation-area {
+
+}

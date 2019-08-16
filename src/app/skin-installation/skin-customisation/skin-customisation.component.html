@@ -1,0 +1,58 @@
+<mat-horizontal-stepper class="customisation-area" fxHide.lt-md>
+  <mat-step *ngFor="let optionType of customisationOptions">
+    <ng-template matStepLabel>{{ optionType.title }}</ng-template>
+
+    <div class="customisation-step-area">
+      <mat-radio-group
+        class="customisation-radio-group"
+        aria-label="Select an option"
+        [(ngModel)]="optionType.selectedOptionIndex"
+      >
+        <mat-radio-button
+          class="customisation-radio-button"
+          *ngFor="let option of optionType.options; let i = index"
+          [value]="i"
+        >
+          {{ option.displayName }}
+        </mat-radio-button>
+      </mat-radio-group>
+      <div class="customisation-image-area">
+        <img src="assets/images/steam.webp" />
+      </div>
+    </div>
+    <div class="customisation-navigation-area">
+      <button mat-button matStepperPrevious>Back</button>
+      <button mat-button matStepperNext>Next</button>
+    </div>
+    
+  </mat-step>
+  <mat-step>
+    <ng-template matStepLabel>Finish</ng-template>
+    <button mat-button (click)="saveGeneratedCSS()">Download</button>
+    <div>
+      <button mat-button matStepperPrevious>Back</button>
+      <button mat-button matStepperNext>Next</button>
+    </div>
+  </mat-step>
+</mat-horizontal-stepper>
+
+<div class="customisation-area" fxHide.gt-sm>
+  <div *ngFor="let optionType of customisationOptions">
+    <h2>{{ optionType.title }}</h2>
+    <mat-radio-group
+      class="customisation-radio-group"
+      aria-label="Select an option"
+      [(ngModel)]="optionType.selectedOptionIndex"
+    >
+      <mat-radio-button
+        class="customisation-radio-button"
+        *ngFor="let option of optionType.options; let i = index"
+        [value]="i"
+      >
+        {{ option.displayName }}
+      </mat-radio-button>
+    </mat-radio-group>
+  </div>
+</div>
+
+<div>{{ selectedOptions() }}</div>
