@@ -10,25 +10,36 @@ import { MatToolbarModule } from "@angular/material/toolbar";
 import { MatListModule } from "@angular/material/list";
 import { MatButtonModule } from "@angular/material/button";
 import { MatIconModule } from "@angular/material/icon";
+import { MatStepperModule } from "@angular/material/stepper";
+import { MatRadioModule } from "@angular/material/radio";
+
+import { FlexLayoutModule } from "@angular/flex-layout";
+import { FormsModule } from "@angular/forms";
 
 import { FooterComponent } from "./footer/footer.component";
 import { SkinExamplesComponent } from "./skin-examples/skin-examples.component";
 import { SkinInstallationComponent } from "./skin-installation/skin-installation.component";
+import { SkinCustomisationComponent } from "./skin-installation/skin-customisation/skin-customisation.component";
 
 @NgModule({
   declarations: [
     AppComponent,
     FooterComponent,
     SkinExamplesComponent,
-    SkinInstallationComponent
+    SkinInstallationComponent,
+    SkinCustomisationComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    FlexLayoutModule,
+    FormsModule,
     MatToolbarModule,
     MatListModule,
     MatButtonModule,
-    MatIconModule
+    MatIconModule,
+    MatStepperModule,
+    MatRadioModule
   ],
   providers: [],
   bootstrap: [AppComponent]
