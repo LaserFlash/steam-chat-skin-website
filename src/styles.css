@@ -1,38 +1,39 @@
 /* You can add global styles to this file, and also import other style files */
 body {
-    margin: 0;
-    font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
-    background: var(--color-background);
-    color: var(--default-text);
-    justify-content: center;
-    align-items: center;
+  margin: 0;
+  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+  background: var(--color-background);
+  color: var(--default-text);
+  justify-content: center;
+  align-items: center;
 }
 
 .content {
-    padding-left: 16px;
-    padding-right: 16px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: auto;
 }
 
 .no-link-style {
-    color: initial;
-    text-decoration: inherit;
+  color: initial;
+  text-decoration: inherit;
 }
 
-.button-spacer{
-    padding: 0;
-    margin: 0;
-    width: 0.5em;
+.button-spacer {
+  padding: 0;
+  margin: 0;
+  width: 0.5em;
 }
 
 @media only screen and (min-width: 600px) {
-    .content {
-        padding-left: calc((100vw - 900px)/2);
-        padding-right: calc((100vw - 900px)/2);
-    }
+  .content {
+    padding-left: calc((100vw - 900px) / 2);
+    padding-right: calc((100vw - 900px) / 2);
+  }
 }

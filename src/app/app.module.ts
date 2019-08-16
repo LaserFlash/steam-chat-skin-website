@@ -12,6 +12,7 @@ import { MatButtonModule } from "@angular/material/button";
 import { MatIconModule } from "@angular/material/icon";
 import { MatStepperModule } from "@angular/material/stepper";
 import { MatRadioModule } from "@angular/material/radio";
+import { MatDividerModule } from "@angular/material/divider";
 
 import { FlexLayoutModule } from "@angular/flex-layout";
 import { FormsModule } from "@angular/forms";
@@ -22,7 +23,7 @@ import { SkinPrerequisiteComponent } from "./skin-prerequisite/skin-prerequisite
 import { SkinCustomisationComponent } from "./skin-customisation/skin-customisation.component";
 import { SteamPreviewComponent } from "./skin-customisation/steam-preview/steam-preview.component";
 import { SafePipe } from "./safe.pipe";
-import { SkinInstallationComponent } from './skin-installation/skin-installation.component';
+import { SkinInstallationComponent } from "./skin-installation/skin-installation.component";
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { SkinInstallationComponent } from './skin-installation/skin-installation
     MatButtonModule,
     MatIconModule,
     MatStepperModule,
-    MatRadioModule
+    MatRadioModule,
+    MatDividerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

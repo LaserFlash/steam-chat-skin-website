@@ -4,12 +4,19 @@
 }
 
 .download-action-bar {
-  background: none;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
 }
+
+.action-holder {
+  display: flex;
+  flex-direction: row;
+  margin: auto 0;
+}
+
 .fill-remaining-space {
-  /* This fills the remaining space, by using flexbox. 
-       Every toolbar row uses a flexbox row layout. */
-  flex: 1 1 auto;
+  flex-grow: 1;
 }
 
 .description-holder {
@@ -20,17 +27,17 @@
   height: auto;
   text-align: center;
   margin: auto;
-  padding-right: 8px; 
+  padding-right: 8px;
 }
 .description-image {
   display: flex;
   justify-content: center;
 }
-.description-image img{
+.description-image img {
   width: 80vw;
 }
 
-@media only screen and (min-width: 960px){
+@media only screen and (min-width: 960px) {
   .description-holder {
     flex-direction: row;
   }
@@ -39,8 +46,17 @@
     text-align: left;
   }
 
-  .description-image img{
+  .description-image img {
     width: 40vw;
     max-width: 600px;
+  }
+}
+
+@media only screen and (max-width: 960px) {
+  .download-action-bar {
+    flex-direction: column;
+  }
+  .action-holder {
+    justify-content: center;
   }
 }
