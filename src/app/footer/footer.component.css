@@ -1,11 +1,13 @@
 .footer {
-  font-size: 10px;
+  font-size: 14px;
   height: 100%;
   background: var(--color-secondary);
 }
 
-::ng-deep .mat-list .mat-list-item {
-  word-wrap: break-word;
-  white-space: pre-line;
-  line-height: 1.5;
+.footer ul {
+  list-style: none;
+}
+
+a {
+  color: unset;
 }
