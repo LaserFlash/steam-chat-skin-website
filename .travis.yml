@@ -16,7 +16,7 @@ deploy:
   provider: pages
   local_dir: dist/steam-chat-skin-website
   skip_cleanup: true
-  target_branch: master
+  target_branch: gh_pages
   fqdn: laserflash.tk
   github_token: $GITHUB_TOKEN
   email: bryn.t.bennett@gmail.com
