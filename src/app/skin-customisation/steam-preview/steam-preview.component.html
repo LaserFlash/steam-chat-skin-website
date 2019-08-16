@@ -1,0 +1,2646 @@
+<link
+  href="https://steamcommunity-a.akamaihd.net/public/shared/css/motiva_sans.css"
+  rel="stylesheet"
+  type="text/css"
+/>
+<link
+  href="https://steamcommunity-a.akamaihd.net/public/shared/css/shared_global.css"
+  rel="stylesheet"
+  type="text/css"
+/>
+<link
+  href="https://steamcommunity-a.akamaihd.net/public/css/webui/friends.css"
+  rel="stylesheet"
+  type="text/css"
+/>
+
+<link *ngFor="let style of styles" rel="stylesheet" [href]="style | safe" />
+<link
+  rel="stylesheet"
+  href="https://laserflash.tk/steam-friends-skin/src/baseTheme.css"
+/>
+<div class="preview-holder">
+  <div
+    class="friendList-preview client_chat_frame fullheight SavedDimensionsPopup"
+  >
+    <div class="fullheight">
+      <div id="popup_target" class="fullheight popup_chat_frame">
+        <div class="chat_main fullheight responsive_friends">
+          <div class="chat_main_flex displayRow">
+            <div class="DropTarget friendsListContainer fullheight ">
+              <div class="friendlist">
+                <div class="friendListHeaderContainer titleBarContainer">
+                  <div class="TitleBar title-area">
+                    <div class="title-area-highlight"></div>
+                    <div class="title-area-children"></div>
+                    <div class="title-bar-actions">
+                      <div class="title-area-icon closeButton">
+                        <svg
+                          version="1.1"
+                          id="Layer_2"
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="SVGIcon_Button SVGIcon_X_Line"
+                          x="0px"
+                          y="0px"
+                          width="256px"
+                          height="256px"
+                          viewBox="0 0 256 256"
+                        >
+                          <line
+                            fill="none"
+                            stroke="#ffffff"
+                            stroke-width="45"
+                            stroke-miterlimit="10"
+                            x1="212"
+                            y1="212"
+                            x2="44"
+                            y2="44"
+                          ></line>
+                          <line
+                            fill="none"
+                            stroke="#ffffff"
+                            stroke-width="45"
+                            stroke-miterlimit="10"
+                            x1="44"
+                            y1="212"
+                            x2="212"
+                            y2="44"
+                          ></line>
+                        </svg>
+                      </div>
+                      <div class="title-area-icon maximizeButton">
+                        <svg
+                          version="1.1"
+                          id="base"
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="SVGIcon_Button SVGIcon_Maximize"
+                          x="0px"
+                          y="0px"
+                          width="256px"
+                          height="256px"
+                          viewBox="0 0 256 256"
+                        >
+                          <rect
+                            x="24"
+                            y="42.167"
+                            fill="none"
+                            stroke="rgb(120, 138, 146)"
+                            stroke-width="18"
+                            stroke-miterlimit="10"
+                            width="208"
+                            height="171.667"
+                          ></rect>
+                          <line
+                            fill="none"
+                            stroke="rgb(120, 138, 146)"
+                            stroke-width="42"
+                            stroke-miterlimit="10"
+                            x1="24"
+                            y1="54.01"
+                            x2="232"
+                            y2="54.01"
+                          ></line>
+                        </svg>
+                      </div>
+                      <div class="title-area-icon minimizeButton">
+                        <svg
+                          version="1.1"
+                          id="base"
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="SVGIcon_Button SVGIcon_Minimize"
+                          x="0px"
+                          y="0px"
+                          width="256px"
+                          height="256px"
+                          viewBox="0 0 256 256"
+                        >
+                          <line
+                            fill="none"
+                            stroke="rgb(120, 138, 146)"
+                            stroke-width="18"
+                            stroke-miterlimit="10"
+                            x1="24"
+                            y1="209.01"
+                            x2="232"
+                            y2="209.01"
+                          ></line>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="currentUserContainer online">
+                    <svg
+                      class="statusHeaderGlow"
+                      width="100%"
+                      height="132"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <defs>
+                        <radialGradient
+                          id="exampleGradient"
+                          cx="50%"
+                          cy="50%"
+                          r="50%"
+                          fx="35%"
+                          fy="30%"
+                        >
+                          <stop offset="10%" stop-color="gold"></stop>
+                          <stop offset="95%" stop-color="green"></stop>
+                        </radialGradient>
+                      </defs>
+                      <ellipse
+                        cx="5%"
+                        cy="28%"
+                        rx="65%"
+                        ry="60%"
+                        fill="url(#exampleGradient)"
+                      ></ellipse>
+                    </svg>
+                    <div class="AvatarAndUser">
+                      <img
+                        class="currentUserAvatar"
+                        src="https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/a0/a09590824ce6e05560677ab513ac8a9a52c311fd_medium.jpg"
+                      />
+                      <div
+                        class="labelHolder online personanameandstatus_twoLine_2wZNn"
+                      >
+                        <div class="personanameandstatus_statusAndName_9U-hi">
+                          <div class="personanameandstatus_playerName_1uxaf">
+                            LaserFlash
+                          </div>
+                          <div class="ContextMenuButton">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              class="SVGIcon_Button SVGIcon_DownArrowContextMenu"
+                              data-name="Layer 1"
+                              viewBox="0 0 128 128"
+                              x="0px"
+                              y="0px"
+                            >
+                              <polygon
+                                points="50 59.49 13.21 22.89 4.74 31.39 50 76.41 95.26 31.39 86.79 22.89 50 59.49"
+                              ></polygon>
+                            </svg>
+                          </div>
+                        </div>
+                        <div
+                          class="personanameandstatus_richPresenceContainer_21cNf"
+                        >
+                          <div
+                            class="personanameandstatus_gameName_qvibF personanameandstatus_richPresenceLabel_3Q6g1 no-drag"
+                          >
+                            Online
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="title-area-icon singleWindowToggle"
+                      title="Toggle chat window docking"
+                    >
+                      <svg
+                        version="1.1"
+                        id="base"
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="SVGIcon_Button SVGIcon_SingleWindowToggle"
+                        x="0px"
+                        y="0px"
+                        width="256px"
+                        height="256px"
+                        viewBox="0 0 256 256"
+                      >
+                        <g class="mainBox">
+                          <rect
+                            x="90"
+                            y="42.167"
+                            fill="none"
+                            stroke="rgb(120, 138, 146)"
+                            stroke-width="18"
+                            stroke-miterlimit="10"
+                            width="142"
+                            height="171.667"
+                          ></rect>
+                          <line
+                            fill="none"
+                            stroke="rgb(120, 138, 146)"
+                            stroke-width="42"
+                            stroke-miterlimit="10"
+                            x1="90"
+                            y1="54.01"
+                            x2="232"
+                            y2="54.01"
+                          ></line>
+                        </g>
+                        <g class="leftBox">
+                          <rect
+                            x="28"
+                            y="42.167"
+                            fill="none"
+                            stroke="rgb(120, 138, 146)"
+                            stroke-width="18"
+                            stroke-miterlimit="10"
+                            width="62"
+                            height="171.667"
+                          ></rect>
+                          <line
+                            fill="none"
+                            stroke="rgb(120, 138, 146)"
+                            stroke-width="42"
+                            stroke-miterlimit="10"
+                            x1="28"
+                            y1="54.01"
+                            x2="90"
+                            y2="54.01"
+                          ></line>
+                        </g>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="friendListButtons">
+                    <div
+                      class="friendListButton friendSettingsButton no-drag"
+                      title="Manage friends list settings"
+                    >
+                      <svg
+                        version="1.1"
+                        id="Layer_1"
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="SVGIcon_Button SVGIcon_Settings"
+                        x="0px"
+                        y="0px"
+                        width="256px"
+                        height="256px"
+                        viewBox="-305.5 396.5 256 256"
+                        enable-background="new -305.5 396.5 256 256"
+                      >
+                        <path
+                          d="M-232.755,589.942l3.103,2.408c5.78,4.492,11.973,8.18,18.409,10.959l3.581,1.547l2.276,33.783 c0.089,1.33,1.385,2.54,2.715,2.54h48.62c1.355,0,2.745-1.273,2.852-2.621l2.74-33.284l3.602-1.496 c6.406-2.656,12.646-6.262,18.554-10.707l3.137-2.366l30.578,15.009c1.155,0.571,2.924,0.017,3.563-1.087l24.303-42.1 c0.674-1.173,0.265-3.014-0.852-3.785l-27.872-19.309l0.469-3.832c0.495-4.032,0.725-7.395,0.725-10.57 c0-3.129-0.227-6.5-0.687-10.307l-0.469-3.896l28.699-19.253c1.112-0.741,1.509-2.473,0.84-3.627l-24.3-42.104 c-0.657-1.139-2.502-1.727-3.7-1.155l-31.208,14.748l-3.091-2.341c-5.571-4.224-11.466-7.688-17.522-10.306l-3.58-1.548 l-2.34-34.887c-0.089-1.33-1.381-2.536-2.715-2.536h-48.617c-1.355,0-2.74,1.274-2.851,2.626l-2.834,34.371l-3.593,1.501 c-6.082,2.535-12.028,5.924-17.667,10.071l-3.124,2.302l-31.392-15.413c-1.168-0.575-2.924-0.025-3.559,1.074l-24.309,42.107 c-0.678,1.172-0.264,3.014,0.848,3.781l28.068,19.444l-0.524,3.883c-0.592,4.378-0.865,8.018-0.865,11.462 c0,2.988,0.179,6.065,0.55,9.403l0.431,3.853l-28.528,19.125c-1.108,0.742-1.509,2.468-0.84,3.632l24.308,42.1 c0.656,1.142,2.489,1.726,3.7,1.154L-232.755,589.942z M-177.498,560.051c-19.311,0-35.02-15.709-35.02-35.02 s15.709-35.02,35.02-35.02s35.02,15.709,35.02,35.02S-158.188,560.051-177.498,560.051z"
+                        ></path>
+                      </svg>
+                    </div>
+                  </div>
+                  <div></div>
+                  <div class="DropTarget quickAccessFriends compactQuickAccess">
+                    <div class="favoriteElement">
+                      <div
+                        class="friend offline quickAccessFriend friendStatusHover"
+                        draggable="true"
+                      >
+                        <div>
+                          <div
+                            class="steamavatar_avatarHolder_1G7LI avatarHolder no-drag Medium"
+                          >
+                            <div
+                              class="steamavatar_avatarStatus_1Pwr6 avatarStatus"
+                            ></div>
+                            <img
+                              class="steamavatar_avatar_f2laR avatar"
+                              src="https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/0e/0e13c8d6fc39b10022f06d51cf58824e1942c763_medium.jpg"
+                              draggable="false"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="favoriteElement">
+                      <div
+                        class="friend offline quickAccessFriend friendStatusHover"
+                        draggable="true"
+                      >
+                        <div>
+                          <div
+                            class="steamavatar_avatarHolder_1G7LI avatarHolder no-drag Medium"
+                          >
+                            <div
+                              class="steamavatar_avatarStatus_1Pwr6 avatarStatus"
+                            ></div>
+                            <img
+                              class="steamavatar_avatar_f2laR avatar"
+                              src="https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/a9/a9bb072073770118e2ab718caf4101e37c76e524_medium.jpg"
+                              draggable="false"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="favoriteElement">
+                      <div
+                        class="friend offline quickAccessFriend friendStatusHover"
+                        draggable="true"
+                      >
+                        <div>
+                          <div
+                            class="steamavatar_avatarHolder_1G7LI avatarHolder no-drag Medium"
+                          >
+                            <div
+                              class="steamavatar_avatarStatus_1Pwr6 avatarStatus"
+                            ></div>
+                            <img
+                              class="steamavatar_avatar_f2laR avatar"
+                              src="https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/95/95c8d501da0505f52862aed28bba915b38f7154d_medium.jpg"
+                              draggable="false"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="favoriteElement">
+                      <div
+                        class="friend offline quickAccessFriend friendStatusHover"
+                        draggable="true"
+                      >
+                        <div>
+                          <div
+                            class="steamavatar_avatarHolder_1G7LI avatarHolder no-drag Medium"
+                          >
+                            <div
+                              class="steamavatar_avatarStatus_1Pwr6 avatarStatus"
+                            ></div>
+                            <img
+                              class="steamavatar_avatar_f2laR avatar"
+                              src="https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/5e/5ea264d0606ed67ad64e4d7401ddd68d0630cb52_medium.jpg"
+                              draggable="false"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="favoriteElement">
+                      <div
+                        class="friend online quickAccessFriend friendStatusHover"
+                        draggable="true"
+                      >
+                        <div>
+                          <div
+                            class="steamavatar_avatarHolder_1G7LI avatarHolder no-drag Medium"
+                          >
+                            <div
+                              class="steamavatar_avatarStatus_1Pwr6 avatarStatus"
+                            ></div>
+                            <img
+                              class="steamavatar_avatar_f2laR avatar"
+                              src="https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/ed/ede51117cc29511eef00fd4e19cb6c800ff80dbc_medium.jpg"
+                              draggable="false"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="dropTargetBox"></div>
+                  </div>
+                  <div class="socialTabSearchContainer">
+                    <div class="socialTabContainer">
+                      <div class="friendTab socialListTab activeTab">
+                        <div class="tabLabel">Friends</div>
+                        <div class="friendsTabButtonsContainer">
+                          <div class="TabSearchButton">
+                            <div class="tabSearchTransitionGroup"></div>
+                            <div
+                              class="searchIconButton"
+                              title="Search my friends list"
+                            >
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="SVGIcon_Button SVGIcon_MagnifyingGlass"
+                                version="1.1"
+                                x="0px"
+                                y="0px"
+                                viewBox="0 0 100 100"
+                              >
+                                <g transform="translate(0,-952.36218)">
+                                  <path
+                                    class="ColorSelector"
+                                    d="m 40.99855,964.36216 c -15.9798,0 -28.9986,13.01864 -28.9986,28.99862 0,15.97992 13.0188,28.99862 28.9986,28.99862 6.9189,0 13.2881,-2.4349 18.2803,-6.4997 l 23.5927,23.6239 c 1.1714,1.1714 3.0784,1.1715 4.2498,0 1.1716,-1.1715 1.1716,-3.0783 0,-4.2498 l -23.6239,-23.5926 c 4.0649,-4.9923 6.4997,-11.3615 6.4997,-18.28042 0,-15.97998 -13.0187,-28.99862 -28.9986,-28.99862 z m 0,5.99972 c 12.7374,0 22.9989,10.26145 22.9989,22.9989 0,12.73732 -10.2615,22.99892 -22.9989,22.99892 -12.7374,0 -22.9989,-10.2616 -22.9989,-22.99892 0,-12.73745 10.2615,-22.9989 22.9989,-22.9989 z"
+                                    fill="#ffffff"
+                                    fill-opacity="1"
+                                    stroke="none"
+                                    visibility="visible"
+                                    display="inline"
+                                    overflow="visible"
+                                  ></path>
+                                </g>
+                              </svg>
+                            </div>
+                          </div>
+                          <a
+                            href="steam://openurl/https://steamcommunity.com/friends/add"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            ><div
+                              class="friendListButton addFriendButton no-drag"
+                              title="Add a friend"
+                            >
+                              <svg
+                                version="1.1"
+                                id="Layer_1"
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="SVGIcon_Button SVGIcon_AddFriend"
+                                x="0px"
+                                y="0px"
+                                width="256px"
+                                height="256px"
+                                viewBox="0 0 256 256"
+                              >
+                                <g
+                                  class="friendHead"
+                                  transform="matrix(1.34048,0,0,1.34048,-10.0942,-5.50445)"
+                                >
+                                  <circle
+                                    cx="86.296"
+                                    cy="47.419"
+                                    r="33.526"
+                                  ></circle>
+                                </g>
+                                <path
+                                  class="friendBody"
+                                  d="M100.353,170.882c0-23.589,10.397-44.736,26.842-59.152c-3.352-0.423-6.773-0.649-10.257-0.649H94.231	c-39.775,0-56.481,28.271-56.481,63.099v41.88c0,0-0.3,16.369,35.917,21.813c36.217,5.444,73.651,5,73.651,5 C119.666,230.681,100.353,203.044,100.353,170.882z"
+                                ></path>
+                                <path
+                                  class="plusCircle"
+                                  d="M179.01,103.892c-36.998,0-66.99,29.992-66.99,66.99s29.994,66.989,66.99,66.989c36.997,0,66.99-29.991,66.99-66.989 S216.008,103.892,179.01,103.892z M217.893,175.882h-33.647v33.882c0,2.762-2.239,5-5,5s-5-2.238-5-5v-33.882h-33.647 c-2.762,0-5-2.238-5-5c0-2.763,2.238-5,5-5h33.647V132.47c0-2.762,2.239-5,5-5s5,2.238,5,5v33.412h33.647c2.762,0,5,2.237,5,5 C222.893,173.643,220.654,175.882,217.893,175.882z"
+                                ></path>
+                              </svg></div
+                          ></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="disconnectBlocker"></div>
+                </div>
+                <div class="FriendsListContent">
+                  <div class="insetshadow_FriendsListInsetShadowCtn_1S167">
+                    <div
+                      class="insetshadow_FriendListInsetShadowTop_1mEmL"
+                    ></div>
+                  </div>
+                  <div></div>
+                  <div class="friendlistListContainer" tabindex="0">
+                    <div class="listContentContainer">
+                      <div class="DropTarget friendGroup gameGroup">
+                        <div class="groupName">
+                          <div class="gameGroupContainer">
+                            <div class="ExpandPlusMinus">
+                              <svg
+                                version="1.1"
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="SVGIcon_Button SVGIcon_PlusCircle"
+                                x="0px"
+                                y="0px"
+                                width="256px"
+                                height="256px"
+                                viewBox="0 0 256 256"
+                              >
+                                <circle
+                                  fill="none"
+                                  stroke-width="10"
+                                  stroke-miterlimit="10"
+                                  cx="128"
+                                  cy="128"
+                                  r="95.333"
+                                ></circle>
+                                <line
+                                  class="horizontalLine"
+                                  fill="none"
+                                  stroke-width="10"
+                                  stroke-linecap="round"
+                                  stroke-miterlimit="10"
+                                  x1="73.333"
+                                  y1="128"
+                                  x2="183.333"
+                                  y2="128"
+                                ></line>
+                                <line
+                                  class="verticalLine"
+                                  fill="none"
+                                  stroke-width="10"
+                                  stroke-linecap="round"
+                                  stroke-miterlimit="10"
+                                  x1="128.333"
+                                  y1="73.335"
+                                  x2="128.333"
+                                  y2="183.333"
+                                ></line>
+                              </svg>
+                            </div>
+                            <img
+                              class="groupIcon"
+                              src="https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/22380/1711fd8c46d739feec76bd4a64eaeeca5b87e3a7.jpg"
+                            />
+                          </div>
+                          Fallout: New Vegas<span class="groupCount">(1)</span>
+                          <hr />
+                        </div>
+                        <div class="friendsContainer">
+                          <div
+                            class="friend ingame  friendsnooze_hoverParent_3SgRH friendStatusHover"
+                            draggable="true"
+                          >
+                            <div
+                              class="steamavatar_avatarHolder_1G7LI avatarHolder no-drag Medium"
+                            >
+                              <div
+                                class="steamavatar_avatarStatus_1Pwr6 avatarStatus"
+                              ></div>
+                              <img
+                                class="steamavatar_avatar_f2laR avatar"
+                                src="https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/a4/a467da4383291d72a9bd9188326badc5d12e6d25_medium.jpg"
+                                draggable="false"
+                              />
+                            </div>
+                            <div
+                              class="labelHolder ingame personanameandstatus_twoLine_2wZNn"
+                            >
+                              <div
+                                class="personanameandstatus_statusAndName_9U-hi"
+                              >
+                                <div
+                                  class="personanameandstatus_playerName_1uxaf"
+                                >
+                                  Commanderz<span
+                                    class="personanameandstatus_playerNickname_3-32P"
+                                    >(Larz)</span
+                                  >
+                                </div>
+                                <div class="ContextMenuButton">
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    class="SVGIcon_Button SVGIcon_DownArrowContextMenu"
+                                    data-name="Layer 1"
+                                    viewBox="0 0 128 128"
+                                    x="0px"
+                                    y="0px"
+                                  >
+                                    <polygon
+                                      points="50 59.49 13.21 22.89 4.74 31.39 50 76.41 95.26 31.39 86.79 22.89 50 59.49"
+                                    ></polygon>
+                                  </svg>
+                                </div>
+                              </div>
+                              <div
+                                class="personanameandstatus_richPresenceContainer_21cNf"
+                              >
+                                <div
+                                  class="personanameandstatus_gameName_qvibF personanameandstatus_richPresenceLabel_3Q6g1 no-drag"
+                                >
+                                  Fallout: New Vegas
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="DropTarget friendGroup onlineFriends ">
+                        <div class="groupHeaderContainer">
+                          <div class="groupName">
+                            <div class="ExpandPlusMinus">
+                              <svg
+                                version="1.1"
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="SVGIcon_Button SVGIcon_PlusCircle"
+                                x="0px"
+                                y="0px"
+                                width="256px"
+                                height="256px"
+                                viewBox="0 0 256 256"
+                              >
+                                <circle
+                                  fill="none"
+                                  stroke-width="10"
+                                  stroke-miterlimit="10"
+                                  cx="128"
+                                  cy="128"
+                                  r="95.333"
+                                ></circle>
+                                <line
+                                  class="horizontalLine"
+                                  fill="none"
+                                  stroke-width="10"
+                                  stroke-linecap="round"
+                                  stroke-miterlimit="10"
+                                  x1="73.333"
+                                  y1="128"
+                                  x2="183.333"
+                                  y2="128"
+                                ></line>
+                                <line
+                                  class="verticalLine"
+                                  fill="none"
+                                  stroke-width="10"
+                                  stroke-linecap="round"
+                                  stroke-miterlimit="10"
+                                  x1="128.333"
+                                  y1="73.335"
+                                  x2="128.333"
+                                  y2="183.333"
+                                ></line>
+                              </svg>
+                            </div>
+                            Online Friends<span class="groupCount">(3)</span>
+                          </div>
+                        </div>
+                        <div class="groupList">
+                          <div class="friendCategoryContainer">
+                            <div
+                              class="friend online friendStatusHover"
+                              draggable="true"
+                            >
+                              <div
+                                class="steamavatar_avatarHolder_1G7LI avatarHolder no-drag Medium"
+                              >
+                                <div
+                                  class="steamavatar_avatarStatus_1Pwr6 avatarStatus"
+                                ></div>
+                                <img
+                                  class="steamavatar_avatar_f2laR avatar"
+                                  src="https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/1e/1e47c598a51e602701039bf9df14c455ec49cbf1_medium.jpg"
+                                  draggable="false"
+                                />
+                              </div>
+                              <div
+                                class="labelHolder online personanameandstatus_twoLine_2wZNn"
+                              >
+                                <div
+                                  class="personanameandstatus_statusAndName_9U-hi"
+                                >
+                                  <div
+                                    class="personanameandstatus_playerName_1uxaf"
+                                  >
+                                    KazuneDo<span
+                                      class="personanameandstatus_playerNickname_3-32P"
+                                      >(Nihn)</span
+                                    >
+                                  </div>
+                                  <div class="ContextMenuButton">
+                                    <svg
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      class="SVGIcon_Button SVGIcon_DownArrowContextMenu"
+                                      data-name="Layer 1"
+                                      viewBox="0 0 128 128"
+                                      x="0px"
+                                      y="0px"
+                                    >
+                                      <polygon
+                                        points="50 59.49 13.21 22.89 4.74 31.39 50 76.41 95.26 31.39 86.79 22.89 50 59.49"
+                                      ></polygon>
+                                    </svg>
+                                  </div>
+                                </div>
+                                <div
+                                  class="personanameandstatus_richPresenceContainer_21cNf"
+                                >
+                                  <div
+                                    class="personanameandstatus_gameName_qvibF personanameandstatus_richPresenceLabel_3Q6g1 no-drag"
+                                  >
+                                    Online
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            class="friendCategoryContainer friend-anim-enter-done"
+                          >
+                            <div
+                              class="friend online friendStatusHover"
+                              draggable="true"
+                            >
+                              <div
+                                class="steamavatar_avatarHolder_1G7LI avatarHolder no-drag Medium"
+                              >
+                                <div
+                                  class="steamavatar_avatarStatus_1Pwr6 avatarStatus"
+                                ></div>
+                                <img
+                                  class="steamavatar_avatar_f2laR avatar"
+                                  src="https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/ed/ede51117cc29511eef00fd4e19cb6c800ff80dbc_medium.jpg"
+                                  draggable="false"
+                                />
+                              </div>
+                              <div
+                                class="labelHolder online personanameandstatus_twoLine_2wZNn"
+                              >
+                                <div
+                                  class="personanameandstatus_statusAndName_9U-hi"
+                                >
+                                  <div
+                                    class="personanameandstatus_playerName_1uxaf"
+                                  >
+                                    MaoFace<span
+                                      class="personanameandstatus_playerNickname_3-32P"
+                                      >(Adam)</span
+                                    >
+                                  </div>
+                                  <div class="ContextMenuButton">
+                                    <svg
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      class="SVGIcon_Button SVGIcon_DownArrowContextMenu"
+                                      data-name="Layer 1"
+                                      viewBox="0 0 128 128"
+                                      x="0px"
+                                      y="0px"
+                                    >
+                                      <polygon
+                                        points="50 59.49 13.21 22.89 4.74 31.39 50 76.41 95.26 31.39 86.79 22.89 50 59.49"
+                                      ></polygon>
+                                    </svg>
+                                  </div>
+                                </div>
+                                <div
+                                  class="personanameandstatus_richPresenceContainer_21cNf"
+                                >
+                                  <div
+                                    class="personanameandstatus_gameName_qvibF personanameandstatus_richPresenceLabel_3Q6g1 no-drag"
+                                  >
+                                    Online
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="friendCategoryContainer">
+                            <div
+                              class="friend online awayOrSnooze friendStatusHover"
+                              draggable="true"
+                            >
+                              <div
+                                class="steamavatar_avatarHolder_1G7LI avatarHolder no-drag Medium"
+                              >
+                                <div
+                                  class="steamavatar_avatarStatus_1Pwr6 avatarStatus"
+                                ></div>
+                                <img
+                                  class="steamavatar_avatar_f2laR avatar"
+                                  src="https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/e6/e6b21f48e29bb29d559e453e8017693033fed174_medium.jpg"
+                                  draggable="false"
+                                />
+                              </div>
+                              <div
+                                class="labelHolder online awayOrSnooze personanameandstatus_twoLine_2wZNn"
+                              >
+                                <div
+                                  class="personanameandstatus_statusAndName_9U-hi"
+                                >
+                                  <div
+                                    class="personanameandstatus_playerName_1uxaf"
+                                  >
+                                    ConcreteFox
+                                  </div>
+                                  <div
+                                    class="friendsnooze_SnoozeContainer_1OfTa online"
+                                  >
+                                    <div
+                                      data-text="Z"
+                                      class="friendsnooze_SnoozeZ_29fyi friendsnooze_Z1_GU6T2"
+                                    >
+                                      Z
+                                    </div>
+                                    <div
+                                      data-text="Z"
+                                      class="friendsnooze_SnoozeZ_29fyi friendsnooze_Z2_277XL"
+                                    >
+                                      Z
+                                    </div>
+                                    <div
+                                      data-text="Z"
+                                      class="friendsnooze_SnoozeZ_29fyi friendsnooze_Z3_1gXQi"
+                                    >
+                                      Z
+                                    </div>
+                                  </div>
+                                  <div class="ContextMenuButton">
+                                    <svg
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      class="SVGIcon_Button SVGIcon_DownArrowContextMenu"
+                                      data-name="Layer 1"
+                                      viewBox="0 0 128 128"
+                                      x="0px"
+                                      y="0px"
+                                    >
+                                      <polygon
+                                        points="50 59.49 13.21 22.89 4.74 31.39 50 76.41 95.26 31.39 86.79 22.89 50 59.49"
+                                      ></polygon>
+                                    </svg>
+                                  </div>
+                                </div>
+                                <div
+                                  class="personanameandstatus_richPresenceContainer_21cNf"
+                                >
+                                  <div
+                                    class="personanameandstatus_gameName_qvibF personanameandstatus_richPresenceLabel_3Q6g1 no-drag"
+                                  >
+                                    Away
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="DropTarget friendGroup offlineFriends ">
+                        <div class="groupHeaderContainer">
+                          <div class="groupName">
+                            <div class="ExpandPlusMinus">
+                              <svg
+                                version="1.1"
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="SVGIcon_Button SVGIcon_PlusCircle"
+                                x="0px"
+                                y="0px"
+                                width="256px"
+                                height="256px"
+                                viewBox="0 0 256 256"
+                              >
+                                <circle
+                                  fill="none"
+                                  stroke-width="10"
+                                  stroke-miterlimit="10"
+                                  cx="128"
+                                  cy="128"
+                                  r="95.333"
+                                ></circle>
+                                <line
+                                  class="horizontalLine"
+                                  fill="none"
+                                  stroke-width="10"
+                                  stroke-linecap="round"
+                                  stroke-miterlimit="10"
+                                  x1="73.333"
+                                  y1="128"
+                                  x2="183.333"
+                                  y2="128"
+                                ></line>
+                                <line
+                                  class="verticalLine"
+                                  fill="none"
+                                  stroke-width="10"
+                                  stroke-linecap="round"
+                                  stroke-miterlimit="10"
+                                  x1="128.333"
+                                  y1="73.335"
+                                  x2="128.333"
+                                  y2="183.333"
+                                ></line>
+                              </svg>
+                            </div>
+                            Offline<span class="groupCount">(24)</span>
+                          </div>
+                          <div
+                            class="SortByRecent"
+                            title="Sorting alphabetically"
+                          >
+                            <svg
+                              version="1.1"
+                              id="Layer_1"
+                              xmlns="http://www.w3.org/2000/svg"
+                              class="SVGIcon_Button SVGIcon_SortBy"
+                              x="0px"
+                              y="0px"
+                              width="256px"
+                              height="256px"
+                              viewBox="0 0 256 256"
+                            >
+                              <g class="alphabet">
+                                <polyline
+                                  fill="none"
+                                  stroke-width="10"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-miterlimit="10"
+                                  points="70.268,109.934 94.483,63.635 119.77,109.934"
+                                ></polyline>
+                                <line
+                                  fill="none"
+                                  stroke-width="10"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-miterlimit="10"
+                                  x1="77.458"
+                                  y1="97.861"
+                                  x2="112.135"
+                                  y2="97.861"
+                                ></line>
+                                <polyline
+                                  fill="none"
+                                  stroke-width="10"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-miterlimit="10"
+                                  points="70.045,145.379 119.547,145.379 70.045,192.032 119.547,192.032"
+                                ></polyline>
+                              </g>
+                              <g class="Arrow">
+                                <polyline
+                                  fill="none"
+                                  stroke-width="10"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-miterlimit="10"
+                                  points="199.735,63.66 199.735,192.366 171.207,163.675"
+                                ></polyline>
+                                <polyline
+                                  fill="none"
+                                  stroke-width="10"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-miterlimit="10"
+                                  points="199.735,63.66 199.735,192.366 228.266,163.675"
+                                ></polyline>
+                              </g>
+                            </svg>
+                          </div>
+                        </div>
+                        <div class="groupList">
+                          <div class="friendCategoryContainer">
+                            <div
+                              class="friend offline friendStatusHover"
+                              draggable="true"
+                            >
+                              <div
+                                class="steamavatar_avatarHolder_1G7LI avatarHolder no-drag Medium"
+                              >
+                                <div
+                                  class="steamavatar_avatarStatus_1Pwr6 avatarStatus"
+                                ></div>
+                                <img
+                                  class="steamavatar_avatar_f2laR avatar"
+                                  src="https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/3e/3e5e3c0b8ba74835ba7479d82dde85e696a5be6a_medium.jpg"
+                                  draggable="false"
+                                />
+                              </div>
+                              <div
+                                class="labelHolder offline personanameandstatus_twoLine_2wZNn"
+                              >
+                                <div
+                                  class="personanameandstatus_statusAndName_9U-hi"
+                                >
+                                  <div
+                                    class="personanameandstatus_playerName_1uxaf"
+                                  >
+                                    Abby Dusk<span
+                                      class="personanameandstatus_playerNickname_3-32P"
+                                      >(Abby)</span
+                                    >
+                                  </div>
+                                  <div class="ContextMenuButton">
+                                    <svg
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      class="SVGIcon_Button SVGIcon_DownArrowContextMenu"
+                                      data-name="Layer 1"
+                                      viewBox="0 0 128 128"
+                                      x="0px"
+                                      y="0px"
+                                    >
+                                      <polygon
+                                        points="50 59.49 13.21 22.89 4.74 31.39 50 76.41 95.26 31.39 86.79 22.89 50 59.49"
+                                      ></polygon>
+                                    </svg>
+                                  </div>
+                                </div>
+                                <div
+                                  class="personanameandstatus_richPresenceContainer_21cNf"
+                                >
+                                  <div
+                                    class="personanameandstatus_gameName_qvibF personanameandstatus_richPresenceLabel_3Q6g1 no-drag"
+                                  >
+                                    Last online 38 minutes ago
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="friendCategoryContainer">
+                            <div
+                              class="friend offline friendStatusHover"
+                              draggable="true"
+                            >
+                              <div
+                                class="steamavatar_avatarHolder_1G7LI avatarHolder no-drag Medium"
+                              >
+                                <div
+                                  class="steamavatar_avatarStatus_1Pwr6 avatarStatus"
+                                ></div>
+                                <img
+                                  class="steamavatar_avatar_f2laR avatar"
+                                  src="https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/b1/b1231fc79711d1328f367ff89eb83f7121ca661d_medium.jpg"
+                                  draggable="false"
+                                />
+                              </div>
+                              <div
+                                class="labelHolder offline personanameandstatus_twoLine_2wZNn"
+                              >
+                                <div
+                                  class="personanameandstatus_statusAndName_9U-hi"
+                                >
+                                  <div
+                                    class="personanameandstatus_playerName_1uxaf"
+                                  >
+                                    Alpha Papa<span
+                                      class="personanameandstatus_playerNickname_3-32P"
+                                      >(Taira)</span
+                                    >
+                                  </div>
+                                  <div class="ContextMenuButton">
+                                    <svg
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      class="SVGIcon_Button SVGIcon_DownArrowContextMenu"
+                                      data-name="Layer 1"
+                                      viewBox="0 0 128 128"
+                                      x="0px"
+                                      y="0px"
+                                    >
+                                      <polygon
+                                        points="50 59.49 13.21 22.89 4.74 31.39 50 76.41 95.26 31.39 86.79 22.89 50 59.49"
+                                      ></polygon>
+                                    </svg>
+                                  </div>
+                                </div>
+                                <div
+                                  class="personanameandstatus_richPresenceContainer_21cNf"
+                                >
+                                  <div
+                                    class="personanameandstatus_gameName_qvibF personanameandstatus_richPresenceLabel_3Q6g1 no-drag"
+                                  >
+                                    Last online 3 years ago
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="friendCategoryContainer">
+                            <div
+                              class="friend offline friendStatusHover"
+                              draggable="true"
+                            >
+                              <div
+                                class="steamavatar_avatarHolder_1G7LI avatarHolder no-drag Medium"
+                              >
+                                <div
+                                  class="steamavatar_avatarStatus_1Pwr6 avatarStatus"
+                                ></div>
+                                <img
+                                  class="steamavatar_avatar_f2laR avatar"
+                                  src="https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/93/9311058768b21d2f15069bf20abcf8353de837a5_medium.jpg"
+                                  draggable="false"
+                                />
+                              </div>
+                              <div
+                                class="labelHolder offline personanameandstatus_twoLine_2wZNn"
+                              >
+                                <div
+                                  class="personanameandstatus_statusAndName_9U-hi"
+                                >
+                                  <div
+                                    class="personanameandstatus_playerName_1uxaf"
+                                  >
+                                    apple<span
+                                      class="personanameandstatus_playerNickname_3-32P"
+                                      >(George)</span
+                                    >
+                                  </div>
+                                  <div class="ContextMenuButton">
+                                    <svg
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      class="SVGIcon_Button SVGIcon_DownArrowContextMenu"
+                                      data-name="Layer 1"
+                                      viewBox="0 0 128 128"
+                                      x="0px"
+                                      y="0px"
+                                    >
+                                      <polygon
+                                        points="50 59.49 13.21 22.89 4.74 31.39 50 76.41 95.26 31.39 86.79 22.89 50 59.49"
+                                      ></polygon>
+                                    </svg>
+                                  </div>
+                                </div>
+                                <div
+                                  class="personanameandstatus_richPresenceContainer_21cNf"
+                                >
+                                  <div
+                                    class="personanameandstatus_gameName_qvibF personanameandstatus_richPresenceLabel_3Q6g1 no-drag"
+                                  >
+                                    Last online 1 day and 16 hours ago
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="friendCategoryContainer">
+                            <div
+                              class="friend offline friendStatusHover"
+                              draggable="true"
+                            >
+                              <div
+                                class="steamavatar_avatarHolder_1G7LI avatarHolder no-drag Medium"
+                              >
+                                <div
+                                  class="steamavatar_avatarStatus_1Pwr6 avatarStatus"
+                                ></div>
+                                <img
+                                  class="steamavatar_avatar_f2laR avatar"
+                                  src="https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/89/8933d23818a6249604590ae5c208c2391f7daa11_medium.jpg"
+                                  draggable="false"
+                                />
+                              </div>
+                              <div
+                                class="labelHolder offline personanameandstatus_twoLine_2wZNn"
+                              >
+                                <div
+                                  class="personanameandstatus_statusAndName_9U-hi"
+                                >
+                                  <div
+                                    class="personanameandstatus_playerName_1uxaf"
+                                  >
+                                    BullDog<span
+                                      class="personanameandstatus_playerNickname_3-32P"
+                                      >(Joel)</span
+                                    >
+                                  </div>
+                                  <div class="ContextMenuButton">
+                                    <svg
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      class="SVGIcon_Button SVGIcon_DownArrowContextMenu"
+                                      data-name="Layer 1"
+                                      viewBox="0 0 128 128"
+                                      x="0px"
+                                      y="0px"
+                                    >
+                                      <polygon
+                                        points="50 59.49 13.21 22.89 4.74 31.39 50 76.41 95.26 31.39 86.79 22.89 50 59.49"
+                                      ></polygon>
+                                    </svg>
+                                  </div>
+                                </div>
+                                <div
+                                  class="personanameandstatus_richPresenceContainer_21cNf"
+                                >
+                                  <div
+                                    class="personanameandstatus_gameName_qvibF personanameandstatus_richPresenceLabel_3Q6g1 no-drag"
+                                  >
+                                    Last online 3 days ago
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="friendCategoryContainer">
+                            <div
+                              class="friend offline friendStatusHover"
+                              draggable="true"
+                            >
+                              <div
+                                class="steamavatar_avatarHolder_1G7LI avatarHolder no-drag Medium"
+                              >
+                                <div
+                                  class="steamavatar_avatarStatus_1Pwr6 avatarStatus"
+                                ></div>
+                                <img
+                                  class="steamavatar_avatar_f2laR avatar"
+                                  src="https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/06/0636805565be0b34e11e20ba4e538e7b61f15c28_medium.jpg"
+                                  draggable="false"
+                                />
+                              </div>
+                              <div
+                                class="labelHolder offline personanameandstatus_twoLine_2wZNn"
+                              >
+                                <div
+                                  class="personanameandstatus_statusAndName_9U-hi"
+                                >
+                                  <div
+                                    class="personanameandstatus_playerName_1uxaf"
+                                  >
+                                    Callywelly<span
+                                      class="personanameandstatus_playerNickname_3-32P"
+                                      >(Callum)</span
+                                    >
+                                  </div>
+                                  <div class="ContextMenuButton">
+                                    <svg
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      class="SVGIcon_Button SVGIcon_DownArrowContextMenu"
+                                      data-name="Layer 1"
+                                      viewBox="0 0 128 128"
+                                      x="0px"
+                                      y="0px"
+                                    >
+                                      <polygon
+                                        points="50 59.49 13.21 22.89 4.74 31.39 50 76.41 95.26 31.39 86.79 22.89 50 59.49"
+                                      ></polygon>
+                                    </svg>
+                                  </div>
+                                </div>
+                                <div
+                                  class="personanameandstatus_richPresenceContainer_21cNf"
+                                >
+                                  <div
+                                    class="personanameandstatus_gameName_qvibF personanameandstatus_richPresenceLabel_3Q6g1 no-drag"
+                                  >
+                                    Last online 7 weeks ago
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="friendCategoryContainer">
+                            <div
+                              class="friend offline friendStatusHover"
+                              draggable="true"
+                            >
+                              <div
+                                class="steamavatar_avatarHolder_1G7LI avatarHolder no-drag Medium"
+                              >
+                                <div
+                                  class="steamavatar_avatarStatus_1Pwr6 avatarStatus"
+                                ></div>
+                                <img
+                                  class="steamavatar_avatar_f2laR avatar"
+                                  src="https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/23/2330997877d85e07ceb063c573f76f4af9d4423c_medium.jpg"
+                                  draggable="false"
+                                />
+                              </div>
+                              <div
+                                class="labelHolder offline personanameandstatus_twoLine_2wZNn"
+                              >
+                                <div
+                                  class="personanameandstatus_statusAndName_9U-hi"
+                                >
+                                  <div
+                                    class="personanameandstatus_playerName_1uxaf"
+                                  >
+                                    Dazz<span
+                                      class="personanameandstatus_playerNickname_3-32P"
+                                      >(Darren)</span
+                                    >
+                                  </div>
+                                  <div class="ContextMenuButton">
+                                    <svg
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      class="SVGIcon_Button SVGIcon_DownArrowContextMenu"
+                                      data-name="Layer 1"
+                                      viewBox="0 0 128 128"
+                                      x="0px"
+                                      y="0px"
+                                    >
+                                      <polygon
+                                        points="50 59.49 13.21 22.89 4.74 31.39 50 76.41 95.26 31.39 86.79 22.89 50 59.49"
+                                      ></polygon>
+                                    </svg>
+                                  </div>
+                                </div>
+                                <div
+                                  class="personanameandstatus_richPresenceContainer_21cNf"
+                                >
+                                  <div
+                                    class="personanameandstatus_gameName_qvibF personanameandstatus_richPresenceLabel_3Q6g1 no-drag"
+                                  >
+                                    Last online 2 days ago
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="friendCategoryContainer">
+                            <div
+                              class="friend offline friendStatusHover"
+                              draggable="true"
+                            >
+                              <div
+                                class="steamavatar_avatarHolder_1G7LI avatarHolder no-drag Medium"
+                              >
+                                <div
+                                  class="steamavatar_avatarStatus_1Pwr6 avatarStatus"
+                                ></div>
+                                <img
+                                  class="steamavatar_avatar_f2laR avatar"
+                                  src="https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/ba/ba67110bf29596903a21e02fc4736056471e0551_medium.jpg"
+                                  draggable="false"
+                                />
+                              </div>
+                              <div
+                                class="labelHolder offline personanameandstatus_twoLine_2wZNn"
+                              >
+                                <div
+                                  class="personanameandstatus_statusAndName_9U-hi"
+                                >
+                                  <div
+                                    class="personanameandstatus_playerName_1uxaf"
+                                  >
+                                    Dj
+                                  </div>
+                                  <div class="ContextMenuButton">
+                                    <svg
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      class="SVGIcon_Button SVGIcon_DownArrowContextMenu"
+                                      data-name="Layer 1"
+                                      viewBox="0 0 128 128"
+                                      x="0px"
+                                      y="0px"
+                                    >
+                                      <polygon
+                                        points="50 59.49 13.21 22.89 4.74 31.39 50 76.41 95.26 31.39 86.79 22.89 50 59.49"
+                                      ></polygon>
+                                    </svg>
+                                  </div>
+                                </div>
+                                <div
+                                  class="personanameandstatus_richPresenceContainer_21cNf"
+                                >
+                                  <div
+                                    class="personanameandstatus_gameName_qvibF personanameandstatus_richPresenceLabel_3Q6g1 no-drag"
+                                  >
+                                    Last online 1 week ago
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="friendCategoryContainer">
+                            <div
+                              class="friend offline friendStatusHover"
+                              draggable="true"
+                            >
+                              <div
+                                class="steamavatar_avatarHolder_1G7LI avatarHolder no-drag Medium"
+                              >
+                                <div
+                                  class="steamavatar_avatarStatus_1Pwr6 avatarStatus"
+                                ></div>
+                                <img
+                                  class="steamavatar_avatar_f2laR avatar"
+                                  src="https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/5e/5ea264d0606ed67ad64e4d7401ddd68d0630cb52_medium.jpg"
+                                  draggable="false"
+                                />
+                              </div>
+                              <div
+                                class="labelHolder offline personanameandstatus_twoLine_2wZNn"
+                              >
+                                <div
+                                  class="personanameandstatus_statusAndName_9U-hi"
+                                >
+                                  <div
+                                    class="personanameandstatus_playerName_1uxaf"
+                                  >
+                                    Dooby<span
+                                      class="personanameandstatus_playerNickname_3-32P"
+                                      >(Dianna)</span
+                                    >
+                                  </div>
+                                  <div class="ContextMenuButton">
+                                    <svg
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      class="SVGIcon_Button SVGIcon_DownArrowContextMenu"
+                                      data-name="Layer 1"
+                                      viewBox="0 0 128 128"
+                                      x="0px"
+                                      y="0px"
+                                    >
+                                      <polygon
+                                        points="50 59.49 13.21 22.89 4.74 31.39 50 76.41 95.26 31.39 86.79 22.89 50 59.49"
+                                      ></polygon>
+                                    </svg>
+                                  </div>
+                                </div>
+                                <div
+                                  class="personanameandstatus_richPresenceContainer_21cNf"
+                                >
+                                  <div
+                                    class="personanameandstatus_gameName_qvibF personanameandstatus_richPresenceLabel_3Q6g1 no-drag"
+                                  >
+                                    Last online 2 weeks ago
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="friendCategoryContainer">
+                            <div
+                              class="friend offline friendStatusHover"
+                              draggable="true"
+                            >
+                              <div
+                                class="steamavatar_avatarHolder_1G7LI avatarHolder no-drag Medium"
+                              >
+                                <div
+                                  class="steamavatar_avatarStatus_1Pwr6 avatarStatus"
+                                ></div>
+                                <img
+                                  class="steamavatar_avatar_f2laR avatar"
+                                  src="https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/95/95c8d501da0505f52862aed28bba915b38f7154d_medium.jpg"
+                                  draggable="false"
+                                />
+                              </div>
+                              <div
+                                class="labelHolder offline personanameandstatus_twoLine_2wZNn"
+                              >
+                                <div
+                                  class="personanameandstatus_statusAndName_9U-hi"
+                                >
+                                  <div
+                                    class="personanameandstatus_playerName_1uxaf"
+                                  >
+                                    GnomeChild<span
+                                      class="personanameandstatus_playerNickname_3-32P"
+                                      >(Christy)</span
+                                    >
+                                  </div>
+                                  <div class="ContextMenuButton">
+                                    <svg
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      class="SVGIcon_Button SVGIcon_DownArrowContextMenu"
+                                      data-name="Layer 1"
+                                      viewBox="0 0 128 128"
+                                      x="0px"
+                                      y="0px"
+                                    >
+                                      <polygon
+                                        points="50 59.49 13.21 22.89 4.74 31.39 50 76.41 95.26 31.39 86.79 22.89 50 59.49"
+                                      ></polygon>
+                                    </svg>
+                                  </div>
+                                </div>
+                                <div
+                                  class="personanameandstatus_richPresenceContainer_21cNf"
+                                >
+                                  <div
+                                    class="personanameandstatus_gameName_qvibF personanameandstatus_richPresenceLabel_3Q6g1 no-drag"
+                                  >
+                                    Last online 5 days ago
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="friendCategoryContainer">
+                            <div
+                              class="friend offline friendStatusHover"
+                              draggable="true"
+                            >
+                              <div
+                                class="steamavatar_avatarHolder_1G7LI avatarHolder no-drag Medium"
+                              >
+                                <div
+                                  class="steamavatar_avatarStatus_1Pwr6 avatarStatus"
+                                ></div>
+                                <img
+                                  class="steamavatar_avatar_f2laR avatar"
+                                  src="https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/65/651ddbe011bba238af5abd8ebde7325ea3e3aa8a_medium.jpg"
+                                  draggable="false"
+                                />
+                              </div>
+                              <div
+                                class="labelHolder offline personanameandstatus_twoLine_2wZNn"
+                              >
+                                <div
+                                  class="personanameandstatus_statusAndName_9U-hi"
+                                >
+                                  <div
+                                    class="personanameandstatus_playerName_1uxaf"
+                                  >
+                                    GodlikeOne
+                                  </div>
+                                  <div class="ContextMenuButton">
+                                    <svg
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      class="SVGIcon_Button SVGIcon_DownArrowContextMenu"
+                                      data-name="Layer 1"
+                                      viewBox="0 0 128 128"
+                                      x="0px"
+                                      y="0px"
+                                    >
+                                      <polygon
+                                        points="50 59.49 13.21 22.89 4.74 31.39 50 76.41 95.26 31.39 86.79 22.89 50 59.49"
+                                      ></polygon>
+                                    </svg>
+                                  </div>
+                                </div>
+                                <div
+                                  class="personanameandstatus_richPresenceContainer_21cNf"
+                                >
+                                  <div
+                                    class="personanameandstatus_gameName_qvibF personanameandstatus_richPresenceLabel_3Q6g1 no-drag"
+                                  >
+                                    Last online 15 hours ago
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="friendCategoryContainer">
+                            <div
+                              class="friend offline friendStatusHover"
+                              draggable="true"
+                            >
+                              <div
+                                class="steamavatar_avatarHolder_1G7LI avatarHolder no-drag Medium"
+                              >
+                                <div
+                                  class="steamavatar_avatarStatus_1Pwr6 avatarStatus"
+                                ></div>
+                                <img
+                                  class="steamavatar_avatar_f2laR avatar"
+                                  src="https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/a9/a9bb072073770118e2ab718caf4101e37c76e524_medium.jpg"
+                                  draggable="false"
+                                />
+                              </div>
+                              <div
+                                class="labelHolder offline personanameandstatus_twoLine_2wZNn"
+                              >
+                                <div
+                                  class="personanameandstatus_statusAndName_9U-hi"
+                                >
+                                  <div
+                                    class="personanameandstatus_playerName_1uxaf"
+                                  >
+                                    Innox<span
+                                      class="personanameandstatus_playerNickname_3-32P"
+                                      >(Tim)</span
+                                    >
+                                  </div>
+                                  <div class="ContextMenuButton">
+                                    <svg
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      class="SVGIcon_Button SVGIcon_DownArrowContextMenu"
+                                      data-name="Layer 1"
+                                      viewBox="0 0 128 128"
+                                      x="0px"
+                                      y="0px"
+                                    >
+                                      <polygon
+                                        points="50 59.49 13.21 22.89 4.74 31.39 50 76.41 95.26 31.39 86.79 22.89 50 59.49"
+                                      ></polygon>
+                                    </svg>
+                                  </div>
+                                </div>
+                                <div
+                                  class="personanameandstatus_richPresenceContainer_21cNf"
+                                >
+                                  <div
+                                    class="personanameandstatus_gameName_qvibF personanameandstatus_richPresenceLabel_3Q6g1 no-drag"
+                                  >
+                                    Last online 2 days ago
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="friendCategoryContainer">
+                            <div
+                              class="friend offline friendStatusHover"
+                              draggable="true"
+                            >
+                              <div
+                                class="steamavatar_avatarHolder_1G7LI avatarHolder no-drag Medium"
+                              >
+                                <div
+                                  class="steamavatar_avatarStatus_1Pwr6 avatarStatus"
+                                ></div>
+                                <img
+                                  class="steamavatar_avatar_f2laR avatar"
+                                  src="https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/2b/2b4f0bc30e4ab9ae1d4e26ae4cc612c92e74735b_medium.jpg"
+                                  draggable="false"
+                                />
+                              </div>
+                              <div
+                                class="labelHolder offline personanameandstatus_twoLine_2wZNn"
+                              >
+                                <div
+                                  class="personanameandstatus_statusAndName_9U-hi"
+                                >
+                                  <div
+                                    class="personanameandstatus_playerName_1uxaf"
+                                  >
+                                    Lozenge
+                                  </div>
+                                  <div class="ContextMenuButton">
+                                    <svg
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      class="SVGIcon_Button SVGIcon_DownArrowContextMenu"
+                                      data-name="Layer 1"
+                                      viewBox="0 0 128 128"
+                                      x="0px"
+                                      y="0px"
+                                    >
+                                      <polygon
+                                        points="50 59.49 13.21 22.89 4.74 31.39 50 76.41 95.26 31.39 86.79 22.89 50 59.49"
+                                      ></polygon>
+                                    </svg>
+                                  </div>
+                                </div>
+                                <div
+                                  class="personanameandstatus_richPresenceContainer_21cNf"
+                                >
+                                  <div
+                                    class="personanameandstatus_gameName_qvibF personanameandstatus_richPresenceLabel_3Q6g1 no-drag"
+                                  >
+                                    Last online 4 days ago
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="friendCategoryContainer">
+                            <div
+                              class="friend offline friendStatusHover"
+                              draggable="true"
+                            >
+                              <div
+                                class="steamavatar_avatarHolder_1G7LI avatarHolder no-drag Medium"
+                              >
+                                <div
+                                  class="steamavatar_avatarStatus_1Pwr6 avatarStatus"
+                                ></div>
+                                <img
+                                  class="steamavatar_avatar_f2laR avatar"
+                                  src="https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/fe/fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb_medium.jpg"
+                                  draggable="false"
+                                />
+                              </div>
+                              <div
+                                class="labelHolder offline personanameandstatus_twoLine_2wZNn"
+                              >
+                                <div
+                                  class="personanameandstatus_statusAndName_9U-hi"
+                                >
+                                  <div
+                                    class="personanameandstatus_playerName_1uxaf"
+                                  >
+                                    philyg
+                                  </div>
+                                  <div class="ContextMenuButton">
+                                    <svg
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      class="SVGIcon_Button SVGIcon_DownArrowContextMenu"
+                                      data-name="Layer 1"
+                                      viewBox="0 0 128 128"
+                                      x="0px"
+                                      y="0px"
+                                    >
+                                      <polygon
+                                        points="50 59.49 13.21 22.89 4.74 31.39 50 76.41 95.26 31.39 86.79 22.89 50 59.49"
+                                      ></polygon>
+                                    </svg>
+                                  </div>
+                                </div>
+                                <div
+                                  class="personanameandstatus_richPresenceContainer_21cNf"
+                                >
+                                  <div
+                                    class="personanameandstatus_gameName_qvibF personanameandstatus_richPresenceLabel_3Q6g1 no-drag"
+                                  >
+                                    Last online 5 weeks ago
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="friendCategoryContainer">
+                            <div
+                              class="friend offline friendStatusHover"
+                              draggable="true"
+                            >
+                              <div
+                                class="steamavatar_avatarHolder_1G7LI avatarHolder no-drag Medium"
+                              >
+                                <div
+                                  class="steamavatar_avatarStatus_1Pwr6 avatarStatus"
+                                ></div>
+                                <img
+                                  class="steamavatar_avatar_f2laR avatar"
+                                  src="https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/05/05f68a8d090726dbabfe29f3ca145842122b36b9_medium.jpg"
+                                  draggable="false"
+                                />
+                              </div>
+                              <div
+                                class="labelHolder offline personanameandstatus_twoLine_2wZNn"
+                              >
+                                <div
+                                  class="personanameandstatus_statusAndName_9U-hi"
+                                >
+                                  <div
+                                    class="personanameandstatus_playerName_1uxaf"
+                                  >
+                                    President Badger
+                                  </div>
+                                  <div class="ContextMenuButton">
+                                    <svg
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      class="SVGIcon_Button SVGIcon_DownArrowContextMenu"
+                                      data-name="Layer 1"
+                                      viewBox="0 0 128 128"
+                                      x="0px"
+                                      y="0px"
+                                    >
+                                      <polygon
+                                        points="50 59.49 13.21 22.89 4.74 31.39 50 76.41 95.26 31.39 86.79 22.89 50 59.49"
+                                      ></polygon>
+                                    </svg>
+                                  </div>
+                                </div>
+                                <div
+                                  class="personanameandstatus_richPresenceContainer_21cNf"
+                                >
+                                  <div
+                                    class="personanameandstatus_gameName_qvibF personanameandstatus_richPresenceLabel_3Q6g1 no-drag"
+                                  >
+                                    Last online 14 hours ago
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="friendCategoryContainer">
+                            <div
+                              class="friend offline friendStatusHover"
+                              draggable="true"
+                            >
+                              <div
+                                class="steamavatar_avatarHolder_1G7LI avatarHolder no-drag Medium"
+                              >
+                                <div
+                                  class="steamavatar_avatarStatus_1Pwr6 avatarStatus"
+                                ></div>
+                                <img
+                                  class="steamavatar_avatar_f2laR avatar"
+                                  src="https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/32/32e919bb677712a3e330f0e6f463d5b95d3c14ed_medium.jpg"
+                                  draggable="false"
+                                />
+                              </div>
+                              <div
+                                class="labelHolder offline personanameandstatus_twoLine_2wZNn"
+                              >
+                                <div
+                                  class="personanameandstatus_statusAndName_9U-hi"
+                                >
+                                  <div
+                                    class="personanameandstatus_playerName_1uxaf"
+                                  >
+                                    pussycat<span
+                                      class="personanameandstatus_playerNickname_3-32P"
+                                      >(Luc)</span
+                                    >
+                                  </div>
+                                  <div class="ContextMenuButton">
+                                    <svg
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      class="SVGIcon_Button SVGIcon_DownArrowContextMenu"
+                                      data-name="Layer 1"
+                                      viewBox="0 0 128 128"
+                                      x="0px"
+                                      y="0px"
+                                    >
+                                      <polygon
+                                        points="50 59.49 13.21 22.89 4.74 31.39 50 76.41 95.26 31.39 86.79 22.89 50 59.49"
+                                      ></polygon>
+                                    </svg>
+                                  </div>
+                                </div>
+                                <div
+                                  class="personanameandstatus_richPresenceContainer_21cNf"
+                                >
+                                  <div
+                                    class="personanameandstatus_gameName_qvibF personanameandstatus_richPresenceLabel_3Q6g1 no-drag"
+                                  >
+                                    Last online 1 week ago
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="friendCategoryContainer">
+                            <div
+                              class="friend offline friendStatusHover"
+                              draggable="true"
+                            >
+                              <div
+                                class="steamavatar_avatarHolder_1G7LI avatarHolder no-drag Medium"
+                              >
+                                <div
+                                  class="steamavatar_avatarStatus_1Pwr6 avatarStatus"
+                                ></div>
+                                <img
+                                  class="steamavatar_avatar_f2laR avatar"
+                                  src="https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/9a/9a846740a8244dff576c861d3c3a8e298af899df_medium.jpg"
+                                  draggable="false"
+                                />
+                              </div>
+                              <div
+                                class="labelHolder offline personanameandstatus_twoLine_2wZNn"
+                              >
+                                <div
+                                  class="personanameandstatus_statusAndName_9U-hi"
+                                >
+                                  <div
+                                    class="personanameandstatus_playerName_1uxaf"
+                                  >
+                                    Raggy<span
+                                      class="personanameandstatus_playerNickname_3-32P"
+                                      >(Ryan)</span
+                                    >
+                                  </div>
+                                  <div class="ContextMenuButton">
+                                    <svg
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      class="SVGIcon_Button SVGIcon_DownArrowContextMenu"
+                                      data-name="Layer 1"
+                                      viewBox="0 0 128 128"
+                                      x="0px"
+                                      y="0px"
+                                    >
+                                      <polygon
+                                        points="50 59.49 13.21 22.89 4.74 31.39 50 76.41 95.26 31.39 86.79 22.89 50 59.49"
+                                      ></polygon>
+                                    </svg>
+                                  </div>
+                                </div>
+                                <div
+                                  class="personanameandstatus_richPresenceContainer_21cNf"
+                                >
+                                  <div
+                                    class="personanameandstatus_gameName_qvibF personanameandstatus_richPresenceLabel_3Q6g1 no-drag"
+                                  >
+                                    Last online 2 days ago
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="friendCategoryContainer">
+                            <div
+                              class="friend offline friendStatusHover"
+                              draggable="true"
+                            >
+                              <div
+                                class="steamavatar_avatarHolder_1G7LI avatarHolder no-drag Medium"
+                              >
+                                <div
+                                  class="steamavatar_avatarStatus_1Pwr6 avatarStatus"
+                                ></div>
+                                <img
+                                  class="steamavatar_avatar_f2laR avatar"
+                                  src="https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/47/4785de88816b777daa5e2868e94d65aaecdc0662_medium.jpg"
+                                  draggable="false"
+                                />
+                              </div>
+                              <div
+                                class="labelHolder offline personanameandstatus_twoLine_2wZNn"
+                              >
+                                <div
+                                  class="personanameandstatus_statusAndName_9U-hi"
+                                >
+                                  <div
+                                    class="personanameandstatus_playerName_1uxaf"
+                                  >
+                                    Revilo<span
+                                      class="personanameandstatus_playerNickname_3-32P"
+                                      >(Oliver)</span
+                                    >
+                                  </div>
+                                  <div class="ContextMenuButton">
+                                    <svg
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      class="SVGIcon_Button SVGIcon_DownArrowContextMenu"
+                                      data-name="Layer 1"
+                                      viewBox="0 0 128 128"
+                                      x="0px"
+                                      y="0px"
+                                    >
+                                      <polygon
+                                        points="50 59.49 13.21 22.89 4.74 31.39 50 76.41 95.26 31.39 86.79 22.89 50 59.49"
+                                      ></polygon>
+                                    </svg>
+                                  </div>
+                                </div>
+                                <div
+                                  class="personanameandstatus_richPresenceContainer_21cNf"
+                                >
+                                  <div
+                                    class="personanameandstatus_gameName_qvibF personanameandstatus_richPresenceLabel_3Q6g1 no-drag"
+                                  >
+                                    Last online 2 months ago
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="friendCategoryContainer">
+                            <div
+                              class="friend offline friendStatusHover"
+                              draggable="true"
+                            >
+                              <div
+                                class="steamavatar_avatarHolder_1G7LI avatarHolder no-drag Medium"
+                              >
+                                <div
+                                  class="steamavatar_avatarStatus_1Pwr6 avatarStatus"
+                                ></div>
+                                <img
+                                  class="steamavatar_avatar_f2laR avatar"
+                                  src="https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/0e/0e13c8d6fc39b10022f06d51cf58824e1942c763_medium.jpg"
+                                  draggable="false"
+                                />
+                              </div>
+                              <div
+                                class="labelHolder offline personanameandstatus_twoLine_2wZNn"
+                              >
+                                <div
+                                  class="personanameandstatus_statusAndName_9U-hi"
+                                >
+                                  <div
+                                    class="personanameandstatus_playerName_1uxaf"
+                                  >
+                                    Rocktopus<span
+                                      class="personanameandstatus_playerNickname_3-32P"
+                                      >(Jesse)</span
+                                    >
+                                  </div>
+                                  <div class="ContextMenuButton">
+                                    <svg
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      class="SVGIcon_Button SVGIcon_DownArrowContextMenu"
+                                      data-name="Layer 1"
+                                      viewBox="0 0 128 128"
+                                      x="0px"
+                                      y="0px"
+                                    >
+                                      <polygon
+                                        points="50 59.49 13.21 22.89 4.74 31.39 50 76.41 95.26 31.39 86.79 22.89 50 59.49"
+                                      ></polygon>
+                                    </svg>
+                                  </div>
+                                </div>
+                                <div
+                                  class="personanameandstatus_richPresenceContainer_21cNf"
+                                >
+                                  <div
+                                    class="personanameandstatus_gameName_qvibF personanameandstatus_richPresenceLabel_3Q6g1 no-drag"
+                                  >
+                                    Last online 13 hours ago
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="friendCategoryContainer">
+                            <div
+                              class="friend offline friendStatusHover"
+                              draggable="true"
+                            >
+                              <div
+                                class="steamavatar_avatarHolder_1G7LI avatarHolder no-drag Medium"
+                              >
+                                <div
+                                  class="steamavatar_avatarStatus_1Pwr6 avatarStatus"
+                                ></div>
+                                <img
+                                  class="steamavatar_avatar_f2laR avatar"
+                                  src="https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/c7/c7d254905c085017ec0123f3bfada3e3f3be446f_medium.jpg"
+                                  draggable="false"
+                                />
+                              </div>
+                              <div
+                                class="labelHolder offline personanameandstatus_twoLine_2wZNn"
+                              >
+                                <div
+                                  class="personanameandstatus_statusAndName_9U-hi"
+                                >
+                                  <div
+                                    class="personanameandstatus_playerName_1uxaf"
+                                  >
+                                    S A M M Y B O Y E<span
+                                      class="personanameandstatus_playerNickname_3-32P"
+                                      >(Sam)</span
+                                    >
+                                  </div>
+                                  <div class="ContextMenuButton">
+                                    <svg
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      class="SVGIcon_Button SVGIcon_DownArrowContextMenu"
+                                      data-name="Layer 1"
+                                      viewBox="0 0 128 128"
+                                      x="0px"
+                                      y="0px"
+                                    >
+                                      <polygon
+                                        points="50 59.49 13.21 22.89 4.74 31.39 50 76.41 95.26 31.39 86.79 22.89 50 59.49"
+                                      ></polygon>
+                                    </svg>
+                                  </div>
+                                </div>
+                                <div
+                                  class="personanameandstatus_richPresenceContainer_21cNf"
+                                >
+                                  <div
+                                    class="personanameandstatus_gameName_qvibF personanameandstatus_richPresenceLabel_3Q6g1 no-drag"
+                                  >
+                                    Last online 1 year and 8 months ago
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="friendCategoryContainer">
+                            <div
+                              class="friend offline friendStatusHover"
+                              draggable="true"
+                            >
+                              <div
+                                class="steamavatar_avatarHolder_1G7LI avatarHolder no-drag Medium"
+                              >
+                                <div
+                                  class="steamavatar_avatarStatus_1Pwr6 avatarStatus"
+                                ></div>
+                                <img
+                                  class="steamavatar_avatar_f2laR avatar"
+                                  src="https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/df/df9fae1b722b2704ae760b716f6456ce774fd212_medium.jpg"
+                                  draggable="false"
+                                />
+                              </div>
+                              <div
+                                class="labelHolder offline personanameandstatus_twoLine_2wZNn"
+                              >
+                                <div
+                                  class="personanameandstatus_statusAndName_9U-hi"
+                                >
+                                  <div
+                                    class="personanameandstatus_playerName_1uxaf"
+                                  >
+                                    Sack Wack<span
+                                      class="personanameandstatus_playerNickname_3-32P"
+                                      >(Issac)</span
+                                    >
+                                  </div>
+                                  <div class="ContextMenuButton">
+                                    <svg
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      class="SVGIcon_Button SVGIcon_DownArrowContextMenu"
+                                      data-name="Layer 1"
+                                      viewBox="0 0 128 128"
+                                      x="0px"
+                                      y="0px"
+                                    >
+                                      <polygon
+                                        points="50 59.49 13.21 22.89 4.74 31.39 50 76.41 95.26 31.39 86.79 22.89 50 59.49"
+                                      ></polygon>
+                                    </svg>
+                                  </div>
+                                </div>
+                                <div
+                                  class="personanameandstatus_richPresenceContainer_21cNf"
+                                >
+                                  <div
+                                    class="personanameandstatus_gameName_qvibF personanameandstatus_richPresenceLabel_3Q6g1 no-drag"
+                                  >
+                                    Last online 1 week ago
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="friendCategoryContainer">
+                            <div
+                              class="friend offline friendStatusHover"
+                              draggable="true"
+                            >
+                              <div
+                                class="steamavatar_avatarHolder_1G7LI avatarHolder no-drag Medium"
+                              >
+                                <div
+                                  class="steamavatar_avatarStatus_1Pwr6 avatarStatus"
+                                ></div>
+                                <img
+                                  class="steamavatar_avatar_f2laR avatar"
+                                  src="https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/4f/4f28c906536c5d66d654574d53b7fc230ddf9d6b_medium.jpg"
+                                  draggable="false"
+                                />
+                              </div>
+                              <div
+                                class="labelHolder offline personanameandstatus_twoLine_2wZNn"
+                              >
+                                <div
+                                  class="personanameandstatus_statusAndName_9U-hi"
+                                >
+                                  <div
+                                    class="personanameandstatus_playerName_1uxaf"
+                                  >
+                                    Schön<span
+                                      class="personanameandstatus_playerNickname_3-32P"
+                                      >(Finn)</span
+                                    >
+                                  </div>
+                                  <div class="ContextMenuButton">
+                                    <svg
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      class="SVGIcon_Button SVGIcon_DownArrowContextMenu"
+                                      data-name="Layer 1"
+                                      viewBox="0 0 128 128"
+                                      x="0px"
+                                      y="0px"
+                                    >
+                                      <polygon
+                                        points="50 59.49 13.21 22.89 4.74 31.39 50 76.41 95.26 31.39 86.79 22.89 50 59.49"
+                                      ></polygon>
+                                    </svg>
+                                  </div>
+                                </div>
+                                <div
+                                  class="personanameandstatus_richPresenceContainer_21cNf"
+                                >
+                                  <div
+                                    class="personanameandstatus_gameName_qvibF personanameandstatus_richPresenceLabel_3Q6g1 no-drag"
+                                  >
+                                    Last online 8 months ago
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="friendCategoryContainer">
+                            <div
+                              class="friend offline friendStatusHover"
+                              draggable="true"
+                            >
+                              <div
+                                class="steamavatar_avatarHolder_1G7LI avatarHolder no-drag Medium"
+                              >
+                                <div
+                                  class="steamavatar_avatarStatus_1Pwr6 avatarStatus"
+                                ></div>
+                                <img
+                                  class="steamavatar_avatar_f2laR avatar"
+                                  src="https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/1c/1ca6691b96f6fe798eed89b7407e3f92335c7a87_medium.jpg"
+                                  draggable="false"
+                                />
+                              </div>
+                              <div
+                                class="labelHolder offline personanameandstatus_twoLine_2wZNn"
+                              >
+                                <div
+                                  class="personanameandstatus_statusAndName_9U-hi"
+                                >
+                                  <div
+                                    class="personanameandstatus_playerName_1uxaf"
+                                  >
+                                    Seizured<span
+                                      class="personanameandstatus_playerNickname_3-32P"
+                                      >(Tommy)</span
+                                    >
+                                  </div>
+                                  <div class="ContextMenuButton">
+                                    <svg
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      class="SVGIcon_Button SVGIcon_DownArrowContextMenu"
+                                      data-name="Layer 1"
+                                      viewBox="0 0 128 128"
+                                      x="0px"
+                                      y="0px"
+                                    >
+                                      <polygon
+                                        points="50 59.49 13.21 22.89 4.74 31.39 50 76.41 95.26 31.39 86.79 22.89 50 59.49"
+                                      ></polygon>
+                                    </svg>
+                                  </div>
+                                </div>
+                                <div
+                                  class="personanameandstatus_richPresenceContainer_21cNf"
+                                >
+                                  <div
+                                    class="personanameandstatus_gameName_qvibF personanameandstatus_richPresenceLabel_3Q6g1 no-drag"
+                                  >
+                                    Last online 2 weeks ago
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="friendCategoryContainer">
+                            <div
+                              class="friend offline friendStatusHover"
+                              draggable="true"
+                            >
+                              <div
+                                class="steamavatar_avatarHolder_1G7LI avatarHolder no-drag Medium"
+                              >
+                                <div
+                                  class="steamavatar_avatarStatus_1Pwr6 avatarStatus"
+                                ></div>
+                                <img
+                                  class="steamavatar_avatar_f2laR avatar"
+                                  src="https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/7e/7e0b8e00af09bbf6d4f9a376d4ebc6106489b70e_medium.jpg"
+                                  draggable="false"
+                                />
+                              </div>
+                              <div
+                                class="labelHolder offline personanameandstatus_twoLine_2wZNn"
+                              >
+                                <div
+                                  class="personanameandstatus_statusAndName_9U-hi"
+                                >
+                                  <div
+                                    class="personanameandstatus_playerName_1uxaf"
+                                  >
+                                    SuperAwesomeProNinja<span
+                                      class="personanameandstatus_playerNickname_3-32P"
+                                      >(Max)</span
+                                    >
+                                  </div>
+                                  <div class="ContextMenuButton">
+                                    <svg
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      class="SVGIcon_Button SVGIcon_DownArrowContextMenu"
+                                      data-name="Layer 1"
+                                      viewBox="0 0 128 128"
+                                      x="0px"
+                                      y="0px"
+                                    >
+                                      <polygon
+                                        points="50 59.49 13.21 22.89 4.74 31.39 50 76.41 95.26 31.39 86.79 22.89 50 59.49"
+                                      ></polygon>
+                                    </svg>
+                                  </div>
+                                </div>
+                                <div
+                                  class="personanameandstatus_richPresenceContainer_21cNf"
+                                >
+                                  <div
+                                    class="personanameandstatus_gameName_qvibF personanameandstatus_richPresenceLabel_3Q6g1 no-drag"
+                                  >
+                                    Last online 1 year and 7 months ago
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="friendCategoryContainer">
+                            <div
+                              class="friend offline friendStatusHover"
+                              draggable="true"
+                            >
+                              <div
+                                class="steamavatar_avatarHolder_1G7LI avatarHolder no-drag Medium"
+                              >
+                                <div
+                                  class="steamavatar_avatarStatus_1Pwr6 avatarStatus"
+                                ></div>
+                                <img
+                                  class="steamavatar_avatar_f2laR avatar"
+                                  src="https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/9f/9f626c5b914bd78f95232ef5750114114496fb2b_medium.jpg"
+                                  draggable="false"
+                                />
+                              </div>
+                              <div
+                                class="labelHolder offline personanameandstatus_twoLine_2wZNn"
+                              >
+                                <div
+                                  class="personanameandstatus_statusAndName_9U-hi"
+                                >
+                                  <div
+                                    class="personanameandstatus_playerName_1uxaf"
+                                  >
+                                    Watlãw¿<span
+                                      class="personanameandstatus_playerNickname_3-32P"
+                                      >(Nathan)</span
+                                    >
+                                  </div>
+                                  <div class="ContextMenuButton">
+                                    <svg
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      class="SVGIcon_Button SVGIcon_DownArrowContextMenu"
+                                      data-name="Layer 1"
+                                      viewBox="0 0 128 128"
+                                      x="0px"
+                                      y="0px"
+                                    >
+                                      <polygon
+                                        points="50 59.49 13.21 22.89 4.74 31.39 50 76.41 95.26 31.39 86.79 22.89 50 59.49"
+                                      ></polygon>
+                                    </svg>
+                                  </div>
+                                </div>
+                                <div
+                                  class="personanameandstatus_richPresenceContainer_21cNf"
+                                >
+                                  <div
+                                    class="personanameandstatus_gameName_qvibF personanameandstatus_richPresenceLabel_3Q6g1 no-drag"
+                                  >
+                                    Last online 17 hours ago
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="disconnectBlocker"></div>
+                    </div>
+                  </div>
+                  <div class="insetshadow_FriendsListInsetShadowCtn_1S167">
+                    <div
+                      class="insetshadow_FriendListInsetShadowBottom_3cl4u"
+                    ></div>
+                  </div>
+                  <div
+                    class="FriendsListChatSection ChatRoomListContainerParent Collapsed"
+                  >
+                    <div class="friendsListSectionTitle chatSectionTitle">
+                      <div
+                        class="ToggleGroupChatList"
+                        title="Expand chats list"
+                      >
+                        <svg
+                          transform="rotate(-90)"
+                          version="1.1"
+                          id="arrowBase"
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="SVGIcon_Button SVGIcon_DoubleArrow"
+                          x="0px"
+                          y="0px"
+                          width="256px"
+                          height="256px"
+                          viewBox="0 0 256 256"
+                        >
+                          <polyline
+                            class="Arrow1"
+                            fill="none"
+                            stroke="#ffffff"
+                            stroke-width="23"
+                            stroke-linecap="round"
+                            stroke-miterlimit="10"
+                            points="135.65,21.667 30.081,127.235 137.18,234.333 "
+                          ></polyline>
+                          <polyline
+                            class="Arrow2"
+                            fill="none"
+                            stroke="#ffffff"
+                            stroke-width="23"
+                            stroke-linecap="round"
+                            stroke-miterlimit="10"
+                            points="224.389,21.667 118.821,127.235 225.92,234.333 "
+                          ></polyline>
+                        </svg>
+                      </div>
+                      <div class="voiceRoomDragBar">
+                        <div class="groupChatSectionTitle">Group Chats</div>
+                      </div>
+                      <button
+                        class="createChatRoomButton"
+                        title="Create a group chat"
+                      >
+                        <svg
+                          version="1.1"
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="SVGIcon_Button SVGIcon_NewChatGroup"
+                          x="0px"
+                          y="0px"
+                          viewBox="0 0 256 256"
+                        >
+                          <path
+                            class="Bubble"
+                            stroke-width="12"
+                            stroke-miterlimit="10"
+                            d="M127.393,10.833 c64.854,0,117.46,52.609,117.46,117.013c0,24.035-7.254,45.804-19.5,63.943c-4.99,7.711,13.15,39.457,20.408,51.705 c4.989,8.612-51.701-19.05-59.412-14.514c-17.233,9.979-37.188,15.872-58.957,15.872c-64.859,0-117.465-52.607-117.465-117.008 C9.928,63.442,62.534,10.833,127.393,10.833z"
+                          ></path>
+                          <line
+                            stroke-width="22"
+                            stroke-linecap="round"
+                            stroke-miterlimit="10"
+                            x1="83.5"
+                            y1="128.886"
+                            x2="176.184"
+                            y2="128.886"
+                          ></line>
+                          <line
+                            stroke-width="22"
+                            stroke-linecap="round"
+                            stroke-miterlimit="10"
+                            x1="129.842"
+                            y1="82.544"
+                            x2="129.842"
+                            y2="175.228"
+                          ></line>
+                        </svg>
+                      </button>
+                      <div class="disconnectBlocker"></div>
+                    </div>
+                    <div class="insetshadow_FriendsListInsetShadowCtn_1S167">
+                      <div
+                        class="insetshadow_FriendListInsetShadowTop_1mEmL"
+                      ></div>
+                    </div>
+                    <div
+                      class="chatRoomListContainer"
+                      style="height: 0px; max-height: 0px; min-height: 0px;"
+                    >
+                      <div class="ChatRoomList CompactFriendsList">
+                        <div
+                          class="ChatRoomListGroupItem NoChannels"
+                          draggable="true"
+                        >
+                          <div class="ChatRoomListGroupItem_header">
+                            <div class="ChatRoomGroupAvatar Small">
+                              <img
+                                class="ChatRoomGroupAvatar_Avatar"
+                                src="https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/f4/f48de34c76fbb5a020dd8859d957581e4dd37240_medium.jpg"
+                              />
+                            </div>
+                            <div class="groupNameStatusContainer">
+                              <div class="displayRow">
+                                <div class="chatRoomName">HoxHud</div>
+                                <div class="ContextMenuButton">
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    class="SVGIcon_Button SVGIcon_DownArrowContextMenu"
+                                    data-name="Layer 1"
+                                    viewBox="0 0 128 128"
+                                    x="0px"
+                                    y="0px"
+                                  >
+                                    <polygon
+                                      points="50 59.49 13.21 22.89 4.74 31.39 50 76.41 95.26 31.39 86.79 22.89 50 59.49"
+                                    ></polygon>
+                                  </svg>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="ChatRoomListGroupItem NoChannels"
+                          draggable="true"
+                        >
+                          <div class="ChatRoomListGroupItem_header">
+                            <div class="ChatRoomGroupAvatar Small">
+                              <div class="ChatRoomGroupAvatar_initials">ST</div>
+                            </div>
+                            <div class="groupNameStatusContainer">
+                              <div class="displayRow">
+                                <div class="chatRoomName">SkinTesting</div>
+                                <div class="ContextMenuButton">
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    class="SVGIcon_Button SVGIcon_DownArrowContextMenu"
+                                    data-name="Layer 1"
+                                    viewBox="0 0 128 128"
+                                    x="0px"
+                                    y="0px"
+                                  >
+                                    <polygon
+                                      points="50 59.49 13.21 22.89 4.74 31.39 50 76.41 95.26 31.39 86.79 22.89 50 59.49"
+                                    ></polygon>
+                                  </svg>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="ChatRoomListGroupItem NoChannels"
+                          draggable="true"
+                        >
+                          <div class="ChatRoomListGroupItem_header">
+                            <div class="ChatRoomGroupAvatar Small">
+                              <img
+                                class="ChatRoomGroupAvatar_Avatar"
+                                src="https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/3e/3e6d7fb58f333421400be5d3cfd4c727090c9e53_medium.jpg"
+                              />
+                            </div>
+                            <div class="groupNameStatusContainer">
+                              <div class="displayRow">
+                                <div class="chatRoomName">Vexil</div>
+                                <div class="ContextMenuButton">
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    class="SVGIcon_Button SVGIcon_DownArrowContextMenu"
+                                    data-name="Layer 1"
+                                    viewBox="0 0 128 128"
+                                    x="0px"
+                                    y="0px"
+                                  >
+                                    <polygon
+                                      points="50 59.49 13.21 22.89 4.74 31.39 50 76.41 95.26 31.39 86.79 22.89 50 59.49"
+                                    ></polygon>
+                                  </svg>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="disconnectBlocker"></div>
+                      </div>
+                    </div>
+                    <div class="insetshadow_FriendsListInsetShadowCtn_1S167">
+                      <div
+                        class="insetshadow_FriendListInsetShadowBottom_3cl4u"
+                      ></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="friendListFooter">
+                  <div class="flexRowCentered"></div>
+                </div>
+              </div>
+            </div>
+            <div class="window_resize_grip"></div>
+            <div class="singleWindowFocusBar"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div
+    class="miniProfile-preview HoverPopup client_chat_frame HoverPopupBody HoverfriendHover miniProfileHover"
+  >
+    <div id="popup_target">
+      <div class="HoverPositionPopup">
+        <div class="miniProfileHoverInner miniprofile_miniProfile_s5zcg">
+          <div
+            class="miniprofile_miniProfileContent_25Sge miniprofile_notInOrWatchingGame_3AIC2"
+          >
+            <div class="miniprofile_miniProfileBackground_3gfFJ">
+              <img
+                class="miniprofile_miniProfileBackgroundBlur_G000o"
+                src="https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/5e/5ea264d0606ed67ad64e4d7401ddd68d0630cb52.jpg"
+              />
+            </div>
+            <div class="miniprofile_miniProfileHeader_3oBIW">
+              <div class="miniprofile_miniProfilePlayer_3cN6K offline offline">
+                <div
+                  class="steamavatar_avatarHolder_1G7LI avatarHolder no-drag X-Large miniprofile_playerAvatar_1dzWG"
+                >
+                  <div
+                    class="steamavatar_avatarStatus_1Pwr6 avatarStatus bottom"
+                  ></div>
+                  <img
+                    class="steamavatar_avatar_f2laR avatar"
+                    src="https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/5e/5ea264d0606ed67ad64e4d7401ddd68d0630cb52_full.jpg"
+                    draggable="false"
+                  />
+                </div>
+                <div class="miniprofile_playerContent_PV11V">
+                  <div>
+                    <div class="miniprofile_persona_1Z3Ey">
+                      <div>
+                        <div class="miniprofile_personaAndIcons_2OhlV">
+                          <div
+                            class="miniprofile_personaName_W3QjS miniprofile_nickName_2E8Iz"
+                          >
+                            <div class="miniprofile_personaNameLabel_390p4">
+                              Dianna
+                            </div>
+                            <div
+                              class="miniprofile_playerNicknameBracket_1bkKo"
+                              title="Your nickname for this friend"
+                            >
+                              *
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="miniprofile_personaName_W3QjS miniprofile_hasNickname_dgG-l"
+                        >
+                          (
+                          <div class="miniprofile_personaNameLabel_390p4">
+                            Dooby
+                          </div>
+                          )
+                        </div>
+                      </div>
+                      <div class="miniprofile_awayStatusLabel_2UzRy">
+                        Last online 2 weeks ago
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="miniprofile_miniProfileBottom_3Agb6">
+              <div class="miniprofile_miniProfileFeaturedContainer_3ljT4">
+                <div class="miniprofile_favoriteBadgeIcon_icnrU">
+                  <img
+                    src="https://steamcdn-a.akamaihd.net/steamcommunity/public/images/items/307780/5ad25f15fbd650d49a5ac0d60009128d3968a47f.png"
+                    class="miniprofile_badgeIcon_2TBf0"
+                  />
+                </div>
+                <div class="miniprofile_featuredLabels_1dGw1">
+                  <div class="miniprofile_featuredTitle_2_2RA">
+                    Dark Brotherhood
+                  </div>
+                  <div class="miniprofile_featuredSubTitle_2p8kJ">200 XP</div>
+                </div>
+              </div>
+              <div class="miniprofile_miniProfileFeaturedContainer_3ljT4">
+                <div class="friendPlayerLevel lvl_10">
+                  <span class="miniprofile_friendPlayerLevelNum_2Ni_1">11</span>
+                </div>
+                <div class="miniprofile_featuredLabels_1dGw1">
+                  <div class="miniprofile_featuredTitle_2_2RA">Steam Level</div>
+                </div>
+              </div>
+            </div>
+            <div class="miniprofile_mutualFriends_36Vl4"><div></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

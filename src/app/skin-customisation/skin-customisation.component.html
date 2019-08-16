@@ -9,6 +9,7 @@
         class="customisation-radio-group"
         aria-label="Select an option"
         [(ngModel)]="optionType.selectedOptionIndex"
+        (change)="updatePreview()"
       >
         <mat-radio-button
           class="customisation-radio-button"
@@ -33,6 +34,10 @@
   </mat-vertical-stepper>
 
   <div class="customisation-image-area">
-    <img src="assets/images/DiscordColourRoundAvatarDiscordStatus.webp" />
+      <app-steam-preview></app-steam-preview>
   </div>
 </div>
+
+
+
+

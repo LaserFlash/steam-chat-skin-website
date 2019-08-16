@@ -16,19 +16,19 @@ export const SteamChatCustomisationOptions: SteamChatStyleOptionSelectable[] = [
         displayName: "Discord Colours",
         shortName: "DiscordColour",
         importLine:
-          "https://laserflash.tk/steam-friends-skin/src/css/customisable/avatarStatus/discordStatus.css"
+          "https://laserflash.tk/steam-friends-skin/src/css/customisable/colourSet/discordColours.css"
       },
       {
         displayName: "Dark Theme",
         shortName: "DarkColour",
         importLine:
-          "https://laserflash.tk/steam-friends-skin/src/css/customisable/avatarStatus/darkMode.css"
+          "https://laserflash.tk/steam-friends-skin/src/css/customisable/colourSet/darkMode.css"
       },
       {
         displayName: "Light Theme",
         shortName: "LightColour",
         importLine:
-          "https://laserflash.tk/steam-friends-skin/src/css/customisable/avatarStatus/lightMode.css"
+          "https://laserflash.tk/steam-friends-skin/src/css/customisable/colourSet/lightMode.css"
       }
     ]
   },

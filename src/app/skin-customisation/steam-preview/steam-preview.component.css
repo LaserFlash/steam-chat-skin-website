@@ -1,0 +1,22 @@
+.client_chat_frame {
+  text-align: left;
+}
+.preview-holder {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 100%;
+}
+.friendList-preview {
+  margin: auto auto;
+}
+.miniProfile-preview {
+  margin: auto auto;
+}
+
+@media only screen and (max-width: 959px){
+    .preview-holder {
+        flex-direction: column;
+        height: 100vh;
+    }
+}

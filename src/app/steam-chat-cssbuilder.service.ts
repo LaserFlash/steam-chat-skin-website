@@ -21,6 +21,18 @@ export class SteamChatCSSBuilderService {
     return generatedImports;
   }
 
+  public generateUrlArray(
+    selectedOptions: SteamChatStyleOptionSelectable[]
+  ): string[] {
+    const generatedImports: string[] = [];
+    selectedOptions.forEach((optionInfo: SteamChatStyleOptionSelectable) => {
+      generatedImports.push(
+        optionInfo.options[optionInfo.selectedOptionIndex].importLine
+      );
+    });
+    return generatedImports;
+  }
+
   private makeImportLine(importLocation: string): string {
     return "@import url(" + importLocation + ");";
   }

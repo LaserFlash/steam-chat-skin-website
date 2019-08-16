@@ -20,6 +20,8 @@ import { FooterComponent } from "./footer/footer.component";
 import { SkinExamplesComponent } from "./skin-examples/skin-examples.component";
 import { SkinInstallationComponent } from "./skin-installation/skin-installation.component";
 import { SkinCustomisationComponent } from "./skin-customisation/skin-customisation.component";
+import { SteamPreviewComponent } from './skin-customisation/steam-preview/steam-preview.component';
+import { SafePipe } from './safe.pipe';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,9 @@ import { SkinCustomisationComponent } from "./skin-customisation/skin-customisat
     FooterComponent,
     SkinExamplesComponent,
     SkinInstallationComponent,
-    SkinCustomisationComponent
+    SkinCustomisationComponent,
+    SteamPreviewComponent,
+    SafePipe
   ],
   imports: [
     BrowserModule,
