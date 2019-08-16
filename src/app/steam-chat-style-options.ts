@@ -16,19 +16,19 @@ export const SteamChatCustomisationOptions: SteamChatStyleOptionSelectable[] = [
         displayName: "Discord Colours",
         shortName: "DiscordColour",
         importLine:
-          "https://laserflash.tk/steam-friends-skin/src/css/customisable/colourSet/discordColours.css"
+          "https://laserflash.tk/steam-chat-skin/src/css/customisable/colourSet/discordColours.css"
       },
       {
         displayName: "Dark Theme",
         shortName: "DarkColour",
         importLine:
-          "https://laserflash.tk/steam-friends-skin/src/css/customisable/colourSet/darkMode.css"
+          "https://laserflash.tk/steam-chat-skin/src/css/customisable/colourSet/darkMode.css"
       },
       {
         displayName: "Light Theme",
         shortName: "LightColour",
         importLine:
-          "https://laserflash.tk/steam-friends-skin/src/css/customisable/colourSet/lightMode.css"
+          "https://laserflash.tk/steam-chat-skin/src/css/customisable/colourSet/lightMode.css"
       }
     ]
   },
@@ -40,19 +40,19 @@ export const SteamChatCustomisationOptions: SteamChatStyleOptionSelectable[] = [
         displayName: "Round Avatar",
         shortName: "RoundAvatar",
         importLine:
-          "https://laserflash.tk/steam-friends-skin/src/css/customisable/avatarStyle/roundAvatar.css"
+          "https://laserflash.tk/steam-chat-skin/src/css/customisable/avatarStyle/roundAvatar.css"
       },
       {
         displayName: "Squircle Avatar",
         shortName: "SquircleAvatar",
         importLine:
-          "https://laserflash.tk/steam-friends-skin/src/css/customisable/avatarStyle/squircleAvatar.css"
+          "https://laserflash.tk/steam-chat-skin/src/css/customisable/avatarStyle/squircleAvatar.css"
       },
       {
         displayName: "Square Avatar",
         shortName: "SquareAvatar",
         importLine:
-          "https://laserflash.tk/steam-friends-skin/src/css/customisable/avatarStyle/squareAvatar.css"
+          "https://laserflash.tk/steam-chat-skin/src/css/customisable/avatarStyle/squareAvatar.css"
       }
     ]
   },
@@ -64,13 +64,13 @@ export const SteamChatCustomisationOptions: SteamChatStyleOptionSelectable[] = [
         displayName: "Discord Styled",
         shortName: "DiscordStatus",
         importLine:
-          "https://laserflash.tk/steam-friends-skin/src/css/customisable/avatarStatus/discordStatus.css"
+          "https://laserflash.tk/steam-chat-skin/src/css/customisable/avatarStatus/discordStatus.css"
       },
       {
         displayName: "Outline Status",
         shortName: "OutlineStatus",
         importLine:
-          "https://laserflash.tk/steam-friends-skin/src/css/customisable/avatarStatus/outlineStatus.css"
+          "https://laserflash.tk/steam-chat-skin/src/css/customisable/avatarStatus/outlineStatus.css"
       },
       { displayName: "Steam Default", shortName: "", importLine: "" }
     ]
@@ -83,7 +83,7 @@ export const SteamChatCustomisationOptions: SteamChatStyleOptionSelectable[] = [
         displayName: "Blur On",
         shortName: "MiniBlur",
         importLine:
-          "https://laserflash.tk/steam-friends-skin/src/css/customisable/miniProfile/miniProfileBlur.css"
+          "https://laserflash.tk/steam-chat-skin/src/css/customisable/miniProfile/miniProfileBlur.css"
       },
       { displayName: "Blur Off", shortName: "", importLine: "" }
     ]
