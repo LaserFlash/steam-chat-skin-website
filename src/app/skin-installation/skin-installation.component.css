@@ -41,5 +41,6 @@
 
   .description-image img{
     width: 40vw;
+    max-width: 600px;
   }
 }

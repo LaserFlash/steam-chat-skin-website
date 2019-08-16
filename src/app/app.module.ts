@@ -19,7 +19,7 @@ import { FormsModule } from "@angular/forms";
 import { FooterComponent } from "./footer/footer.component";
 import { SkinExamplesComponent } from "./skin-examples/skin-examples.component";
 import { SkinInstallationComponent } from "./skin-installation/skin-installation.component";
-import { SkinCustomisationComponent } from "./skin-installation/skin-customisation/skin-customisation.component";
+import { SkinCustomisationComponent } from "./skin-customisation/skin-customisation.component";
 
 @NgModule({
   declarations: [
