@@ -17,7 +17,7 @@ deploy:
   local_dir: dist/steam-chat-skin-website
   skip_cleanup: true
   target_branch: gh-pages
-  fqdn: laserflash.tk
+  fqdn: laserflash.tk/steam-chat-skin-website
   github_token: $GITHUB_TOKEN
   email: bryn.t.bennett@gmail.com
   name: Bryn Bennett
