@@ -1,0 +1,46 @@
+.download-button {
+  border-color: var(--color-accent);
+  border-width: 2px;
+}
+
+.download-action-bar {
+  background: none;
+}
+.fill-remaining-space {
+  /* This fills the remaining space, by using flexbox. 
+       Every toolbar row uses a flexbox row layout. */
+  flex: 1 1 auto;
+}
+
+.description-holder {
+  display: flex;
+  flex-direction: column;
+}
+.description-text {
+  height: auto;
+  text-align: center;
+  margin: auto;
+  padding-right: 8px; 
+}
+.description-image {
+  display: flex;
+  justify-content: center;
+}
+.description-image img{
+  width: 80vw;
+}
+
+@media only screen and (min-width: 960px){
+  .description-holder {
+    flex-direction: row;
+  }
+
+  .description-text {
+    text-align: left;
+  }
+
+  .description-image img{
+    width: 40vw;
+    max-width: 600px;
+  }
+}
