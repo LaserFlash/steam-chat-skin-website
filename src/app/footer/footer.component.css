@@ -8,6 +8,14 @@
   list-style: none;
 }
 
+.footer li {
+  line-height: 2.5ch;
+}
+
 a {
   color: unset;
+}
+
+.footer ul li {
+  white-space: normal;
 }
