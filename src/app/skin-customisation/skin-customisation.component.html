@@ -1,11 +1,9 @@
 <div class="content">
-    <h2>Customisation</h2>
+  <h2>Customisation</h2>
 </div>
 <div class="content content-holder">
   <mat-vertical-stepper class="customisation-area">
-    <mat-step
-      *ngFor="let optionType of customisationOptions; let i = index"
-    >
+    <mat-step *ngFor="let optionType of customisationOptions; let i = index">
       <ng-template matStepLabel>{{ optionType.title }}</ng-template>
 
       <mat-radio-group
@@ -37,10 +35,6 @@
   </mat-vertical-stepper>
 
   <div class="customisation-image-area">
-      <app-steam-preview></app-steam-preview>
+    <app-steam-preview></app-steam-preview>
   </div>
 </div>
-
-
-
-

@@ -1,7 +1,7 @@
 .customisation-area {
   margin: auto 0;
   width: 50%;
-  background-color: var(--color-secondary);
+  background-color: var(--color-background);
 }
 
 .customisation-step-area {
@@ -32,9 +32,6 @@
   flex-direction: row;
   width: auto;
   height: 80vh;
-}
-.content { 
-  background-color: var(--color-secondary);
 }
 
 @media only screen and (max-width: 959px) {

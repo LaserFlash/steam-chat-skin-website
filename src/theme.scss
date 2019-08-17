@@ -13,7 +13,7 @@ $theme:  mat-dark-theme($primary, $accent, $warn);
     --color-primary: #{mat-color($primary)};
     --color-accent: #{mat-color($accent)};
     --color-warn: #{mat-color($warn)};
-    --color-background: rgb(30, 30, 31);
-    --color-secondary: rgb(21, 21, 21);
+    --color-background: rgb(21, 21, 21);
+    --color-secondary: rgb(30, 30, 31);
     --default-text: rgb(255, 255, 255);
   }

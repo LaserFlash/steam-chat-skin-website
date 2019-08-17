@@ -1,7 +1,12 @@
+.content {
+  background-color: var(--color-secondary);
+}
+
 .download-button {
   border-color: var(--color-accent);
   border-width: 2px;
 }
+
 
 .download-action-bar {
   display: flex;

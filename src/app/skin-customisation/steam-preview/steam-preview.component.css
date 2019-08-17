@@ -5,6 +5,10 @@
 .client_chat_frame {
   text-align: left;
 }
+
+.HoverPositionPopup {
+  display: block;
+}
 .preview-holder {
   display: flex;
   flex-direction: row;
@@ -19,7 +23,7 @@
 }
 
 .previewBorder {
-  border-color: var(--color-background);
+  border-color: var(--color-secondary);
   border-width: 2px;
   border-style: solid;
 }

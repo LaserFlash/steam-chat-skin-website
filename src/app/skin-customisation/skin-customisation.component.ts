@@ -10,7 +10,7 @@ import { SteamPreviewComponent } from "./steam-preview/steam-preview.component";
 @Component({
   selector: "app-skin-customisation",
   templateUrl: "./skin-customisation.component.html",
-  styleUrls: ["./skin-customisation.component.css"]
+  styleUrls: ["./skin-customisation.component.css"],
 })
 export class SkinCustomisationComponent implements OnInit {
   customisationOptions: SteamChatStyleOptionSelectable[];
