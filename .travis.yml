@@ -10,7 +10,7 @@ before_script:
    - npm install -g @angular/cli
 
 script:
-   - ng build --prod --aot --base-href="/steam-chat-website/"
+   - ng build --prod --aot --base-href="/steam-chat-skin-website/"
 
 deploy:
   provider: pages
