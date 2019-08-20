@@ -87,5 +87,28 @@ export const SteamChatCustomisationOptions: SteamChatStyleOptionSelectable[] = [
       },
       { displayName: "Blur Off", shortName: "", importLine: "" }
     ]
+  },
+  {
+    title: "Status Glow",
+    selectedOptionIndex: 0,
+    options: [
+      {
+        displayName: "Steam Default",
+        shortName: "",
+        importLine: ""
+      },
+      {
+        displayName: "Themed Glow",
+        shortName: "themedGlow",
+        importLine:
+          "https://laserflash.tk/steam-chat-skin/src/css/customisable/statusGlow/themedGlow.css"
+      },
+      {
+        displayName: "No Glow",
+        shortName: "noGlow",
+        importLine:
+          "https://laserflash.tk/steam-chat-skin/src/css/customisable/statusGlow/noGlow.css"
+      }
+    ]
   }
 ];
