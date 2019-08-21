@@ -10,14 +10,14 @@ before_script:
    - npm install -g @angular/cli
 
 script:
-   - ng build --prod --aot --base-href="/steam-chat-skin-website/"
+   - ng build --prod --aot --base-href="/"
 
 deploy:
   provider: pages
   local_dir: dist/steam-chat-skin-website
   skip_cleanup: true
   target_branch: gh-pages
-  fqdn: laserflash.tk/steam-chat-skin-website
+  fqdn: steamchatskinning.tk
   github_token: $GITHUB_TOKEN
   email: bryn.t.bennett@gmail.com
   name: Bryn Bennett
