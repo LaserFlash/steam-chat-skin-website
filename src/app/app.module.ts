@@ -25,6 +25,8 @@ import { SteamPreviewComponent } from "./skin-customisation/steam-preview/steam-
 import { SafePipe } from "./safe.pipe";
 import { SkinInstallationComponent } from "./skin-installation/skin-installation.component";
 
+import { DeferLoadModule } from "@trademe/ng-defer-load";
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,6 +39,7 @@ import { SkinInstallationComponent } from "./skin-installation/skin-installation
     SkinInstallationComponent
   ],
   imports: [
+    DeferLoadModule,
     RouterModule.forRoot([], {
       scrollPositionRestoration: "enabled",
       anchorScrolling: "enabled"

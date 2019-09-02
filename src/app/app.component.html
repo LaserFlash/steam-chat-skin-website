@@ -6,9 +6,22 @@
     <a mat-button href="#installation">Installation</a>
   </span>
 </mat-toolbar>
-<!--The content below is only a placeholder and can be replaced.-->
+
+<!--Bellow is the vertical site feed. Some items have have deferred (later) loading -->
 <app-skin-examples></app-skin-examples>
 <app-skin-prerequisite id="prerequisite"></app-skin-prerequisite>
-<app-skin-customisation id="customisation" class="red-background"></app-skin-customisation>
-<app-skin-installation id="installation"></app-skin-installation>
-<app-footer></app-footer>
+
+<div class="defer" (deferLoad)="showElementCustomisation = true"></div>
+<app-skin-customisation
+  *ngIf="showElementCustomisation"
+  id="customisation"
+></app-skin-customisation>
+
+<div class="defer" (deferLoad)="showElementInstallation = true"></div>
+<app-skin-installation
+  *ngIf="showElementInstallation"
+  id="installation"
+></app-skin-installation>
+
+<div class="defer" (deferLoad)="showElementFooter = true"></div>
+<app-footer *ngIf="showElementFooter"></app-footer>
