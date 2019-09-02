@@ -28,7 +28,13 @@
     <mat-step>
       <ng-template matStepLabel>Generate and Download</ng-template>
       <div>
-        <button mat-flat-button (click)="saveGeneratedCSS()">Download</button>
+        <button
+          mat-flat-button
+          aria-label="download generates css"
+          (click)="saveGeneratedCSS()"
+        >
+          Download
+        </button>
         <button mat-button matStepperPrevious>Back</button>
       </div>
     </mat-step>
