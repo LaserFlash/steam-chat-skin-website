@@ -9,6 +9,9 @@ import { HostListener, Inject } from "@angular/core";
 export class AppComponent implements OnInit {
   title = "Steam Chat Skinning";
 
+  showElementCustomisation = false;
+  showElementInstallation = false;
+  showElementFooter = false;
   ngOnInit(): void {
     this.onWindowScroll();
   }
