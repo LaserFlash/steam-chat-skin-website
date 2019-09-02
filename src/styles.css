@@ -1,7 +1,12 @@
-/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
+
+/* Force use of open sans font but not on icons*/
+* :not(.mat-icon) {
+  font-family: "Open Sans", sans-serif !important;
+}
+
 body {
   margin: 0;
-  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
   background: var(--color-background);
   color: var(--default-text);
   justify-content: center;
