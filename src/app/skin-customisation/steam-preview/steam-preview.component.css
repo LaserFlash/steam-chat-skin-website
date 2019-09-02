@@ -1,7 +1,4 @@
-@import url(https://steamcommunity-a.akamaihd.net/public/shared/css/motiva_sans.css);
-@import url(https://steamcommunity-a.akamaihd.net/public/shared/css/shared_global.css);
 @import url(https://steamcommunity-a.akamaihd.net/public/css/webui/friends.css);
-
 @import url(https://laserflash.tk/steam-chat-skin/src/baseTheme.css);
 
 .client_chat_frame {
