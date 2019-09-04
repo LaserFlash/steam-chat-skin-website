@@ -75,7 +75,7 @@ export class SkinCustomisationComponent implements OnInit {
           return responses;
         })
         // map array of responses into array of response.json() to read their content
-        .then(responses => Promise.all(responses.map(r => r.text())))
+        .then(responses => Promise.all(responses.map((r: Response) => r.text()))
         // all JSON answers are parsed: "users" is the array of them
         .then(content => {
           const subRequests = content.map(text => {
@@ -96,7 +96,7 @@ export class SkinCustomisationComponent implements OnInit {
               return responses;
             })
             .then(builtCSS => resolve(builtCSS));
-        });
+        }));
     });
   }
 
