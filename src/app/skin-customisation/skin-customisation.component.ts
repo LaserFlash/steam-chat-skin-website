@@ -10,12 +10,13 @@ import { SteamPreviewComponent } from "./steam-preview/steam-preview.component";
 @Component({
   selector: "app-skin-customisation",
   templateUrl: "./skin-customisation.component.html",
-  styleUrls: ["./skin-customisation.component.css"],
+  styleUrls: ["./skin-customisation.component.css"]
 })
 export class SkinCustomisationComponent implements OnInit {
   customisationOptions: SteamChatStyleOptionSelectable[];
 
-  @ViewChild(SteamPreviewComponent,{static: true}) steamPreview: SteamPreviewComponent;
+  @ViewChild(SteamPreviewComponent, { static: true })
+  steamPreview: SteamPreviewComponent;
 
   constructor(
     public CSSBUILDER: SteamChatCSSBuilderService,
@@ -49,5 +50,77 @@ export class SkinCustomisationComponent implements OnInit {
       this.customisationOptions
     );
     this.FILESAVER.createAndSaveFromArray(imports, "friends.custom.css");
+  }
+
+  saveGeneratedCSSUnixReady() {
+    const urls = this.CSSBUILDER.generateUrlArray(this.customisationOptions);
+    this.downloadFiles(urls, "").then((css: string) => {
+      const cssArray = [css];
+      this.FILESAVER.createAndSaveFromArray(cssArray, "webkit.css");
+    });
+  }
+
+  /**
+   * Download css files & build into one file
+   * @param urls list of urls to the css files
+   * @param css string to build up
+   */
+  downloadFiles(urls, css) {
+    return new Promise((resolve, reject) => {
+      // map every url to the promise of the fetch
+      const requests = urls.map(url => fetch(url));
+      // Promise.all waits until all jobs are resolved
+      Promise.all(requests)
+        .then(responses => {
+          return responses;
+        })
+        // map array of responses into array of response.json() to read their content
+        .then(responses => Promise.all(responses.map(r => r.text())))
+        // all JSON answers are parsed: "users" is the array of them
+        .then(content => {
+          const subRequests = content.map(text => {
+            text = this.removeComments(text);
+            if (text.startsWith("@")) {
+              text = this.convertImportsToUrls(text);
+              const subUrls = text.split(";");
+              subUrls.pop();
+              return this.downloadFiles(subUrls, css);
+            } else {
+              css += text;
+              return css;
+            }
+          });
+
+          Promise.all(subRequests)
+            .then(responses => {
+              return responses;
+            })
+            .then(builtCSS => resolve(builtCSS));
+        });
+    });
+  }
+
+  /**
+   * Remove comments from css and slim text
+   * @param text block of css maybe with imports
+   */
+  removeComments(text) {
+    text = text.replace(/\/\*.*\*\//g, "");
+    text = text.replace(/\n/g, " ");
+    text = text.replace(/ /, "");
+    text = text.replace(/\n+/g, "\n");
+    return text;
+  }
+
+  /**
+   * Extract the url from css import statements
+   * @param imports text line in the form is a css import statement
+   */
+  convertImportsToUrls(imports) {
+    imports = imports.replace(/@import url\(/g, "");
+    imports = imports.replace(/\)/g, "");
+    imports = imports.replace(/\n+/g, "\n");
+    imports = imports.replace(/ +/g, " ");
+    return imports;
   }
 }

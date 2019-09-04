@@ -18,11 +18,6 @@ export class SteamChatCSSBuilderService {
         )
       );
     });
-    generatedImports.push(
-      this.makeImportLine(
-        "https://laserflash.tk/steam-chat-skin/src/baseTheme.css"
-      )
-    );
     return generatedImports;
   }
 
@@ -31,10 +26,12 @@ export class SteamChatCSSBuilderService {
   ): string[] {
     const generatedImports: string[] = [];
     selectedOptions.forEach((optionInfo: SteamChatStyleOptionSelectable) => {
-      generatedImports.push(
-        optionInfo.options[optionInfo.selectedOptionIndex].importLine
-      );
+      const url = optionInfo.options[optionInfo.selectedOptionIndex].importLine;
+      if (url) {
+        generatedImports.push(url);
+      }
     });
+    generatedImports.push("https://laserflash.tk/steam-chat-skin/src/baseTheme.css");
     return generatedImports;
   }
 

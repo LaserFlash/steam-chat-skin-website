@@ -28,6 +28,7 @@
   display: flex;
   flex-direction: column;
 }
+
 .description-text {
   height: auto;
   text-align: center;
@@ -53,6 +54,10 @@
 
 ul {
   list-style-position: outside;
+}
+
+.mat-divider{
+  width: 100%;
 }
 
 @media only screen and (max-width: 960px) {

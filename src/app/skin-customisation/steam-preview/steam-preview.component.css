@@ -16,6 +16,7 @@
 }
 .friendList-preview {
   margin: auto auto;
+  height: 600px;
 }
 .miniProfile-preview {
   margin: auto auto;
@@ -30,6 +31,6 @@
 @media only screen and (max-width: 959px) {
   .preview-holder {
     flex-direction: column;
-    height: 100vh;
+    height: auto;
   }
 }

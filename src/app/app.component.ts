@@ -12,6 +12,7 @@ export class AppComponent implements OnInit {
   showElementCustomisation = false;
   showElementInstallation = false;
   showElementFooter = false;
+  
   ngOnInit(): void {
     this.onWindowScroll();
   }

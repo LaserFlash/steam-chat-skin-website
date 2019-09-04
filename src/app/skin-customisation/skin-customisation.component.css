@@ -18,7 +18,7 @@
 
 .customisation-image-area {
   display: flex;
-  height: 80vh;
+  height: auto;
   justify-content: right;
 }
 
@@ -31,7 +31,23 @@
   display: flex;
   flex-direction: row;
   width: auto;
-  height: 80vh;
+  height: auto;
+}
+
+.download-area {
+  text-align: start;
+  display: flex;
+  flex-direction: column;
+}
+
+.download-button {
+  vertical-align: middle;
+  margin: 4px;
+  width: fit-content;
+}
+
+.download-icon {
+  width: 1em;
 }
 
 @media only screen and (max-width: 959px) {
@@ -45,6 +61,6 @@
   }
 
   .customisation-image-area {
-    height:  auto;
+    height: auto;
   }
 }

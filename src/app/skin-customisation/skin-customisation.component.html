@@ -27,15 +27,33 @@
     </mat-step>
     <mat-step>
       <ng-template matStepLabel>Generate and Download</ng-template>
-      <div>
+      <div class="download-area">
         <button
+          class="download-button"
           mat-flat-button
           aria-label="download generates css"
           (click)="saveGeneratedCSS()"
         >
-          Download
+          Download Windows
+          <img
+            class="download-icon"
+            src="assets/images/microsoft-windows.png"
+          />
         </button>
-        <button mat-button matStepperPrevious>Back</button>
+        <button
+          class="download-button"
+          mat-flat-button
+          aria-label="download generates css"
+          (click)="saveGeneratedCSSUnixReady()"
+        >
+          Download Linux/Mac
+          <img class="download-icon" src="assets/images/apple-os.png" />
+          <img class="download-icon" src="assets/images/linux-os.png" />
+        </button>
+        <br />
+        <button class="download-button" mat-button matStepperPrevious>
+          Back
+        </button>
       </div>
     </mat-step>
   </mat-vertical-stepper>
