@@ -52,10 +52,15 @@ export class SkinCustomisationComponent implements OnInit {
     this.FILESAVER.createAndSaveFromArray(imports, "friends.custom.css");
   }
 
+  /**
+   * Generate css theme for linux or macOS
+   *  Both of these cannot have any import statements
+   */
   saveGeneratedCSSUnixReady() {
     const urls = this.CSSBUILDER.generateUrlArray(this.customisationOptions);
     this.downloadFiles(urls, "").then((css: string) => {
       const cssArray = [css];
+      console.log(1);
       this.FILESAVER.createAndSaveFromArray(cssArray, "webkit.css");
     });
   }
@@ -65,7 +70,7 @@ export class SkinCustomisationComponent implements OnInit {
    * @param urls list of urls to the css files
    * @param css string to build up
    */
-  downloadFiles(urls, css) {
+  downloadFiles(urls: string[], css: string) {
     return new Promise((resolve, reject) => {
       // map every url to the promise of the fetch
       const requests = urls.map(url => fetch(url));
@@ -74,29 +79,27 @@ export class SkinCustomisationComponent implements OnInit {
         .then(responses => {
           return responses;
         })
-        // map array of responses into array of response.json() to read their content
-        .then(responses => Promise.all(responses.map((r: Response) => r.text()))
-        // all JSON answers are parsed: "users" is the array of them
-        .then(content => {
-          const subRequests = content.map(text => {
-            text = this.removeComments(text);
-            if (text.startsWith("@")) {
-              text = this.convertImportsToUrls(text);
-              const subUrls = text.split(";");
-              subUrls.pop();
-              return this.downloadFiles(subUrls, css);
-            } else {
-              css += text;
-              return css;
+        // map array of responses into array of strings to read their content
+        .then(responses =>
+          Promise.all(responses.map((r: Response) => r.text())).then(
+            content => {
+              const subRequests = content.map(text => {
+                text = this.removeComments(text);
+                if (text.startsWith("@")) {
+                  text = this.convertImportsToUrls(text);
+                  const subUrls = text.split(";");
+                  subUrls.pop();
+                  return this.downloadFiles(subUrls, css);
+                } else {
+                  css += text;
+                  return css;
+                }
+              });
+              // The last sub request has the fully built css file
+              resolve(subRequests[subRequests.length -1]);
             }
-          });
-
-          Promise.all(subRequests)
-            .then(responses => {
-              return responses;
-            })
-            .then(builtCSS => resolve(builtCSS));
-        }));
+          )
+        );
     });
   }
 
@@ -104,7 +107,7 @@ export class SkinCustomisationComponent implements OnInit {
    * Remove comments from css and slim text
    * @param text block of css maybe with imports
    */
-  removeComments(text) {
+  removeComments(text: string) {
     text = text.replace(/\/\*.*\*\//g, "");
     text = text.replace(/\n/g, " ");
     text = text.replace(/ /, "");
@@ -116,7 +119,7 @@ export class SkinCustomisationComponent implements OnInit {
    * Extract the url from css import statements
    * @param imports text line in the form is a css import statement
    */
-  convertImportsToUrls(imports) {
+  convertImportsToUrls(imports: string) {
     imports = imports.replace(/@import url\(/g, "");
     imports = imports.replace(/\)/g, "");
     imports = imports.replace(/\n+/g, "\n");
