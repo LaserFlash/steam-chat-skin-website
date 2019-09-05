@@ -115,5 +115,28 @@ export const SteamChatCustomisationOptions: SteamChatStyleOptionSelectable[] = [
           "https://laserflash.tk/steam-chat-skin/src/css/customisable/statusGlow/noGlow.css"
       }
     ]
+  },
+  {
+    title: "Shadow Effects",
+    selectedOptionIndex: 0,
+    options: [
+      {
+        displayName: "Improved Shadows",
+        shortName: "improvedShadows",
+        importLine:
+          "https://laserflash.tk/steam-chat-skin/src/css/customisable/shadowEffects/improvedShadow.css"
+      },
+      {
+        displayName: "No Shadows",
+        shortName: "noShadow",
+        importLine:
+          "https://laserflash.tk/steam-chat-skin/src/css/customisable/shadowEffects/noShadow.css"
+      },
+      {
+        displayName: "Steam Default",
+        shortName: "",
+        importLine: ""
+      }
+    ]
   }
 ];
