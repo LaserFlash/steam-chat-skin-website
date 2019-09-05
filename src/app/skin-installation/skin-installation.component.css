@@ -62,16 +62,27 @@ ul {
   list-style-position: outside;
 }
 
+.gap-after {
+  margin-bottom: 1em;
+}
+
 .mat-divider{
   width: 100%;
 }
 
-@media only screen and (max-width: 960px) {
-  .second {
-    flex-direction: column;
+@media only screen and (max-width: 900px) {
+  .heading,
+  .description {
+    width: auto;
   }
 
-  .download-action-bar {
+  ul {
+    margin-left: 0;
+    padding-left: 4px;
+  }
+
+  .download-action-bar,
+  .second {
     flex-direction: column;
   }
   .action-holder {
