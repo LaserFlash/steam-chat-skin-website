@@ -3,7 +3,7 @@
 @import url(https://laserflash.tk/steam-chat-skin/src/baseTheme.css);
 
 /* Force use of open sans font but not on icons*/
-* :not(.mat-icon) {
+* :not(.mat-icon):not(code) {
   font-family: "Open Sans", sans-serif !important;
 }
 
@@ -36,13 +36,6 @@ body {
   padding: 0;
   margin: 0;
   width: 0.5em;
-}
-
-@media only screen and (min-width: 600px) {
-  .content {
-    padding-left: calc((100vw - 900px) / 2);
-    padding-right: calc((100vw - 900px) / 2);
-  }
 }
 
 body::-webkit-scrollbar {
