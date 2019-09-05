@@ -60,7 +60,6 @@ export class SkinCustomisationComponent implements OnInit {
     const urls = this.CSSBUILDER.generateUrlArray(this.customisationOptions);
     this.downloadFiles(urls, "").then((css: string) => {
       const cssArray = [css];
-      console.log(1);
       this.FILESAVER.createAndSaveFromArray(cssArray, "webkit.css");
     });
   }
@@ -109,9 +108,8 @@ export class SkinCustomisationComponent implements OnInit {
    */
   removeComments(text: string) {
     text = text.replace(/\/\*.*\*\//g, "");
-    text = text.replace(/\n/g, " ");
-    text = text.replace(/ /, "");
     text = text.replace(/\n+/g, "\n");
+    text = text.replace(/^\n+/, "");
     return text;
   }
 
@@ -120,6 +118,7 @@ export class SkinCustomisationComponent implements OnInit {
    * @param imports text line in the form is a css import statement
    */
   convertImportsToUrls(imports: string) {
+    console.log(imports)
     imports = imports.replace(/@import url\(/g, "");
     imports = imports.replace(/\)/g, "");
     imports = imports.replace(/\n+/g, "\n");
