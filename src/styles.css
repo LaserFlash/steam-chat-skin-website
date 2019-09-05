@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
+@import url(https://steamcommunity-a.akamaihd.net/public/css/webui/friends.css);
+@import url(https://laserflash.tk/steam-chat-skin/src/baseTheme.css);
 
 /* Force use of open sans font but not on icons*/
 * :not(.mat-icon) {
