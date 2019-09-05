@@ -104,16 +104,12 @@ export const SteamChatCustomisationOptions: SteamChatStyleOptionSelectable[] = [
           "https://laserflash.tk/steam-chat-skin/src/css/customisable/statusGlow/themedGlow.css"
       },
       {
-        displayName: "Steam Default",
-        shortName: "",
-        importLine: ""
-      },
-      {
         displayName: "No Glow",
         shortName: "noGlow",
         importLine:
           "https://laserflash.tk/steam-chat-skin/src/css/customisable/statusGlow/noGlow.css"
-      }
+      },
+      { displayName: "Steam Default", shortName: "", importLine: "" }
     ]
   },
   {
@@ -132,11 +128,7 @@ export const SteamChatCustomisationOptions: SteamChatStyleOptionSelectable[] = [
         importLine:
           "https://laserflash.tk/steam-chat-skin/src/css/customisable/shadowEffects/noShadow.css"
       },
-      {
-        displayName: "Steam Default",
-        shortName: "",
-        importLine: ""
-      }
+      { displayName: "Steam Default", shortName: "", importLine: "" }
     ]
   }
 ];
