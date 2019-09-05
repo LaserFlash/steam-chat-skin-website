@@ -85,7 +85,12 @@ export const SteamChatCustomisationOptions: SteamChatStyleOptionSelectable[] = [
         importLine:
           "https://laserflash.tk/steam-chat-skin/src/css/customisable/miniProfile/miniProfileBlur.css"
       },
-      { displayName: "Blur Off", shortName: "", importLine: "" }
+      {
+        displayName: "Blur Off",
+        shortName: "MiniNoBlur",
+        importLine:
+          "https://laserflash.tk/steam-chat-skin/src/css/customisable/miniProfile/miniProfileSolid.css"
+      }
     ]
   },
   {
@@ -93,15 +98,15 @@ export const SteamChatCustomisationOptions: SteamChatStyleOptionSelectable[] = [
     selectedOptionIndex: 0,
     options: [
       {
-        displayName: "Steam Default",
-        shortName: "",
-        importLine: ""
-      },
-      {
         displayName: "Themed Glow",
         shortName: "themedGlow",
         importLine:
           "https://laserflash.tk/steam-chat-skin/src/css/customisable/statusGlow/themedGlow.css"
+      },
+      {
+        displayName: "Steam Default",
+        shortName: "",
+        importLine: ""
       },
       {
         displayName: "No Glow",
