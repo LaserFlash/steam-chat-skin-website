@@ -12,16 +12,14 @@
 <app-skin-prerequisite id="prerequisite"></app-skin-prerequisite>
 
 <div class="defer" (deferLoad)="showElementCustomisation = true"></div>
+<div id="customisation"></div>
 <app-skin-customisation
   *ngIf="showElementCustomisation"
-  id="customisation"
 ></app-skin-customisation>
 
 <div class="defer" (deferLoad)="showElementInstallation = true"></div>
-<app-skin-installation
-  *ngIf="showElementInstallation"
-  id="installation"
-></app-skin-installation>
+<div id="installation"></div>
+<app-skin-installation *ngIf="showElementInstallation"></app-skin-installation>
 
 <div class="defer" (deferLoad)="showElementFooter = true"></div>
 <app-footer *ngIf="showElementFooter"></app-footer>

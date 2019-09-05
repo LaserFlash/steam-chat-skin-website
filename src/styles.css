@@ -61,3 +61,10 @@ body::-webkit-scrollbar-track {
 	border-radius: 10px;
   background-color: transparent;
 }
+
+@media only screen and (min-width: 900px) {
+  .content {
+    padding-left: calc((100vw - 900px) / 2);
+    padding-right: calc((100vw - 900px) / 2);
+  }
+}

@@ -15,6 +15,13 @@ export class AppComponent implements OnInit {
   
   ngOnInit(): void {
     this.onWindowScroll();
+
+    /* Load later views after 4 seconds */
+    setTimeout(() => {
+      this.showElementCustomisation = true;
+      this.showElementInstallation = true;
+      this.showElementFooter = true;
+    }, 2000);
   }
 
   @HostListener("window:scroll", [])
