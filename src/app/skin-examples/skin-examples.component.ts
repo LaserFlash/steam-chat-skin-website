@@ -8,11 +8,36 @@ import { Image } from "../image";
 })
 export class SkinExamplesComponent implements OnInit {
   previewImages: Image[] = [
-    { fileName: "assets/images/steam", alt: "Discord themed steam" },
-    { fileName: "assets/images/steam", alt: "Discord themed steam" },
-    { fileName: "assets/images/steam", alt: "Discord themed steam" },
+    {
+      fileName: "assets/images/steamSquircleDiscord",
+      alt: "Theme using the steam default colours"
+    },
+    {
+      fileName: "assets/images/darkSquircleDiscord",
+      alt: "Theme using the a darker colour pallet"
+    },
+    {
+      fileName: "assets/images/discordRoundDiscord",
+      alt: "Theme using the discord colours"
+    },
+    { fileName: "assets/images/lightRoundOutline", alt: "A white theme" }
   ];
   constructor() {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.previewImages = this.shuffle(this.previewImages);
+    console.log(this.previewImages)
+  }
+
+  /**
+   * Shuffles array in place.
+   * @param Image[] a items An array containing the items.
+   */
+  shuffle(a: Image[]) {
+    for (let i = a.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [a[i], a[j]] = [a[j], a[i]];
+    }
+    return a;
+  }
 }
