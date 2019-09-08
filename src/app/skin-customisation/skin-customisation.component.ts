@@ -57,72 +57,8 @@ export class SkinCustomisationComponent implements OnInit {
    *  Both of these cannot have any import statements
    */
   saveGeneratedCSSUnixReady() {
-    const urls = this.CSSBUILDER.generateUrlArray(this.customisationOptions);
-    this.downloadFiles(urls, "").then((css: string) => {
-      const cssArray = [css];
-      this.FILESAVER.createAndSaveFromArray(cssArray, "webkit.css");
+    this.CSSBUILDER.generateWebkit(this.customisationOptions).then(css => {
+      this.FILESAVER.createAndSaveFromArray(css, "webkit.css");
     });
-  }
-
-  /**
-   * Download css files & build into one file
-   * @param urls list of urls to the css files
-   * @param css string to build up
-   */
-  downloadFiles(urls: string[], css: string) {
-    return new Promise((resolve, reject) => {
-      // map every url to the promise of the fetch
-      const requests = urls.map(url => fetch(url));
-      // Promise.all waits until all jobs are resolved
-      Promise.all(requests)
-        .then(responses => {
-          return responses;
-        })
-        // map array of responses into array of strings to read their content
-        .then(responses =>
-          Promise.all(responses.map((r: Response) => r.text())).then(
-            content => {
-              const subRequests = content.map(text => {
-                text = this.removeComments(text);
-                if (text.startsWith("@")) {
-                  text = this.convertImportsToUrls(text);
-                  const subUrls = text.split(";");
-                  subUrls.pop();
-                  return this.downloadFiles(subUrls, css);
-                } else {
-                  css += text;
-                  return css;
-                }
-              });
-              // The last sub request has the fully built css file
-              resolve(subRequests[subRequests.length -1]);
-            }
-          )
-        );
-    });
-  }
-
-  /**
-   * Remove comments from css and slim text
-   * @param text block of css maybe with imports
-   */
-  removeComments(text: string) {
-    text = text.replace(/\/\*.*\*\//g, "");
-    text = text.replace(/\n+/g, "\n");
-    text = text.replace(/^\n+/, "");
-    return text;
-  }
-
-  /**
-   * Extract the url from css import statements
-   * @param imports text line in the form is a css import statement
-   */
-  convertImportsToUrls(imports: string) {
-    console.log(imports)
-    imports = imports.replace(/@import url\(/g, "");
-    imports = imports.replace(/\)/g, "");
-    imports = imports.replace(/\n+/g, "\n");
-    imports = imports.replace(/ +/g, " ");
-    return imports;
   }
 }

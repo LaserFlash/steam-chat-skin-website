@@ -7,8 +7,15 @@ import * as FileSaver from "file-saver";
 export class FileSaverService {
   constructor() {}
 
-  createAndSaveFromArray(lines: string[], fileName: string) {
-    const blob = new File(lines, fileName, {type: "text/plain;charset=utf-8"});
+  /**
+   * Given an array produce produce a download output
+   * @param lines content to save as a file
+   * @param fileName name of the produced file
+   */
+  createAndSaveFromArray(items: string[], fileName: string) {
+    const blob = new File(items, fileName, {
+      type: "text/plain;charset=utf-8"
+    });
     FileSaver.saveAs(blob, fileName);
   }
 }
