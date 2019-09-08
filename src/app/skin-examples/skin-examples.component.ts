@@ -26,7 +26,6 @@ export class SkinExamplesComponent implements OnInit {
 
   ngOnInit() {
     this.previewImages = this.shuffle(this.previewImages);
-    console.log(this.previewImages)
   }
 
   /**
