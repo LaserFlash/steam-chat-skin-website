@@ -1,10 +1,10 @@
-import { Component, ViewChild, OnInit } from "@angular/core";
-import {
-  SteamChatStyleOptionSelectable,
-  SteamChatCustomisationOptions
-} from "src/app/steam-chat-style-options";
-import { SteamChatCSSBuilderService } from "src/app/steam-chat-cssbuilder.service";
+import { Component, OnInit, ViewChild } from "@angular/core";
 import { FileSaverService } from "src/app/file-saver.service";
+import { SteamChatCSSBuilderService } from "src/app/steam-chat-cssbuilder.service";
+import {
+  SteamChatCustomisationOptions,
+  SteamChatStyleOptionSelectable
+} from "src/app/steam-chat-style-options";
 import { SteamPreviewComponent } from "./steam-preview/steam-preview.component";
 
 @Component({
@@ -13,22 +13,22 @@ import { SteamPreviewComponent } from "./steam-preview/steam-preview.component";
   styleUrls: ["./skin-customisation.component.css"]
 })
 export class SkinCustomisationComponent implements OnInit {
-  customisationOptions: SteamChatStyleOptionSelectable[];
+  public customisationOptions: SteamChatStyleOptionSelectable[];
 
   @ViewChild(SteamPreviewComponent, { static: true })
-  steamPreview: SteamPreviewComponent;
+  public steamPreview: SteamPreviewComponent;
 
   constructor(
     public CSSBUILDER: SteamChatCSSBuilderService,
     public FILESAVER: FileSaverService
   ) {}
 
-  ngOnInit() {
+  public ngOnInit() {
     this.customisationOptions = SteamChatCustomisationOptions as SteamChatStyleOptionSelectable[];
     this.updatePreview();
   }
 
-  selectedOptions() {
+  public selectedOptions() {
     let selectedOptions = "";
     this.customisationOptions.forEach(optionType => {
       selectedOptions +=
@@ -37,7 +37,7 @@ export class SkinCustomisationComponent implements OnInit {
     return selectedOptions;
   }
 
-  updatePreview() {
+  public updatePreview() {
     const newStyles = this.CSSBUILDER.generateUrlArray(
       this.customisationOptions
     );
@@ -45,7 +45,7 @@ export class SkinCustomisationComponent implements OnInit {
     this.steamPreview.updateTheme(newStyles);
   }
 
-  saveGeneratedCSS() {
+  public saveGeneratedCSS() {
     const imports = this.CSSBUILDER.generateImportArray(
       this.customisationOptions
     );
@@ -56,7 +56,7 @@ export class SkinCustomisationComponent implements OnInit {
    * Generate css theme for linux or macOS
    *  Both of these cannot have any import statements
    */
-  saveGeneratedCSSUnixReady() {
+  public saveGeneratedCSSUnixReady() {
     this.CSSBUILDER.generateWebkit(this.customisationOptions).then(css => {
       this.FILESAVER.createAndSaveFromArray(css, "webkit.css");
     });

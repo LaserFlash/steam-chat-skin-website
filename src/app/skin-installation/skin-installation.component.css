@@ -8,7 +8,6 @@
   border-width: 2px;
 }
 
-
 .download-action-bar {
   display: flex;
   flex-direction: row;
@@ -66,7 +65,7 @@ ul {
   margin-bottom: 1em;
 }
 
-.mat-divider{
+.mat-divider {
   width: 100%;
 }
 

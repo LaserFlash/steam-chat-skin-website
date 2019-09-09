@@ -7,7 +7,7 @@ import { Image } from "../image";
   styleUrls: ["./skin-examples.component.css"]
 })
 export class SkinExamplesComponent implements OnInit {
-  previewImages: Image[] = [
+  public previewImages: Image[] = [
     {
       fileName: "assets/images/steamSquircleDiscord",
       alt: "Theme using the steam default colours"
@@ -24,7 +24,7 @@ export class SkinExamplesComponent implements OnInit {
   ];
   constructor() {}
 
-  ngOnInit() {
+  public ngOnInit() {
     this.previewImages = this.shuffle(this.previewImages);
   }
 
@@ -32,7 +32,7 @@ export class SkinExamplesComponent implements OnInit {
    * Shuffles array in place.
    * @param Image[] a items An array containing the items.
    */
-  shuffle(a: Image[]) {
+  public shuffle(a: Image[]) {
     for (let i = a.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
       [a[i], a[j]] = [a[j], a[i]];

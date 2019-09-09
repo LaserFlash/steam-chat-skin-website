@@ -46,7 +46,7 @@ export class SteamChatCSSBuilderService {
       /* Last url is always for baseTheme imports
         Has  a list of data in form @import url();
         The following extracts url data
-    */
+      */
       const baseTheme = urls.pop();
 
       fetch(baseTheme)
@@ -83,7 +83,7 @@ export class SteamChatCSSBuilderService {
    * Extract the url from css import statements
    * @param imports text line in the form of a css import statement
    */
-  convertImportsToUrls(imports: string) {
+  public convertImportsToUrls(imports: string) {
     imports = imports.replace(/@import url\(/g, "");
     imports = imports.replace(/\)/g, "");
     imports = imports.replace(/\n+/g, "\n");
@@ -94,13 +94,13 @@ export class SteamChatCSSBuilderService {
    * Remove comments from css and slim text
    * @param text block of css maybe with imports
    */
-  removeComments(text: string) {
+  public removeComments(text: string) {
     text = text.replace(/\/\*.*\*\//g, ""); // Remove comments
     text = text.replace(/\n+/g, ""); // Remove newline
     text = text.replace(/ /g, ""); // Remove spaces
     return text;
   }
-  
+
   private makeImportLine(importLocation: string): string {
     return "@import url(" + importLocation + ");";
   }
@@ -110,7 +110,7 @@ export class SteamChatCSSBuilderService {
    * @param array array to check
    */
   private noEmpty(array: string[]): string[] {
-    return  array.filter(value => {
+    return array.filter(value => {
       return value;
     });
   }

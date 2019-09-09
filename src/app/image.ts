@@ -1,4 +1,4 @@
 export class Image {
-    fileName : string;
-    alt: string;
+  public fileName: string;
+  public alt: string;
 }

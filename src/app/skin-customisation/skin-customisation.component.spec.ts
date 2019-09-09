@@ -1,16 +1,15 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { SkinCustomisationComponent } from './skin-customisation.component';
+import { SkinCustomisationComponent } from "./skin-customisation.component";
 
-describe('SkinCustomisationComponent', () => {
+describe("SkinCustomisationComponent", () => {
   let component: SkinCustomisationComponent;
   let fixture: ComponentFixture<SkinCustomisationComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SkinCustomisationComponent ]
-    })
-    .compileComponents();
+      declarations: [SkinCustomisationComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {
@@ -19,7 +18,7 @@ describe('SkinCustomisationComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });

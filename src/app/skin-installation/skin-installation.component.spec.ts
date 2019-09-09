@@ -1,16 +1,15 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { SkinInstallationComponent } from './skin-installation.component';
+import { SkinInstallationComponent } from "./skin-installation.component";
 
-describe('SkinInstallationComponent', () => {
+describe("SkinInstallationComponent", () => {
   let component: SkinInstallationComponent;
   let fixture: ComponentFixture<SkinInstallationComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SkinInstallationComponent ]
-    })
-    .compileComponents();
+      declarations: [SkinInstallationComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {
@@ -19,7 +18,7 @@ describe('SkinInstallationComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });

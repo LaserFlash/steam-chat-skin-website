@@ -12,7 +12,7 @@ export class FileSaverService {
    * @param lines content to save as a file
    * @param fileName name of the produced file
    */
-  createAndSaveFromArray(items: string[], fileName: string) {
+  public createAndSaveFromArray(items: string[], fileName: string) {
     const blob = new File(items, fileName, {
       type: "text/plain;charset=utf-8"
     });

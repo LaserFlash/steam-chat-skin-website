@@ -1,10 +1,14 @@
 export class SteamChatStyleOption {
-  title: string;
-  options: { displayName: string; shortName: string; importLine: string }[];
+  public title: string;
+  public options: Array<{
+    displayName: string;
+    shortName: string;
+    importLine: string;
+  }>;
 }
 
 export class SteamChatStyleOptionSelectable extends SteamChatStyleOption {
-  selectedOptionIndex = 0;
+  public selectedOptionIndex = 0;
 }
 
 export const SteamChatCustomisationOptions: SteamChatStyleOptionSelectable[] = [

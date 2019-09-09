@@ -6,10 +6,10 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./footer.component.css"]
 })
 export class FooterComponent implements OnInit {
-  affiliationNote =
+  public affiliationNote =
     "Steam Chat Skinning is not affiliated with Valve and the Steam Logo is trademark of Valve Corporation";
-  copyright = "© 2019 Bryn Bennett";
+  public copyright = "© 2019 Bryn Bennett";
   constructor() {}
 
-  ngOnInit() {}
+  public ngOnInit() {}
 }

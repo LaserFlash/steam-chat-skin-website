@@ -6,7 +6,7 @@
   background: var(--color-secondary);
 }
 
-.actions{ 
+.actions {
   display: flex;
   flex-grow: 1;
   justify-content: flex-end;
@@ -21,6 +21,6 @@
 
 .defer {
   position: absolute;
-  z-index: 10; 
-  margin-top: -50vh; 
+  z-index: 10;
+  margin-top: -50vh;
 }

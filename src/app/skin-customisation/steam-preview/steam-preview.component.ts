@@ -1,5 +1,4 @@
-import { Component, OnInit, Inject } from "@angular/core";
-
+import { Component, Inject, OnInit } from "@angular/core";
 
 @Component({
   selector: "app-steam-preview",
@@ -7,15 +6,13 @@ import { Component, OnInit, Inject } from "@angular/core";
   styleUrls: ["./steam-preview.component.css"]
 })
 export class SteamPreviewComponent implements OnInit {
-  styles = [];
+  public styles = [];
 
   constructor() {}
 
-  ngOnInit() {
+  public ngOnInit() {}
 
-  }
-
-  updateTheme(newStyles: string[]) {
+  public updateTheme(newStyles: string[]) {
     this.styles = newStyles;
   }
 }

@@ -31,7 +31,11 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: radial-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7), rgba(0,0,0,0.9));
+  background-image: radial-gradient(
+    rgba(0, 0, 0, 0.6),
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.9)
+  );
 }
 
 .landingText {
@@ -49,4 +53,3 @@ h1 {
 p {
   margin-top: 0;
 }
-
