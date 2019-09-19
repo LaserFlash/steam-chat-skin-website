@@ -18,6 +18,11 @@ export class SteamChatCSSBuilderService {
         )
       );
     });
+    generatedImports.push(
+      this.makeImportLine(
+        "https://laserflash.tk/steam-chat-skin/src/baseTheme.css"
+      )
+    );
     return generatedImports;
   }
 
