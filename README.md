@@ -1,3 +1,5 @@
+![Build and Deploy](https://github.com/LaserFlash/steam-chat-skin-website/workflows/Build%20and%20Deploy/badge.svg?branch=master)
+
 # SteamChatSkinWebsite
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.0.
