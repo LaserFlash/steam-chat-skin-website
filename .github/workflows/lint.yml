@@ -1,0 +1,17 @@
+name: Lint
+on: push
+jobs:
+  run-linters:
+    name: Lint
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout repo
+        uses: actions/checkout@v2
+      - name: install dependencies
+        run: npm install
+      - name: run linters
+        uses: samuelmeuli/lint-action@v1
+        with:
+          github_token: ${{ secrets.github_token }}
+          # Enable your linters here
+          prettier: true
