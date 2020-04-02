@@ -2,7 +2,7 @@ import { Injectable } from "@angular/core";
 import { SteamChatStyleOptionSelectable } from "./steam-chat-style-options";
 
 @Injectable({
-  providedIn: "root"
+  providedIn: "root",
 })
 export class SteamChatCSSBuilderService {
   constructor() {}
@@ -55,10 +55,10 @@ export class SteamChatCSSBuilderService {
       const baseTheme = urls.pop();
 
       fetch(baseTheme)
-        .then(response => {
+        .then((response) => {
           return response.text();
         })
-        .then(baseThemeUrls => {
+        .then((baseThemeUrls) => {
           baseThemeUrls = this.convertImportsToUrls(baseThemeUrls);
           baseThemeUrls = this.removeComments(baseThemeUrls);
           const baseThemeUrlsArray = baseThemeUrls.split(";");
@@ -66,16 +66,16 @@ export class SteamChatCSSBuilderService {
           urls = this.noEmpty(urls);
           // Now have all the required urls
           // map every url to the promise of the fetch
-          const requests = urls.map(url => fetch(url));
+          const requests = urls.map((url) => fetch(url));
           const css: string[] = [];
           Promise.all(requests)
-            .then(responses => {
+            .then((responses) => {
               return responses;
             })
             // Process the response getting the file content or text from it
-            .then(responses =>
+            .then((responses) =>
               Promise.all(responses.map((r: Response) => r.text())).then(
-                content => {
+                (content) => {
                   resolve(content);
                 }
               )
@@ -115,7 +115,7 @@ export class SteamChatCSSBuilderService {
    * @param array array to check
    */
   private noEmpty(array: string[]): string[] {
-    return array.filter(value => {
+    return array.filter((value) => {
       return value;
     });
   }

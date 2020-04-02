@@ -8,7 +8,7 @@ describe("SteamPreviewComponent", () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [SteamPreviewComponent]
+      declarations: [SteamPreviewComponent],
     }).compileComponents();
   }));
 

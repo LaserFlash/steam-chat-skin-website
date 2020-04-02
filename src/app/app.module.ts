@@ -36,13 +36,13 @@ import { DeferLoadModule } from "@trademe/ng-defer-load";
     SkinCustomisationComponent,
     SteamPreviewComponent,
     SafePipe,
-    SkinInstallationComponent
+    SkinInstallationComponent,
   ],
   imports: [
     DeferLoadModule,
     RouterModule.forRoot([], {
       scrollPositionRestoration: "enabled",
-      anchorScrolling: "enabled"
+      anchorScrolling: "enabled",
     }),
     BrowserModule,
     BrowserAnimationsModule,
@@ -54,10 +54,10 @@ import { DeferLoadModule } from "@trademe/ng-defer-load";
     MatIconModule,
     MatStepperModule,
     MatRadioModule,
-    MatDividerModule
+    MatDividerModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule {
   constructor(overlayContainer: OverlayContainer) {

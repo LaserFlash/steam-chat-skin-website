@@ -1,7 +1,8 @@
 package.json
-package-lock.json
+.editorconfig
+.gitignore
+.prettierignore
+browserslist
 dist
-.angulardoc.json
 .vscode/*
-
 */assets
