@@ -3,14 +3,14 @@ import { FileSaverService } from "src/app/file-saver.service";
 import { SteamChatCSSBuilderService } from "src/app/steam-chat-cssbuilder.service";
 import {
   SteamChatCustomisationOptions,
-  SteamChatStyleOptionSelectable
+  SteamChatStyleOptionSelectable,
 } from "src/app/steam-chat-style-options";
 import { SteamPreviewComponent } from "./steam-preview/steam-preview.component";
 
 @Component({
   selector: "app-skin-customisation",
   templateUrl: "./skin-customisation.component.html",
-  styleUrls: ["./skin-customisation.component.css"]
+  styleUrls: ["./skin-customisation.component.css"],
 })
 export class SkinCustomisationComponent implements OnInit {
   public customisationOptions: SteamChatStyleOptionSelectable[];
@@ -30,7 +30,7 @@ export class SkinCustomisationComponent implements OnInit {
 
   public selectedOptions() {
     let selectedOptions = "";
-    this.customisationOptions.forEach(optionType => {
+    this.customisationOptions.forEach((optionType) => {
       selectedOptions +=
         optionType.options[optionType.selectedOptionIndex].shortName;
     });
@@ -57,7 +57,7 @@ export class SkinCustomisationComponent implements OnInit {
    *  Both of these cannot have any import statements
    */
   public saveGeneratedCSSUnixReady() {
-    this.CSSBUILDER.generateWebkit(this.customisationOptions).then(css => {
+    this.CSSBUILDER.generateWebkit(this.customisationOptions).then((css) => {
       this.FILESAVER.createAndSaveFromArray(css, "webkit.css");
     });
   }

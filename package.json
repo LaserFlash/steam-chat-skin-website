@@ -9,7 +9,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "pretty": "prettier --write src/**",
+    "pretty": "prettier --write *",
     "format:fix": "pretty-quick --staged"
   },
   "husky": {

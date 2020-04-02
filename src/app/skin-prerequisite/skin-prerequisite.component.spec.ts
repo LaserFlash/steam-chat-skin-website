@@ -8,7 +8,7 @@ describe("SkinPrerequisiteComponent", () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [SkinPrerequisiteComponent]
+      declarations: [SkinPrerequisiteComponent],
     }).compileComponents();
   }));
 
