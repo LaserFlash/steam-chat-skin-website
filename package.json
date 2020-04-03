@@ -8,6 +8,7 @@
     "build": "ng build --prod --aot --base-href='/'",
     "test": "ng test",
     "lint": "ng lint",
+    "lint:fix":"ng lint --fix",
     "e2e": "ng e2e",
     "pretty": "prettier --write *",
     "format:fix": "pretty-quick --staged"
