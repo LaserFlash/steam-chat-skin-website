@@ -9,7 +9,7 @@ jobs:
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v2
-      - name: Build 🔧
+      - name: Install & Build 🔧
         run: |
           npm ci
           npm run build
