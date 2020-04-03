@@ -1,8 +1,8 @@
-import { Injectable } from "@angular/core";
-import * as FileSaver from "file-saver";
+import { Injectable } from '@angular/core';
+import * as FileSaver from 'file-saver';
 
 @Injectable({
-  providedIn: "root",
+  providedIn: 'root',
 })
 export class FileSaverService {
   constructor() {}
@@ -14,7 +14,7 @@ export class FileSaverService {
    */
   public createAndSaveFromArray(items: string[], fileName: string) {
     const blob = new File(items, fileName, {
-      type: "text/plain;charset=utf-8",
+      type: 'text/plain;charset=utf-8',
     });
     FileSaver.saveAs(blob, fileName);
   }
