@@ -1,8 +1,8 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { SteamPreviewComponent } from './steam-preview.component';
+import { SteamPreviewComponent } from "./steam-preview.component";
 
-describe('SteamPreviewComponent', () => {
+describe("SteamPreviewComponent", () => {
   let component: SteamPreviewComponent;
   let fixture: ComponentFixture<SteamPreviewComponent>;
 
@@ -18,7 +18,7 @@ describe('SteamPreviewComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });
