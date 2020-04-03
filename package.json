@@ -8,7 +8,7 @@
     "build": "ng build --prod --aot --base-href='/'",
     "test": "ng test",
     "lint": "ng lint",
-    "lint:fix":"ng lint --fix",
+    "lint:fix": "ng lint --fix",
     "e2e": "ng e2e",
     "pretty": "prettier --write *",
     "format:fix": "pretty-quick --staged"
@@ -35,7 +35,7 @@
     "@trademe/ng-defer-load": "^8.0.0",
     "@types/file-saver": "^2.0.1",
     "file-saver": "2.0.2",
-    "rxjs": "~6.5.4",
+    "rxjs": "^6.5.5",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"
   },
