@@ -2,7 +2,7 @@ package.json
 .editorconfig
 .gitignore
 .prettierignore
-browserslist
+.browserslistrc
 dist
 .vscode/*
 */assets
