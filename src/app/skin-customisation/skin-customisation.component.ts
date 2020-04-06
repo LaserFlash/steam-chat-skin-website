@@ -24,8 +24,7 @@ export class SkinCustomisationComponent implements OnInit {
   ) {}
 
   public ngOnInit() {
-    this.customisationOptions =
-      SteamChatCustomisationOptions as SteamChatStyleOptionSelectable[];
+    this.customisationOptions = SteamChatCustomisationOptions as SteamChatStyleOptionSelectable[];
     this.updatePreview();
   }
 
