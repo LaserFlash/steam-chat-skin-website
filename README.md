@@ -2,6 +2,8 @@
 
 # SteamChatSkinWebsite
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/fb391886d1ec4960941fc3b14dd05aba)](https://app.codacy.com/manual/LaserFlash/steam-chat-skin-website?utm_source=github.com&utm_medium=referral&utm_content=LaserFlash/steam-chat-skin-website&utm_campaign=Badge_Grade_Settings)
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.0.
 
 ## Development server
