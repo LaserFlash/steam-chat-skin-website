@@ -48,39 +48,23 @@ export class SteamChatCSSBuilderService {
     return new Promise((resolve, reject) => {
       let urls = this.generateUrlArray(selectedOptions);
 
-      /* Last url is always for baseTheme imports
-        Has  a list of data in form @import url();
-        The following extracts url data
-      */
-      const baseTheme = urls.pop();
-
-      fetch(baseTheme)
-        .then((response) => {
-          return response.text();
+      urls = this.noEmpty(urls);
+      // Now have all the required urls
+      // map every url to the promise of the fetch
+      const requests = urls.map((url) => fetch(url));
+      const css: string[] = [];
+      Promise.all(requests)
+        .then((responses) => {
+          return responses;
         })
-        .then((baseThemeUrls) => {
-          baseThemeUrls = this.convertImportsToUrls(baseThemeUrls);
-          baseThemeUrls = this.removeComments(baseThemeUrls);
-          const baseThemeUrlsArray = baseThemeUrls.split(";");
-          urls = urls.concat(baseThemeUrlsArray);
-          urls = this.noEmpty(urls);
-          // Now have all the required urls
-          // map every url to the promise of the fetch
-          const requests = urls.map((url) => fetch(url));
-          const css: string[] = [];
-          Promise.all(requests)
-            .then((responses) => {
-              return responses;
-            })
-            // Process the response getting the file content or text from it
-            .then((responses) =>
-              Promise.all(responses.map((r: Response) => r.text())).then(
-                (content) => {
-                  resolve(content);
-                }
-              )
-            );
-        });
+        // Process the response getting the file content or text from it
+        .then((responses) =>
+          Promise.all(responses.map((r: Response) => r.text())).then(
+            (content) => {
+              resolve(content);
+            }
+          )
+        );
     });
   }
 
