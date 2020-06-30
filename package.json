@@ -32,7 +32,7 @@
     "@angular/platform-browser": "^9.1.0",
     "@angular/platform-browser-dynamic": "^9.1.0",
     "@angular/router": "^9.1.0",
-    "@trademe/ng-defer-load": "^8.0.0",
+    "@trademe/ng-defer-load": "^8.2.1",
     "@types/file-saver": "^2.0.1",
     "file-saver": "2.0.2",
     "rxjs": "^6.5.5",
