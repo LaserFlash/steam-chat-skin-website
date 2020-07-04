@@ -1,8 +1,8 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { SkinPrerequisiteComponent } from './skin-prerequisite.component';
+import { SkinPrerequisiteComponent } from "./skin-prerequisite.component";
 
-describe('SkinPrerequisiteComponent', () => {
+describe("SkinPrerequisiteComponent", () => {
   let component: SkinPrerequisiteComponent;
   let fixture: ComponentFixture<SkinPrerequisiteComponent>;
 
@@ -18,7 +18,7 @@ describe('SkinPrerequisiteComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });

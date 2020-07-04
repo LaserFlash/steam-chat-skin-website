@@ -1,11 +1,11 @@
-import { TestBed } from '@angular/core/testing';
+import { TestBed } from "@angular/core/testing";
 
-import { SteamChatCSSBuilderService } from './steam-chat-cssbuilder.service';
+import { SteamChatCSSBuilderService } from "./steam-chat-cssbuilder.service";
 
-describe('SteamChatCSSBuilderService', () => {
+describe("SteamChatCSSBuilderService", () => {
   beforeEach(() => TestBed.configureTestingModule({}));
 
-  it('should be created', () => {
+  it("should be created", () => {
     const service: SteamChatCSSBuilderService = TestBed.get(
       SteamChatCSSBuilderService
     );

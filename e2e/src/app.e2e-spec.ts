@@ -1,16 +1,16 @@
-import { browser, logging } from 'protractor';
-import { AppPage } from './app.po';
+import { browser, logging } from "protractor";
+import { AppPage } from "./app.po";
 
-describe('workspace-project App', () => {
+describe("workspace-project App", () => {
   let page: AppPage;
 
   beforeEach(() => {
     page = new AppPage();
   });
 
-  it('should display welcome message', () => {
+  it("should display welcome message", () => {
     page.navigateTo();
-    expect(page.getTitleText()).toEqual('Welcome to steam-chat-skin-website!');
+    expect(page.getTitleText()).toEqual("Welcome to steam-chat-skin-website!");
   });
 
   afterEach(async () => {

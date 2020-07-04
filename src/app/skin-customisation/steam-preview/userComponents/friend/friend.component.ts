@@ -1,11 +1,11 @@
-import { Component, OnInit, Input } from '@angular/core';
-import utils from '../utils';
-import { User, Status } from '../users';
+import { Component, OnInit, Input } from "@angular/core";
+import utils from "../utils";
+import { User, Status } from "../users";
 
 @Component({
-  selector: 'app-friend',
-  templateUrl: './friend.component.html',
-  styleUrls: ['./friend.component.css'],
+  selector: "app-friend",
+  templateUrl: "./friend.component.html",
+  styleUrls: ["./friend.component.css"],
 })
 export class FriendComponent implements OnInit {
   @Input() user: User;
@@ -21,6 +21,6 @@ export class FriendComponent implements OnInit {
   }
 
   public isAway(status: Status[]) {
-    return status.includes('away') && !status.includes('offline');
+    return status.includes("away") && !status.includes("offline");
   }
 }
