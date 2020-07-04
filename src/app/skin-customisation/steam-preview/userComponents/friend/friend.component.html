@@ -1,0 +1,80 @@
+<div class="friendsContainer">
+  <div
+    class="friend friendStatusHover"
+    draggable="true"
+    [ngClass]="statusToClass(user.status)"
+  >
+    <div
+      class="steamavatar_avatarHolder_1G7LI avatarHolder no-drag Medium"
+      [ngClass]="statusToClass(user.status)"
+    >
+      <div class="steamavatar_avatarStatus_1Pwr6 avatarStatus"></div>
+      <img
+        class="steamavatar_avatar_f2laR avatar"
+        draggable="false"
+        [src]="user.image"
+      />
+    </div>
+    <div
+      class="labelHolder personanameandstatus_twoLine_2wZNn"
+      [ngClass]="statusToClass(user.status)"
+    >
+      <div class="personanameandstatus_statusAndName_9U-hi">
+        <div class="personanameandstatus_playerName_1uxaf">
+          {{ user.name }}
+          <span
+            *ngIf="user.nickname"
+            class="personanameandstatus_playerNickname_3-32P"
+          >
+            ({{ user.nickname }})
+          </span>
+        </div>
+        <div
+          *ngIf="isAway(user.status)"
+          class="friendsnooze_SnoozeContainer_1OfTa"
+          [ngClass]="statusToClass(user.status)"
+        >
+          <div
+            data-text="Z"
+            class="friendsnooze_SnoozeZ_29fyi friendsnooze_Z1_GU6T2"
+          >
+            Z
+          </div>
+          <div
+            data-text="Z"
+            class="friendsnooze_SnoozeZ_29fyi friendsnooze_Z2_277XL"
+          >
+            Z
+          </div>
+          <div
+            data-text="Z"
+            class="friendsnooze_SnoozeZ_29fyi friendsnooze_Z3_1gXQi"
+          >
+            Z
+          </div>
+        </div>
+        <div class="ContextMenuButton">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="SVGIcon_Button SVGIcon_DownArrowContextMenu"
+            data-name="Layer 1"
+            viewBox="0 0 128 128"
+            x="0px"
+            y="0px"
+          >
+            <polygon
+              points="50 59.49 13.21 22.89 4.74 31.39 50 76.41 95.26 31.39 86.79 22.89 50 59.49"
+            ></polygon>
+          </svg>
+        </div>
+      </div>
+      <div class="personanameandstatus_richPresenceContainer_21cNf">
+        <div
+          class="personanameandstatus_gameName_qvibF personanameandstatus_richPresenceLabel_3Q6g1 no-drag"
+        >
+          {{ user.statusText }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
