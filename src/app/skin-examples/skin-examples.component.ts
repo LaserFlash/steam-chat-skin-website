@@ -1,26 +1,26 @@
-import { Component, OnInit } from "@angular/core";
-import { Image } from "../image";
+import { Component, OnInit } from '@angular/core';
+import { Image } from '../image';
 
 @Component({
-  selector: "app-skin-examples",
-  templateUrl: "./skin-examples.component.html",
-  styleUrls: ["./skin-examples.component.css"],
+  selector: 'app-skin-examples',
+  templateUrl: './skin-examples.component.html',
+  styleUrls: ['./skin-examples.component.css'],
 })
 export class SkinExamplesComponent implements OnInit {
   public previewImages: Image[] = [
     {
-      fileName: "assets/images/steamSquircleDiscord",
-      alt: "Theme using the steam default colours",
+      fileName: 'assets/images/steamSquircleDiscord',
+      alt: 'Theme using the steam default colours',
     },
     {
-      fileName: "assets/images/darkSquircleDiscord",
-      alt: "Theme using the a darker colour pallet",
+      fileName: 'assets/images/darkSquircleDiscord',
+      alt: 'Theme using the a darker colour pallet',
     },
     {
-      fileName: "assets/images/discordRoundDiscord",
-      alt: "Theme using the discord colours",
+      fileName: 'assets/images/discordRoundDiscord',
+      alt: 'Theme using the discord colours',
     },
-    { fileName: "assets/images/lightRoundOutline", alt: "A white theme" },
+    { fileName: 'assets/images/lightRoundOutline', alt: 'A white theme' },
   ];
   constructor() {}
 
