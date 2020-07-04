@@ -1,8 +1,8 @@
-import { Injectable } from "@angular/core";
-import { SteamChatStyleOptionSelectable } from "./steam-chat-style-options";
+import { Injectable } from '@angular/core';
+import { SteamChatStyleOptionSelectable } from './steam-chat-style-options';
 
 @Injectable({
-  providedIn: "root",
+  providedIn: 'root',
 })
 export class SteamChatCSSBuilderService {
   constructor() {}
@@ -20,7 +20,7 @@ export class SteamChatCSSBuilderService {
     });
     generatedImports.push(
       this.makeImportLine(
-        "https://laserflash.tk/steam-chat-skin/src/baseTheme.css"
+        'https://laserflash.tk/steam-chat-skin/src/baseTheme.css'
       )
     );
     return generatedImports;
@@ -37,7 +37,7 @@ export class SteamChatCSSBuilderService {
       }
     });
     generatedImports.push(
-      "https://laserflash.tk/steam-chat-skin/src/baseTheme.css"
+      'https://laserflash.tk/steam-chat-skin/src/baseTheme.css'
     );
     return generatedImports;
   }
@@ -73,9 +73,9 @@ export class SteamChatCSSBuilderService {
    * @param imports text line in the form of a css import statement
    */
   public convertImportsToUrls(imports: string) {
-    imports = imports.replace(/@import url\(/g, "");
-    imports = imports.replace(/\)/g, "");
-    imports = imports.replace(/\n+/g, "\n");
+    imports = imports.replace(/@import url\(/g, '');
+    imports = imports.replace(/\)/g, '');
+    imports = imports.replace(/\n+/g, '\n');
     return imports;
   }
 
@@ -84,14 +84,14 @@ export class SteamChatCSSBuilderService {
    * @param text block of css maybe with imports
    */
   public removeComments(text: string) {
-    text = text.replace(/\/\*.*\*\//g, ""); // Remove comments
-    text = text.replace(/\n+/g, ""); // Remove newline
-    text = text.replace(/ /g, ""); // Remove spaces
+    text = text.replace(/\/\*.*\*\//g, ''); // Remove comments
+    text = text.replace(/\n+/g, ''); // Remove newline
+    text = text.replace(/ /g, ''); // Remove spaces
     return text;
   }
 
   private makeImportLine(importLocation: string): string {
-    return "@import url(" + importLocation + ");";
+    return '@import url(' + importLocation + ');';
   }
 
   /**
