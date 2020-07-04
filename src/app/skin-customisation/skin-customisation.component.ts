@@ -1,16 +1,16 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
-import { FileSaverService } from 'src/app/file-saver.service';
-import { SteamChatCSSBuilderService } from 'src/app/steam-chat-cssbuilder.service';
+import { Component, OnInit, ViewChild } from "@angular/core";
+import { FileSaverService } from "src/app/file-saver.service";
+import { SteamChatCSSBuilderService } from "src/app/steam-chat-cssbuilder.service";
 import {
   SteamChatCustomisationOptions,
   SteamChatStyleOptionSelectable,
-} from 'src/app/steam-chat-style-options';
-import { SteamPreviewComponent } from './steam-preview/steam-preview.component';
+} from "src/app/steam-chat-style-options";
+import { SteamPreviewComponent } from "./steam-preview/steam-preview.component";
 
 @Component({
-  selector: 'app-skin-customisation',
-  templateUrl: './skin-customisation.component.html',
-  styleUrls: ['./skin-customisation.component.css'],
+  selector: "app-skin-customisation",
+  templateUrl: "./skin-customisation.component.html",
+  styleUrls: ["./skin-customisation.component.css"],
 })
 export class SkinCustomisationComponent implements OnInit {
   public customisationOptions: SteamChatStyleOptionSelectable[];
@@ -29,7 +29,7 @@ export class SkinCustomisationComponent implements OnInit {
   }
 
   public selectedOptions() {
-    let selectedOptions = '';
+    let selectedOptions = "";
     this.customisationOptions.forEach((optionType) => {
       selectedOptions +=
         optionType.options[optionType.selectedOptionIndex].shortName;
@@ -49,7 +49,7 @@ export class SkinCustomisationComponent implements OnInit {
     const imports = this.CSSBUILDER.generateImportArray(
       this.customisationOptions
     );
-    this.FILESAVER.createAndSaveFromArray(imports, 'friends.custom.css');
+    this.FILESAVER.createAndSaveFromArray(imports, "friends.custom.css");
   }
 
   /**
@@ -58,7 +58,7 @@ export class SkinCustomisationComponent implements OnInit {
    */
   public saveGeneratedCSSUnixReady() {
     this.CSSBUILDER.generateWebkit(this.customisationOptions).then((css) => {
-      this.FILESAVER.createAndSaveFromArray(css, 'webkit.css');
+      this.FILESAVER.createAndSaveFromArray(css, "webkit.css");
     });
   }
 }
