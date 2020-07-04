@@ -15,9 +15,7 @@
   margin: auto auto;
   height: 600px;
 }
-.miniProfile-preview {
-  margin: auto auto;
-}
+
 
 .previewBorder {
   border-color: var(--color-secondary);

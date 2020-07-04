@@ -1,0 +1,49 @@
+<div class="DropTarget quickAccessFriends compactQuickAccess">
+  <ng-container *ngFor="let user of users">
+    <div class="favoriteElement">
+      <div
+        class="friend quickAccessFriend friendStatusHover"
+        draggable="true"
+        [ngClass]="statusToClass(user.status)"
+      >
+        <div>
+          <div
+            class="steamavatar_avatarHolder_1G7LI avatarHolder no-drag Medium"
+            [ngClass]="statusToClass(user.status)"
+          >
+            <div class="steamavatar_avatarStatus_1Pwr6 avatarStatus"></div>
+            <img
+              class="steamavatar_avatar_f2laR avatar"
+              draggable="false"
+              [src]="user.image"
+            />
+            <div
+              *ngIf="isAway(user.status)"
+              class="friendsnooze_SnoozeContainer_1OfTa online SnoozeContainer friendsnooze_Medium_2NSIM friendsnooze_Dim_10sPU"
+            >
+              <div
+                data-text="Z"
+                class="friendsnooze_SnoozeZ_29fyi friendsnooze_Z1_GU6T2"
+              >
+                Z
+              </div>
+              <div
+                data-text="Z"
+                class="friendsnooze_SnoozeZ_29fyi friendsnooze_Z2_277XL"
+              >
+                Z
+              </div>
+              <div
+                data-text="Z"
+                class="friendsnooze_SnoozeZ_29fyi friendsnooze_Z3_1gXQi"
+              >
+                Z
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+  <div class="dropTargetBox"></div>
+</div>
