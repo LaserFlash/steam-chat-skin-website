@@ -1,4 +1,4 @@
-![Build and Deploy](https://github.com/LaserFlash/steam-chat-skin-website/workflows/Build%20and%20Deploy/badge.svg?branch=master)
+![CI](https://github.com/LaserFlash/steam-chat-skin-website/workflows/CI/badge.svg)
 
 # SteamChatSkinWebsite
 
