@@ -1,16 +1,16 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit } from '@angular/core';
 import {
   currentUser,
   offlineUsers,
   onlineUsers,
   ingameUsers,
   User,
-} from "./userComponents/users";
+} from './userComponents/users';
 
 @Component({
-  selector: "app-steam-preview",
-  templateUrl: "./steam-preview.component.html",
-  styleUrls: ["./steam-preview.component.css"],
+  selector: 'app-steam-preview',
+  templateUrl: './steam-preview.component.html',
+  styleUrls: ['./steam-preview.component.css'],
 })
 export class SteamPreviewComponent implements OnInit {
   public styles = [];

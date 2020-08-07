@@ -1,8 +1,8 @@
-import { async, ComponentFixture, TestBed } from "@angular/core/testing";
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { QuickAccessComponent } from "./quick-access.component";
+import { QuickAccessComponent } from './quick-access.component';
 
-describe("QuickAccessComponent", () => {
+describe('QuickAccessComponent', () => {
   let component: QuickAccessComponent;
   let fixture: ComponentFixture<QuickAccessComponent>;
 
@@ -18,7 +18,7 @@ describe("QuickAccessComponent", () => {
     fixture.detectChanges();
   });
 
-  it("should create", () => {
+  it('should create', () => {
     expect(component).toBeTruthy();
   });
 });

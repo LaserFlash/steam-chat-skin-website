@@ -1,37 +1,37 @@
-import { Status } from "./users";
+import { Status } from './users';
 
 export const statusToClassNames = (status: Status[]): string => {
   return status
     .map((s) => {
       switch (s) {
-        case "online":
-          return "online";
-        case "ingame":
-          return "ingame";
-        case "away":
-          return "awayOrSnooze";
-        case "offline":
-          return "offline";
+        case 'online':
+          return 'online';
+        case 'ingame':
+          return 'ingame';
+        case 'away':
+          return 'awayOrSnooze';
+        case 'offline':
+          return 'offline';
       }
     })
-    .join(" ");
+    .join(' ');
 };
 
 export const statusToDisplayName = (status: Status[]): string => {
   return status
     .map((s) => {
       switch (s) {
-        case "online":
-          return "Online";
-        case "ingame":
-          return "ingame";
-        case "away":
-          return "Away";
-        case "offline":
-          return "Offline";
+        case 'online':
+          return 'Online';
+        case 'ingame':
+          return 'ingame';
+        case 'away':
+          return 'Away';
+        case 'offline':
+          return 'Offline';
       }
     })
-    .join(" ");
+    .join(' ');
 };
 
 export default { statusToClassNames, statusToDisplayName };
