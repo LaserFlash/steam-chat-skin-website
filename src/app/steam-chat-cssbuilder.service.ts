@@ -10,36 +10,30 @@ export class SteamChatCSSBuilderService {
   public generateImportArray(
     selectedOptions: SteamChatStyleOptionSelectable[]
   ): string[] {
-    const generatedImports: string[] = [];
-    selectedOptions.forEach((optionInfo: SteamChatStyleOptionSelectable) => {
-      generatedImports.push(
+    return [
+      this.makeImportLine(
+        'https://laserflash.tk/steam-chat-skin/src/baseTheme.css'
+      ),
+      ...selectedOptions.map((optionInfo: SteamChatStyleOptionSelectable) =>
         this.makeImportLine(
           optionInfo.options[optionInfo.selectedOptionIndex].importLine
         )
-      );
-    });
-    generatedImports.push(
-      this.makeImportLine(
-        'https://laserflash.tk/steam-chat-skin/src/baseTheme.css'
-      )
-    );
-    return generatedImports;
+      ),
+    ];
   }
 
   public generateUrlArray(
     selectedOptions: SteamChatStyleOptionSelectable[]
   ): string[] {
-    const generatedImports: string[] = [];
-    selectedOptions.forEach((optionInfo: SteamChatStyleOptionSelectable) => {
-      const url = optionInfo.options[optionInfo.selectedOptionIndex].importLine;
-      if (url) {
-        generatedImports.push(url);
-      }
-    });
-    generatedImports.push(
-      'https://laserflash.tk/steam-chat-skin/src/baseTheme.css'
-    );
-    return generatedImports;
+    return [
+      'https://laserflash.tk/steam-chat-skin/src/baseTheme.css',
+      ...selectedOptions
+        .map(
+          (optionInfo: SteamChatStyleOptionSelectable) =>
+            optionInfo.options[optionInfo.selectedOptionIndex].importLine
+        )
+        .filter((url) => url),
+    ];
   }
 
   public generateWebkit(
@@ -52,7 +46,6 @@ export class SteamChatCSSBuilderService {
       // Now have all the required urls
       // map every url to the promise of the fetch
       const requests = urls.map((url) => fetch(url));
-      const css: string[] = [];
       Promise.all(requests)
         .then((responses) => {
           return responses;
