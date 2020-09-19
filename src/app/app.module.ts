@@ -23,7 +23,7 @@ import { SkinCustomisationComponent } from './skin-customisation/skin-customisat
 import { SteamPreviewComponent } from './skin-customisation/steam-preview/steam-preview.component';
 import { SkinExamplesComponent } from './skin-examples/skin-examples.component';
 import { SkinInstallationComponent } from './skin-installation/skin-installation.component';
-import { SkinPrerequisiteComponent } from './skin-prerequisite/skin-prerequisite.component';
+import { SkinPreparationComponent } from './skin-preparation/skin-preparation.component';
 
 import { DeferLoadModule } from '@trademe/ng-defer-load';
 import { CurrentUserComponent } from './skin-customisation/steam-preview/userComponents/current-user/current-user.component';
@@ -36,7 +36,7 @@ import { QuickAccessComponent } from './skin-customisation/steam-preview/userCom
     AppComponent,
     FooterComponent,
     SkinExamplesComponent,
-    SkinPrerequisiteComponent,
+    SkinPreparationComponent,
     SkinCustomisationComponent,
     SteamPreviewComponent,
     SafePipe,
