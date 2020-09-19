@@ -8,12 +8,11 @@ export class SteamChatCSSBuilderService {
   constructor() {}
 
   public generateImportArray(
-    selectedOptions: SteamChatStyleOptionSelectable[]
+    selectedOptions: SteamChatStyleOptionSelectable[],
+    baseUrl: string
   ): string[] {
     return [
-      this.makeImportLine(
-        'https://laserflash.tk/steam-chat-skin/src/baseTheme.css'
-      ),
+      this.makeImportLine(baseUrl),
       ...selectedOptions.map((optionInfo: SteamChatStyleOptionSelectable) =>
         this.makeImportLine(
           optionInfo.options[optionInfo.selectedOptionIndex].importLine
@@ -23,10 +22,11 @@ export class SteamChatCSSBuilderService {
   }
 
   public generateUrlArray(
-    selectedOptions: SteamChatStyleOptionSelectable[]
+    selectedOptions: SteamChatStyleOptionSelectable[],
+    baseUrl
   ): string[] {
     return [
-      'https://laserflash.tk/steam-chat-skin/src/baseTheme.css',
+      baseUrl,
       ...selectedOptions
         .map(
           (optionInfo: SteamChatStyleOptionSelectable) =>
@@ -37,12 +37,17 @@ export class SteamChatCSSBuilderService {
   }
 
   public generateWebkit(
-    selectedOptions: SteamChatStyleOptionSelectable[]
+    options: {
+      selectedOptions: SteamChatStyleOptionSelectable[];
+      baseUrl: string;
+    }[]
   ): Promise<string[]> {
     return new Promise((resolve, reject) => {
-      let urls = this.generateUrlArray(selectedOptions);
+      const urls = options
+        .flatMap((o) => this.generateUrlArray(o.selectedOptions, o.baseUrl))
+        .filter((item, i, array) => array.indexOf(item) === i)
+        .filter((item) => item);
 
-      urls = this.noEmpty(urls);
       // Now have all the required urls
       // map every url to the promise of the fetch
       const requests = urls.map((url) => fetch(url));
