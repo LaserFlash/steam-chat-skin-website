@@ -1,7 +1,7 @@
 <mat-toolbar class="sticky-toolbar">
   {{ title }}
   <span class="actions">
-    <a mat-button href="#prerequisite">Preparation</a>
+    <a mat-button href="#preparation">Preparation</a>
     <a mat-button href="#customisation">Customisation</a>
     <a mat-button href="#installation">Installation</a>
   </span>
@@ -9,7 +9,7 @@
 
 <!--Bellow is the vertical site feed. Some items have have deferred (later) loading -->
 <app-skin-examples></app-skin-examples>
-<app-skin-prerequisite id="prerequisite"></app-skin-prerequisite>
+<app-skin-preparation id="preparation"></app-skin-preparation>
 
 <div class="defer" (deferLoad)="showElementCustomisation = true"></div>
 <div id="customisation"></div>

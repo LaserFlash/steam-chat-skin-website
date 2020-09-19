@@ -1,6 +1,6 @@
 export class SteamChatStyleOption {
   public title: string;
-  public oFriendsSupport = false;
+  public oFriendsSupport?: boolean;
 
   public options: Array<{
     displayName: string;
