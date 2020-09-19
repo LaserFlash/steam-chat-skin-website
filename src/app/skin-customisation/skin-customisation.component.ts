@@ -4,6 +4,8 @@ import { SteamChatCSSBuilderService } from 'src/app/steam-chat-cssbuilder.servic
 import {
   SteamChatCustomisationOptions,
   SteamChatStyleOptionSelectable,
+  oFriendsBaseImport,
+  friendsBaseImport,
 } from 'src/app/steam-chat-style-options';
 import { SteamPreviewComponent } from './steam-preview/steam-preview.component';
 
@@ -39,17 +41,36 @@ export class SkinCustomisationComponent implements OnInit {
 
   public updatePreview() {
     const newStyles = this.CSSBUILDER.generateUrlArray(
-      this.customisationOptions
+      this.customisationOptions,
+      friendsBaseImport
     );
 
     this.steamPreview.updateTheme(newStyles);
   }
 
   public saveGeneratedCSS() {
-    const imports = this.CSSBUILDER.generateImportArray(
-      this.customisationOptions
+    const friendsImports = this.CSSBUILDER.generateImportArray(
+      this.customisationOptions,
+      friendsBaseImport
     );
-    this.FILESAVER.createAndSaveFromArray(imports, 'friends.custom.css');
+
+    const oFriendsImports = this.CSSBUILDER.generateImportArray(
+      this.customisationOptions
+        .filter((group) => group.oFriendsSupport)
+        .map((group) => ({
+          ...group,
+          options: group.options.map((o) => ({
+            ...o,
+            importLine: o.oFriendsImport || o.importLine,
+          })),
+        })),
+      oFriendsBaseImport
+    );
+    this.FILESAVER.createAndSaveFromArray(friendsImports, 'friends.custom.css');
+    this.FILESAVER.createAndSaveFromArray(
+      oFriendsImports,
+      'ofriends.custom.css'
+    );
   }
 
   /**
@@ -57,7 +78,24 @@ export class SkinCustomisationComponent implements OnInit {
    *  Both of these cannot have any import statements
    */
   public saveGeneratedCSSUnixReady() {
-    this.CSSBUILDER.generateWebkit(this.customisationOptions).then((css) => {
+    this.CSSBUILDER.generateWebkit([
+      {
+        selectedOptions: this.customisationOptions,
+        baseUrl: friendsBaseImport,
+      },
+      {
+        selectedOptions: this.customisationOptions
+          .filter((group) => group.oFriendsSupport)
+          .map((group) => ({
+            ...group,
+            options: group.options.map((o) => ({
+              ...o,
+              importLine: o.oFriendsImport,
+            })),
+          })),
+        baseUrl: oFriendsBaseImport,
+      },
+    ]).then((css) => {
       this.FILESAVER.createAndSaveFromArray(css, 'webkit.css');
     });
   }

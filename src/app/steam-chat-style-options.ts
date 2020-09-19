@@ -1,9 +1,12 @@
 export class SteamChatStyleOption {
   public title: string;
+  public oFriendsSupport = false;
+
   public options: Array<{
     displayName: string;
     shortName: string;
     importLine: string;
+    oFriendsImport?: string;
   }>;
 }
 
@@ -11,9 +14,16 @@ export class SteamChatStyleOptionSelectable extends SteamChatStyleOption {
   public selectedOptionIndex = 0;
 }
 
+export const friendsBaseImport =
+  'https://laserflash.tk/steam-chat-skin/src/baseTheme.css';
+
+export const oFriendsBaseImport =
+  'https://laserflash.tk/steam-chat-skin/offlineFriends/offlineFriends.css';
+
 export const SteamChatCustomisationOptions: SteamChatStyleOptionSelectable[] = [
   {
     title: 'Theme Colour',
+    oFriendsSupport: true,
     selectedOptionIndex: 0,
     options: [
       {
@@ -44,6 +54,7 @@ export const SteamChatCustomisationOptions: SteamChatStyleOptionSelectable[] = [
   },
   {
     title: 'Avatar Shape',
+    oFriendsSupport: true,
     selectedOptionIndex: 0,
     options: [
       {
@@ -51,18 +62,24 @@ export const SteamChatCustomisationOptions: SteamChatStyleOptionSelectable[] = [
         shortName: 'RoundAvatar',
         importLine:
           'https://laserflash.tk/steam-chat-skin/src/css/customisable/avatarStyle/roundAvatar.css',
+        oFriendsImport:
+          'https://laserflash.tk/steam-chat-skin/offlineFriends/avatarStyle/roundAvatar.css',
       },
       {
         displayName: 'Squircle Avatar',
         shortName: 'SquircleAvatar',
         importLine:
           'https://laserflash.tk/steam-chat-skin/src/css/customisable/avatarStyle/squircleAvatar.css',
+        oFriendsImport:
+          'https://laserflash.tk/steam-chat-skin/offlineFriends/avatarStyle/squircleAvatar.css',
       },
       {
         displayName: 'Square Avatar',
         shortName: 'SquareAvatar',
         importLine:
           'https://laserflash.tk/steam-chat-skin/src/css/customisable/avatarStyle/squareAvatar.css',
+        oFriendsImport:
+          'https://laserflash.tk/steam-chat-skin/offlineFriends/avatarStyle/squareAvatar.css',
       },
     ],
   },
@@ -124,6 +141,7 @@ export const SteamChatCustomisationOptions: SteamChatStyleOptionSelectable[] = [
   },
   {
     title: 'Shadow Effects',
+    oFriendsSupport: true,
     selectedOptionIndex: 0,
     options: [
       {
@@ -131,12 +149,16 @@ export const SteamChatCustomisationOptions: SteamChatStyleOptionSelectable[] = [
         shortName: 'improvedShadows',
         importLine:
           'https://laserflash.tk/steam-chat-skin/src/css/customisable/shadowEffects/improvedShadow.css',
+        oFriendsImport:
+          'https://laserflash.tk/steam-chat-skin/offlineFriends/shadowEffects/improvedShadow.css',
       },
       {
         displayName: 'No Shadows',
         shortName: 'noShadow',
         importLine:
           'https://laserflash.tk/steam-chat-skin/src/css/customisable/shadowEffects/noShadow.css',
+        oFriendsImport:
+          'https://laserflash.tk/steam-chat-skin/offlineFriends/shadowEffects/noShadow.css',
       },
       { displayName: 'Steam Default', shortName: '', importLine: '' },
     ],
