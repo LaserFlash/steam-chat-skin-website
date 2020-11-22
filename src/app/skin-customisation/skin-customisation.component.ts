@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, AfterViewInit, ViewChild, OnInit } from '@angular/core';
 import { FileSaverService } from 'src/app/file-saver.service';
 import { SteamChatCSSBuilderService } from 'src/app/steam-chat-cssbuilder.service';
 import {
@@ -14,9 +14,10 @@ import { SteamPreviewComponent } from './steam-preview/steam-preview.component';
   templateUrl: './skin-customisation.component.html',
   styleUrls: ['./skin-customisation.component.css'],
 })
-export class SkinCustomisationComponent implements OnInit {
-  public customisationOptions: SteamChatStyleOptionSelectable[];
+export class SkinCustomisationComponent implements AfterViewInit, OnInit {
+  @ViewChild(SteamPreviewComponent, { static: true })
   public steamPreview: SteamPreviewComponent;
+  public customisationOptions: SteamChatStyleOptionSelectable[];
 
   constructor(
     public CSSBUILDER: SteamChatCSSBuilderService,
@@ -25,6 +26,9 @@ export class SkinCustomisationComponent implements OnInit {
 
   public ngOnInit() {
     this.customisationOptions = SteamChatCustomisationOptions as SteamChatStyleOptionSelectable[];
+  }
+
+  public ngAfterViewInit() {
     this.updatePreview();
   }
 
