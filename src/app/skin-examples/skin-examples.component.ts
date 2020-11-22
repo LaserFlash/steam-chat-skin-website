@@ -30,6 +30,7 @@ export class SkinExamplesComponent implements OnInit {
 
   /**
    * Shuffles array in place.
+   *
    * @param Image[] a items An array containing the items.
    */
   public shuffle(a: Image[]) {

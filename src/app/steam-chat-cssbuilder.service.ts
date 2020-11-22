@@ -68,6 +68,7 @@ export class SteamChatCSSBuilderService {
 
   /**
    * Extract the url from css import statements
+   *
    * @param imports text line in the form of a css import statement
    */
   public convertImportsToUrls(imports: string) {
@@ -79,6 +80,7 @@ export class SteamChatCSSBuilderService {
 
   /**
    * Remove comments from css and slim text
+   *
    * @param text block of css maybe with imports
    */
   public removeComments(text: string) {
@@ -94,6 +96,7 @@ export class SteamChatCSSBuilderService {
 
   /**
    * Remove empty or non true items from the given array
+   *
    * @param array array to check
    */
   private noEmpty(array: string[]): string[] {

@@ -16,8 +16,6 @@ import { SteamPreviewComponent } from './steam-preview/steam-preview.component';
 })
 export class SkinCustomisationComponent implements OnInit {
   public customisationOptions: SteamChatStyleOptionSelectable[];
-
-  @ViewChild(SteamPreviewComponent, { static: true })
   public steamPreview: SteamPreviewComponent;
 
   constructor(

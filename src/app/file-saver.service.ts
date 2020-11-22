@@ -9,6 +9,7 @@ export class FileSaverService {
 
   /**
    * Given an array produce produce a download output
+   *
    * @param lines content to save as a file
    * @param fileName name of the produced file
    */

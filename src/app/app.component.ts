@@ -13,17 +13,6 @@ export class AppComponent implements OnInit {
   public showElementInstallation = false;
   public showElementFooter = false;
 
-  public ngOnInit(): void {
-    this.onWindowScroll();
-
-    /* Load later views after 4 seconds */
-    setTimeout(() => {
-      this.showElementCustomisation = true;
-      this.showElementInstallation = true;
-      this.showElementFooter = true;
-    }, 2000);
-  }
-
   @HostListener('window:scroll', [])
   public onWindowScroll() {
     /* Hide top toolbar when the main page title is on page */
@@ -38,5 +27,16 @@ export class AppComponent implements OnInit {
     } else {
       document.querySelector('body').style.cssText = '--visibility: visible';
     }
+  }
+
+  public ngOnInit(): void {
+    this.onWindowScroll();
+
+    /* Load later views after 4 seconds */
+    setTimeout(() => {
+      this.showElementCustomisation = true;
+      this.showElementInstallation = true;
+      this.showElementFooter = true;
+    }, 2000);
   }
 }
