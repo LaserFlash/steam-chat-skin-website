@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { SkinInstallationComponent } from './skin-installation.component';
 
@@ -6,7 +6,7 @@ describe('SkinInstallationComponent', () => {
   let component: SkinInstallationComponent;
   let fixture: ComponentFixture<SkinInstallationComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [SkinInstallationComponent],
     }).compileComponents();
