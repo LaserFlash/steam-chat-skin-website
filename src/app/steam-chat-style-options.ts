@@ -39,6 +39,12 @@ export const SteamChatCustomisationOptions: SteamChatStyleOptionSelectable[] = [
           'https://laserflash.tk/steam-chat-skin/src/css/customisable/colourSet/darkMode.css',
       },
       {
+        displayName: 'Black Theme',
+        shortName: 'BlackColour',
+        importLine:
+          'https://laserflash.tk/steam-chat-skin/src/css/customisable/colourSet/blackMode.css',
+      },
+      {
         displayName: 'Steam Like',
         shortName: 'SteamColours',
         importLine:
