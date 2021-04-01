@@ -52,9 +52,7 @@ export class SteamChatCSSBuilderService {
       // map every url to the promise of the fetch
       const requests = urls.map((url) => fetch(url));
       Promise.all(requests)
-        .then((responses) => {
-          return responses;
-        })
+        .then((responses) => responses)
         // Process the response getting the file content or text from it
         .then((responses) =>
           Promise.all(responses.map((r: Response) => r.text())).then(
@@ -100,8 +98,6 @@ export class SteamChatCSSBuilderService {
    * @param array array to check
    */
   private noEmpty(array: string[]): string[] {
-    return array.filter((value) => {
-      return value;
-    });
+    return array.filter((value) => value);
   }
 }

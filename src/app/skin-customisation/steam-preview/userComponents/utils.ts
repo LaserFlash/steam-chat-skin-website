@@ -1,7 +1,6 @@
 import { Status } from './users';
 
-export const statusToClassNames = (status: Status[]): string => {
-  return status
+export const statusToClassNames = (status: Status[]): string => status
     .map((s) => {
       switch (s) {
         case 'online':
@@ -15,10 +14,8 @@ export const statusToClassNames = (status: Status[]): string => {
       }
     })
     .join(' ');
-};
 
-export const statusToDisplayName = (status: Status[]): string => {
-  return status
+export const statusToDisplayName = (status: Status[]): string => status
     .map((s) => {
       switch (s) {
         case 'online':
@@ -32,6 +29,5 @@ export const statusToDisplayName = (status: Status[]): string => {
       }
     })
     .join(' ');
-};
 
 export default { statusToClassNames, statusToDisplayName };
