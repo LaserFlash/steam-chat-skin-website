@@ -1,11 +1,11 @@
 {
   "name": "steam-chat-skin-website",
-  "homepage": "https://steamchatskinning.tk/",
+  "homepage": "https://laserflash.github.io/steam-chat-skin-website/",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --prod --aot --base-href='/'",
+    "build": "ng build --prod --aot --base-href=/steam-chat-skin-website/",
     "test": "ng test",
     "lint": "ng lint",
     "lint:fix": "ng lint --fix",
