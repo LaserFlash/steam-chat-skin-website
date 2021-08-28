@@ -72,7 +72,7 @@ Lint:
 Build Site:
   extends: .build-stage
   script:
-    - npm run build
+    - npm run build:gitlab
   artifacts:
     paths:
       - dist

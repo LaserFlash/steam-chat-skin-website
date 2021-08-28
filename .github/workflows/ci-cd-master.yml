@@ -46,7 +46,7 @@ jobs:
           path: node_modules
           key: ${{hashFiles('package-lock.json')}}
       - name: Build
-        run: npm run build
+        run: npm run build:github
       - name: Upload artifact
         uses: actions/upload-artifact@v2
         with:
@@ -71,4 +71,4 @@ jobs:
           BRANCH: gh-pages
           FOLDER: dist/steam-chat-skin-website
           CLEAN: true
-          CLEAN_EXCLUDE: "[CNAME]"
+          CLEAN_EXCLUDE: '[CNAME]'
