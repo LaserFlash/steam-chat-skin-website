@@ -1,4 +1,4 @@
-![CI](https://github.com/LaserFlash/steam-chat-skin-website/workflows/CI/badge.svg)
+[![CI](https://github.com/LaserFlash/steam-chat-skin-website/workflows/CI/badge.svg)](https://github.com/LaserFlash/steam-chat-skin-website/actions/workflows/ci-cd-master.yml)
 [![Gitlab Deploy](https://gitlab.com/LaserFlash/steam-skin/badges/master/pipeline.svg)](https://gitlab.com/LaserFlash/steam-skin/-/pipelines)
 
 # SteamChatSkinWebsite
