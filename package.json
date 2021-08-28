@@ -6,6 +6,8 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build --prod --aot --base-href=/steam-chat-skin-website/",
+    "build:github": "ng build --prod --aot --base-href=/steam-chat-skin-website/",
+    "build:gitlab": "ng build --prod --aot --base-href=/steam-skin/",
     "test": "ng test",
     "lint": "ng lint",
     "lint:fix": "ng lint --fix",
