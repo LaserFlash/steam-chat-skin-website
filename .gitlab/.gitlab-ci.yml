@@ -81,11 +81,13 @@ Build Site:
 # Pre Deploy
 pages:
   extends: .deploy-stage
-  stage: deploy
   needs: [Build Site]
   script:
     - rm -rf public
     - mv dist/ public
+  environment:
+    name: Gitlab Pages
+    url: https://laserflash.gitlab/steam-skin
   artifacts:
     paths:
       - public
