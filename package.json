@@ -26,7 +26,7 @@
     "@angular-devkit/architect": "^0.1202.7",
     "@angular-devkit/core": "^12.2.8",
     "@angular/animations": "^11.2.7",
-    "@angular/cdk": "^12.2.8",
+    "@angular/cdk": "^14.1.2",
     "@angular/common": "^11.2.7",
     "@angular/compiler": "^11.2.7",
     "@angular/core": "^11.2.7",
