@@ -1,41 +1,53 @@
-<div class="DropTarget quickAccessFriends compactQuickAccess">
+<div class="DropTarget quickAccessFriends compactQuickAccess Panel Focusable">
   <ng-container *ngFor="let user of users">
-    <div class="favoriteElement">
+    <div class="favoriteElement Panel Focusable">
       <div
-        class="friend quickAccessFriend friendStatusHover"
+        class="
+          friend
+          online
+          quickAccessFriend
+          friendStatusHover
+          Panel
+          Focusable
+        "
         draggable="true"
         [ngClass]="statusToClass(user.status)"
       >
         <div>
           <div
-            class="steamavatar_avatarHolder_1G7LI avatarHolder no-drag Medium"
+            class="steamavatar_avatarHolder_1qjsP avatarHolder no-drag Medium"
             [ngClass]="statusToClass(user.status)"
           >
-            <div class="steamavatar_avatarStatus_1Pwr6 avatarStatus"></div>
+            <div class="steamavatar_avatarStatus_1Co4T avatarStatus"></div>
             <img
-              class="steamavatar_avatar_f2laR avatar"
+              class="steamavatar_avatar_1LMc2 avatar"
               draggable="false"
               [src]="user.image"
             />
             <div
               *ngIf="isAway(user.status)"
-              class="friendsnooze_SnoozeContainer_1OfTa online SnoozeContainer friendsnooze_Medium_2NSIM friendsnooze_Dim_10sPU"
+              class="
+                friendsnooze_SnoozeContainer_37Qst
+                online
+                SnoozeContainer
+                friendsnooze_Medium_1DQyI friendsnooze_Dim_26tjU
+              "
             >
               <div
                 data-text="Z"
-                class="friendsnooze_SnoozeZ_29fyi friendsnooze_Z1_GU6T2"
+                class="friendsnooze_SnoozeZ_2urc6 friendsnooze_Z1_1SBGO"
               >
                 Z
               </div>
               <div
                 data-text="Z"
-                class="friendsnooze_SnoozeZ_29fyi friendsnooze_Z2_277XL"
+                class="friendsnooze_SnoozeZ_2urc6 friendsnooze_Z2_1XZDy"
               >
                 Z
               </div>
               <div
                 data-text="Z"
-                class="friendsnooze_SnoozeZ_29fyi friendsnooze_Z3_1gXQi"
+                class="friendsnooze_SnoozeZ_2urc6 friendsnooze_Z3_1pszW"
               >
                 Z
               </div>

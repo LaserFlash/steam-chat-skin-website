@@ -1,4 +1,4 @@
-<div class="currentUserContainer online">
+<div class="currentUserContainer" [ngClass]="statusToClass(user.status)">
   <svg
     class="statusHeaderGlow"
     width="100%"
@@ -27,13 +27,25 @@
     ></ellipse>
   </svg>
   <div class="AvatarAndUser">
-    <img class="currentUserAvatar" [src]="user.image" />
+    <div class="currentUserAvatar">
+      <div
+        class="steamavatar_avatarHolder_1qjsP avatarHolder no-drag Medium"
+        [ngClass]="statusToClass(user.status)"
+      >
+        <div class="steamavatar_avatarStatus_1Co4T avatarStatus"></div>
+        <img
+          [src]="user.image"
+          class="steamavatar_avatar_1LMc2 avatar"
+          draggable="false"
+        />
+      </div>
+    </div>
     <div
-      class="labelHolder personanameandstatus_twoLine_2wZNn"
+      class="labelHolder personanameandstatus_twoLine_GI-2M"
       [ngClass]="statusToClass(user.status)"
     >
-      <div class="personanameandstatus_statusAndName_9U-hi">
-        <div class="personanameandstatus_playerName_1uxaf">{{ user.name }}</div>
+      <div class="personanameandstatus_statusAndName_yTyUi">
+        <div class="personanameandstatus_playerName_1ocG6">{{ user.name }}</div>
         <div class="ContextMenuButton">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -49,9 +61,13 @@
           </svg>
         </div>
       </div>
-      <div class="personanameandstatus_richPresenceContainer_21cNf">
+      <div class="personanameandstatus_richPresenceContainer_TIY16">
         <div
-          class="personanameandstatus_gameName_qvibF personanameandstatus_richPresenceLabel_3Q6g1 no-drag"
+          class="
+            personanameandstatus_gameName_1pRZ3
+            personanameandstatus_richPresenceLabel_1whoN
+            no-drag
+          "
         >
           {{ statusToDisplayName(user.status) }}
         </div>

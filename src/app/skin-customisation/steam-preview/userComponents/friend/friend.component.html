@@ -5,50 +5,50 @@
     [ngClass]="statusToClass(user.status)"
   >
     <div
-      class="steamavatar_avatarHolder_1G7LI avatarHolder no-drag Medium"
+      class="steamavatar_avatarHolder_1qjsP avatarHolder no-drag Medium"
       [ngClass]="statusToClass(user.status)"
     >
-      <div class="steamavatar_avatarStatus_1Pwr6 avatarStatus"></div>
+      <div class="steamavatar_avatarStatus_1Co4T avatarStatus"></div>
       <img
-        class="steamavatar_avatar_f2laR avatar"
+        class="steamavatar_avatar_1LMc2 avatar"
         draggable="false"
         [src]="user.image"
       />
     </div>
     <div
-      class="labelHolder personanameandstatus_twoLine_2wZNn"
+      class="labelHolder personanameandstatus_twoLine_GI-2M"
       [ngClass]="statusToClass(user.status)"
     >
-      <div class="personanameandstatus_statusAndName_9U-hi">
-        <div class="personanameandstatus_playerName_1uxaf">
+      <div class="personanameandstatus_statusAndName_yTyUi">
+        <div class="personanameandstatus_playerName_1ocG6">
           {{ user.name }}
           <span
             *ngIf="user.nickname"
-            class="personanameandstatus_playerNickname_3-32P"
+            class="personanameandstatus_playerNickname_1RcPs-32P"
           >
             ({{ user.nickname }})
           </span>
         </div>
         <div
           *ngIf="isAway(user.status)"
-          class="friendsnooze_SnoozeContainer_1OfTa"
+          class="friendsnooze_SnoozeContainer_37Qst"
           [ngClass]="statusToClass(user.status)"
         >
           <div
             data-text="Z"
-            class="friendsnooze_SnoozeZ_29fyi friendsnooze_Z1_GU6T2"
+            class="friendsnooze_SnoozeZ_2urc6 friendsnooze_Z1_1SBGO"
           >
             Z
           </div>
           <div
             data-text="Z"
-            class="friendsnooze_SnoozeZ_29fyi friendsnooze_Z2_277XL"
+            class="friendsnooze_SnoozeZ_2urc6 friendsnooze_Z2_1XZDy"
           >
             Z
           </div>
           <div
             data-text="Z"
-            class="friendsnooze_SnoozeZ_29fyi friendsnooze_Z3_1gXQi"
+            class="friendsnooze_SnoozeZ_2urc6 friendsnooze_Z3_1pszW"
           >
             Z
           </div>
@@ -68,9 +68,13 @@
           </svg>
         </div>
       </div>
-      <div class="personanameandstatus_richPresenceContainer_21cNf">
+      <div class="personanameandstatus_richPresenceContainer_TIY16">
         <div
-          class="personanameandstatus_gameName_qvibF personanameandstatus_richPresenceLabel_3Q6g1 no-drag"
+          class="
+            personanameandstatus_gameName_1pRZ3
+            personanameandstatus_richPresenceLabel_1whoN
+            no-drag
+          "
         >
           {{ user.statusText }}
         </div>
