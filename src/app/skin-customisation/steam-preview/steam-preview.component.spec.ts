@@ -6,11 +6,13 @@ describe('SteamPreviewComponent', () => {
   let component: SteamPreviewComponent;
   let fixture: ComponentFixture<SteamPreviewComponent>;
 
-  beforeEach(waitForAsync(() => {
-    TestBed.configureTestingModule({
-      declarations: [SteamPreviewComponent],
-    }).compileComponents();
-  }));
+  beforeEach(
+    waitForAsync(() => {
+      TestBed.configureTestingModule({
+        declarations: [SteamPreviewComponent],
+      }).compileComponents();
+    })
+  );
 
   beforeEach(() => {
     fixture = TestBed.createComponent(SteamPreviewComponent);

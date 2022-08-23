@@ -6,11 +6,13 @@ describe('QuickAccessComponent', () => {
   let component: QuickAccessComponent;
   let fixture: ComponentFixture<QuickAccessComponent>;
 
-  beforeEach(waitForAsync(() => {
-    TestBed.configureTestingModule({
-      declarations: [QuickAccessComponent],
-    }).compileComponents();
-  }));
+  beforeEach(
+    waitForAsync(() => {
+      TestBed.configureTestingModule({
+        declarations: [QuickAccessComponent],
+      }).compileComponents();
+    })
+  );
 
   beforeEach(() => {
     fixture = TestBed.createComponent(QuickAccessComponent);

@@ -5,11 +5,13 @@ describe('SkinPreparationComponent', () => {
   let component: SkinPreparationComponent;
   let fixture: ComponentFixture<SkinPreparationComponent>;
 
-  beforeEach(waitForAsync(() => {
-    TestBed.configureTestingModule({
-      declarations: [SkinPreparationComponent],
-    }).compileComponents();
-  }));
+  beforeEach(
+    waitForAsync(() => {
+      TestBed.configureTestingModule({
+        declarations: [SkinPreparationComponent],
+      }).compileComponents();
+    })
+  );
 
   beforeEach(() => {
     fixture = TestBed.createComponent(SkinPreparationComponent);

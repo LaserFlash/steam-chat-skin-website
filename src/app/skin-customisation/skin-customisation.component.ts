@@ -25,7 +25,8 @@ export class SkinCustomisationComponent implements AfterViewInit, OnInit {
   ) {}
 
   public ngOnInit() {
-    this.customisationOptions = SteamChatCustomisationOptions as SteamChatStyleOptionSelectable[];
+    this.customisationOptions =
+      SteamChatCustomisationOptions as SteamChatStyleOptionSelectable[];
   }
 
   public ngAfterViewInit() {

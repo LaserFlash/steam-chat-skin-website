@@ -49,10 +49,10 @@ import { QuickAccessComponent } from './skin-customisation/steam-preview/userCom
   imports: [
     DeferLoadModule,
     RouterModule.forRoot([], {
-    scrollPositionRestoration: 'enabled',
-    anchorScrolling: 'enabled',
-    relativeLinkResolution: 'legacy'
-}),
+      scrollPositionRestoration: 'enabled',
+      anchorScrolling: 'enabled',
+      relativeLinkResolution: 'legacy',
+    }),
     BrowserModule,
     BrowserAnimationsModule,
     FlexLayoutModule,

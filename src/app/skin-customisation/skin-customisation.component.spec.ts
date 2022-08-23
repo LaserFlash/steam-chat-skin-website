@@ -6,11 +6,13 @@ describe('SkinCustomisationComponent', () => {
   let component: SkinCustomisationComponent;
   let fixture: ComponentFixture<SkinCustomisationComponent>;
 
-  beforeEach(waitForAsync(() => {
-    TestBed.configureTestingModule({
-      declarations: [SkinCustomisationComponent],
-    }).compileComponents();
-  }));
+  beforeEach(
+    waitForAsync(() => {
+      TestBed.configureTestingModule({
+        declarations: [SkinCustomisationComponent],
+      }).compileComponents();
+    })
+  );
 
   beforeEach(() => {
     fixture = TestBed.createComponent(SkinCustomisationComponent);

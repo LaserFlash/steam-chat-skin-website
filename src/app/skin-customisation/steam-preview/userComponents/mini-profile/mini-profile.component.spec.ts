@@ -6,11 +6,13 @@ describe('MiniProfileComponent', () => {
   let component: MiniProfileComponent;
   let fixture: ComponentFixture<MiniProfileComponent>;
 
-  beforeEach(waitForAsync(() => {
-    TestBed.configureTestingModule({
-      declarations: [MiniProfileComponent],
-    }).compileComponents();
-  }));
+  beforeEach(
+    waitForAsync(() => {
+      TestBed.configureTestingModule({
+        declarations: [MiniProfileComponent],
+      }).compileComponents();
+    })
+  );
 
   beforeEach(() => {
     fixture = TestBed.createComponent(MiniProfileComponent);
