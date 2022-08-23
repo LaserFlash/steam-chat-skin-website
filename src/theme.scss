@@ -1,17 +1,17 @@
-@import "~@angular/material/theming";
-@include mat-core();
-$primary: mat-palette($mat-green);
-$accent: mat-palette($mat-green, 800);
-$warn: mat-palette($mat-deep-orange);
+@use '~@angular/material' as mat;
+@include mat.core();
+$primary: mat.define-palette(mat.$green-palette);
+$accent: mat.define-palette(mat.$green-palette, 800);
+$warn: mat.define-palette(mat.$deep-orange-palette);
 
-$theme: mat-dark-theme($primary, $accent, $warn);
+$theme: mat.define-dark-theme($primary, $accent, $warn);
 
-@include angular-material-theme($theme);
+@include mat.all-component-themes($theme);
 
 :root {
-  --color-primary: #{mat-color($primary)};
-  --color-accent: #{mat-color($accent)};
-  --color-warn: #{mat-color($warn)};
+  --color-primary: #{mat.get-color-from-palette($primary)};
+  --color-accent: #{mat.get-color-from-palette($accent)};
+  --color-warn: #{mat.get-color-from-palette($warn)};
   --color-background: rgb(21, 21, 21);
   --color-secondary: rgb(30, 30, 31);
   --default-text: rgb(255, 255, 255);
