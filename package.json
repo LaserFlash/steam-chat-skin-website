@@ -5,8 +5,8 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --configuration production --aot --base-href=/steam-chat-skin-website/",
-    "build:github": "ng build --configuration production --aot --base-href=/steam-chat-skin-website/",
+    "build": "ng build --configuration production --aot --base-href=/",
+    "build:github": "ng build --configuration production --aot --base-href=/",
     "build:gitlab": "ng build --configuration production --aot --base-href=/steam-skin/",
     "test": "ng test",
     "lint": "ng lint",
