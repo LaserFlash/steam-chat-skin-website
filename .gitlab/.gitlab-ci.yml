@@ -87,7 +87,7 @@ pages:
     - mv dist/ public
   environment:
     name: Gitlab Pages
-    url: https://laserflash.gitlab/steam-skin
+    url: https://laserflash.gitlab/steam-skin-chat
   artifacts:
     paths:
       - public
