@@ -24,7 +24,6 @@ import { SkinExamplesComponent } from './skin-examples/skin-examples.component';
 import { SkinInstallationComponent } from './skin-installation/skin-installation.component';
 import { SkinPreparationComponent } from './skin-preparation/skin-preparation.component';
 
-import { DeferLoadModule } from '@trademe/ng-defer-load';
 import { CurrentUserComponent } from './skin-customisation/steam-preview/userComponents/current-user/current-user.component';
 import { FriendComponent } from './skin-customisation/steam-preview/userComponents/friend/friend.component';
 import { MiniProfileComponent } from './skin-customisation/steam-preview/userComponents/mini-profile/mini-profile.component';
@@ -46,7 +45,6 @@ import { QuickAccessComponent } from './skin-customisation/steam-preview/userCom
     QuickAccessComponent,
   ],
   imports: [
-    DeferLoadModule,
     RouterModule.forRoot([], {
       scrollPositionRestoration: 'enabled',
       anchorScrolling: 'enabled',

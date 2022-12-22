@@ -9,10 +9,6 @@ import { HostListener } from '@angular/core';
 export class AppComponent implements OnInit {
   public title = 'Steam Chat Skinning';
 
-  public showElementCustomisation = false;
-  public showElementInstallation = false;
-  public showElementFooter = false;
-
   @HostListener('window:scroll', [])
   public onWindowScroll() {
     /* Hide top toolbar when the main page title is on page */
@@ -31,12 +27,5 @@ export class AppComponent implements OnInit {
 
   public ngOnInit(): void {
     this.onWindowScroll();
-
-    /* Load later views after 4 seconds */
-    setTimeout(() => {
-      this.showElementCustomisation = true;
-      this.showElementInstallation = true;
-      this.showElementFooter = true;
-    }, 2000);
   }
 }

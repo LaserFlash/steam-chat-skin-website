@@ -18,9 +18,3 @@
     height: auto;
   }
 }
-
-.defer {
-  position: absolute;
-  z-index: 10;
-  margin-top: -50vh;
-}
