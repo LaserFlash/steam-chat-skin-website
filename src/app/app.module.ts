@@ -14,7 +14,6 @@ import { MatRadioModule } from '@angular/material/radio';
 import { MatStepperModule } from '@angular/material/stepper';
 import { MatToolbarModule } from '@angular/material/toolbar';
 
-import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule } from '@angular/forms';
 
 import { FooterComponent } from './footer/footer.component';
@@ -55,7 +54,6 @@ import { QuickAccessComponent } from './skin-customisation/steam-preview/userCom
     }),
     BrowserModule,
     BrowserAnimationsModule,
-    FlexLayoutModule,
     FormsModule,
     MatToolbarModule,
     MatListModule,
