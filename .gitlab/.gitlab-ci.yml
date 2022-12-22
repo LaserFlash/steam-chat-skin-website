@@ -4,7 +4,7 @@ stages:
   - build
   - deploy
 
-image: node:16
+image: node:18
 
 # common config for all stages
 .base:
