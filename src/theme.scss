@@ -1,4 +1,5 @@
 @use '@angular/material' as mat;
+@include mat.all-component-typographies();
 @include mat.core();
 $primary: mat.define-palette(mat.$green-palette);
 $accent: mat.define-palette(mat.$green-palette, 800);
