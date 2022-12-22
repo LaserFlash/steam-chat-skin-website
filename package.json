@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve --poll=2000",
     "build": "ng build --configuration production --aot --base-href=/",
     "build:github": "ng build --configuration production --aot --base-href=/",
     "build:gitlab": "ng build --configuration production --aot --base-href=/steam-skin/",
