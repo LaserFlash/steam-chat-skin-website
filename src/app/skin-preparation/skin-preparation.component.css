@@ -29,7 +29,7 @@
 }
 .description-text {
   height: auto;
-  text-align: center;
+  text-align: left;
   margin: auto;
   padding-right: 8px;
 }
@@ -44,10 +44,6 @@
 @media only screen and (min-width: 960px) {
   .description-holder {
     flex-direction: row;
-  }
-
-  .description-text {
-    text-align: left;
   }
 
   .description-image img {
