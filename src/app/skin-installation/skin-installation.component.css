@@ -31,6 +31,13 @@ ul {
   margin: 1em 0;
 }
 
+.steam-beta {
+  border: solid 2px #1a9fff;
+  border-radius: 4px;
+  padding: 4px;
+  background-color: #1f2126;
+}
+
 @media only screen and (max-width: 900px) {
   .heading,
   .description {

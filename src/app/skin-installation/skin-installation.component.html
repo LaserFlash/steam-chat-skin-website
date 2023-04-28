@@ -36,4 +36,33 @@
       </li>
     </ul>
   </div>
+  <mat-divider></mat-divider>
+  <div class="description-holder steam-beta">
+    <h3 class="heading">
+      <mat-icon
+        style="padding-right: 8px"
+        fontIcon="tips_and_updates"
+      ></mat-icon
+      >Steam Beta
+    </h3>
+    <p>If you are on the current steam beta please follow these instructions</p>
+    <ul class="description">
+      <li>
+        Download: <code>friends.custom.css</code> &
+        <code>ofriends.custom.css</code> from above customiser or other sources
+      </li>
+      <li>
+        Move: <code>friends.custom.css</code> &
+        <code>ofriends.custom.css</code> to <code>Steam/steamui</code>
+      </li>
+      <li>
+        Add the following imports to:
+        <code>Steam/steamui/library.custom.css</code>. <br />
+        <code>
+          @import url(./friends.custom.css);<br />
+          @import url(./ofriends.custom.css);
+        </code>
+      </li>
+    </ul>
+  </div>
 </div>
