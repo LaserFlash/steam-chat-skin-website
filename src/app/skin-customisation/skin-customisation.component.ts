@@ -4,7 +4,6 @@ import { SteamChatCSSBuilderService } from 'src/app/steam-chat-cssbuilder.servic
 import {
   SteamChatCustomisationOptions,
   SteamChatStyleOptionSelectable,
-  oFriendsBaseImport,
   friendsBaseImport,
 } from 'src/app/steam-chat-style-options';
 import { SteamPreviewComponent } from './steam-preview/steam-preview.component';
@@ -57,23 +56,7 @@ export class SkinCustomisationComponent implements AfterViewInit, OnInit {
       friendsBaseImport
     );
 
-    const oFriendsImports = this.CSSBUILDER.generateImportArray(
-      this.customisationOptions
-        .filter((group) => group.oFriendsSupport)
-        .map((group) => ({
-          ...group,
-          options: group.options.map((o) => ({
-            ...o,
-            importLine: o.oFriendsImport || o.importLine,
-          })),
-        })),
-      oFriendsBaseImport
-    );
     this.FILESAVER.createAndSaveFromArray(friendsImports, 'friends.custom.css');
-    this.FILESAVER.createAndSaveFromArray(
-      oFriendsImports,
-      'ofriends.custom.css'
-    );
   }
 
   /**
@@ -85,18 +68,6 @@ export class SkinCustomisationComponent implements AfterViewInit, OnInit {
       {
         selectedOptions: this.customisationOptions,
         baseUrl: friendsBaseImport,
-      },
-      {
-        selectedOptions: this.customisationOptions
-          .filter((group) => group.oFriendsSupport)
-          .map((group) => ({
-            ...group,
-            options: group.options.map((o) => ({
-              ...o,
-              importLine: o.oFriendsImport,
-            })),
-          })),
-        baseUrl: oFriendsBaseImport,
       },
     ]).then((css) => {
       this.FILESAVER.createAndSaveFromArray(css, 'webkit.css');
