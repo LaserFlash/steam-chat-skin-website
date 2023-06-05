@@ -12,7 +12,7 @@ export class SteamChatStyleOptionSelectable extends SteamChatStyleOption {
   public selectedOptionIndex = 0;
 }
 
-export const friendsBaseImport = 'https://ccss.lasr.dev/src/baseTheme.css';
+export const friendsBaseImport = 'https://ccss.lasr.dev/friends-client/friends-client.css';
 
 export const SteamChatCustomisationOptions: SteamChatStyleOptionSelectable[] = [
   {
@@ -23,31 +23,31 @@ export const SteamChatCustomisationOptions: SteamChatStyleOptionSelectable[] = [
         displayName: 'Discord Colours',
         shortName: 'DiscordColour',
         importLine:
-          'https://ccss.lasr.dev/src/css/customisable/colourSet/discordColours.css',
+          'https://ccss.lasr.dev/friends-client/colourSet/discordColours.css',
       },
       {
         displayName: 'Dark Theme',
         shortName: 'DarkColour',
         importLine:
-          'https://ccss.lasr.dev/src/css/customisable/colourSet/darkMode.css',
+          'https://ccss.lasr.dev/friends-client/colourSet/darkMode.css',
       },
       {
         displayName: 'Black Theme',
         shortName: 'BlackColour',
         importLine:
-          'https://ccss.lasr.dev/src/css/customisable/colourSet/blackMode.css',
+          'https://ccss.lasr.dev/friends-client/colourSet/blackMode.css',
       },
       {
         displayName: 'Steam Like',
         shortName: 'SteamColours',
         importLine:
-          'https://ccss.lasr.dev/src/css/customisable/colourSet/steamColours.css',
+          'https://ccss.lasr.dev/friends-client/colourSet/steamColours.css',
       },
       {
         displayName: 'Light Theme',
         shortName: 'LightColour',
         importLine:
-          'https://ccss.lasr.dev/src/css/customisable/colourSet/lightMode.css',
+          'https://ccss.lasr.dev/friends-client/colourSet/lightMode.css',
       },
     ],
   },
@@ -59,19 +59,19 @@ export const SteamChatCustomisationOptions: SteamChatStyleOptionSelectable[] = [
         displayName: 'Round Avatar',
         shortName: 'RoundAvatar',
         importLine:
-          'https://ccss.lasr.dev/src/css/customisable/avatarStyle/roundAvatar.css',
+          'https://ccss.lasr.dev/friends-cliente/avatarStyle/roundAvatar.css',
       },
       {
         displayName: 'Squircle Avatar',
         shortName: 'SquircleAvatar',
         importLine:
-          'https://ccss.lasr.dev/src/css/customisable/avatarStyle/squircleAvatar.css',
+          'https://ccss.lasr.dev/friends-client/avatarStyle/squircleAvatar.css',
       },
       {
         displayName: 'Square Avatar',
         shortName: 'SquareAvatar',
         importLine:
-          'https://ccss.lasr.dev/src/css/customisable/avatarStyle/squareAvatar.css',
+          'https://ccss.lasr.dev/friends-client/avatarStyle/squareAvatar.css',
       },
     ],
   },
@@ -83,13 +83,13 @@ export const SteamChatCustomisationOptions: SteamChatStyleOptionSelectable[] = [
         displayName: 'Discord Styled',
         shortName: 'DiscordStatus',
         importLine:
-          'https://ccss.lasr.dev/src/css/customisable/avatarStatus/discordStatus.css',
+          'https://ccss.lasr.dev/friends-client/avatarStatus/discordStatus.css',
       },
       {
         displayName: 'Outline Status',
         shortName: 'OutlineStatus',
         importLine:
-          'https://ccss.lasr.dev/src/css/customisable/avatarStatus/outlineStatus.css',
+          'https://ccss.lasr.dev/friends-client/avatarStatus/outlineStatus.css',
       },
       { displayName: 'Steam Default', shortName: '', importLine: '' },
     ],
@@ -102,13 +102,13 @@ export const SteamChatCustomisationOptions: SteamChatStyleOptionSelectable[] = [
         displayName: 'Blur On',
         shortName: 'MiniBlur',
         importLine:
-          'https://ccss.lasr.dev/src/css/customisable/miniProfile/miniProfileBlur.css',
+          'https://ccss.lasr.dev/friends-client/miniProfile/miniProfileBlur.css',
       },
       {
         displayName: 'Blur Off',
         shortName: 'MiniNoBlur',
         importLine:
-          'https://ccss.lasr.dev/src/css/customisable/miniProfile/miniProfileSolid.css',
+          'https://ccss.lasr.dev/friends-client/miniProfile/miniProfileSolid.css',
       },
     ],
   },
@@ -120,13 +120,13 @@ export const SteamChatCustomisationOptions: SteamChatStyleOptionSelectable[] = [
         displayName: 'Themed Glow',
         shortName: 'themedGlow',
         importLine:
-          'https://ccss.lasr.dev/src/css/customisable/statusGlow/themedGlow.css',
+          'https://ccss.lasr.dev/friends-client/statusGlow/themedGlow.css',
       },
       {
         displayName: 'No Glow',
         shortName: 'noGlow',
         importLine:
-          'https://ccss.lasr.dev/src/css/customisable/statusGlow/noGlow.css',
+          'https://ccss.lasr.dev/friends-client/statusGlow/noGlow.css',
       },
       { displayName: 'Steam Default', shortName: '', importLine: '' },
     ],
@@ -139,13 +139,13 @@ export const SteamChatCustomisationOptions: SteamChatStyleOptionSelectable[] = [
         displayName: 'Improved Shadows',
         shortName: 'improvedShadows',
         importLine:
-          'https://ccss.lasr.dev/src/css/customisable/shadowEffects/improvedShadow.css',
+          'https://ccss.lasr.dev/friends-client/shadowEffects/improvedShadow.css',
       },
       {
         displayName: 'No Shadows',
         shortName: 'noShadow',
         importLine:
-          'https://ccss.lasr.dev/src/css/customisable/shadowEffects/noShadow.css',
+          'https://ccss.lasr.dev/friends-client/shadowEffects/noShadow.css',
       },
       { displayName: 'Steam Default', shortName: '', importLine: '' },
     ],
@@ -159,7 +159,7 @@ export const SteamChatCustomisationOptions: SteamChatStyleOptionSelectable[] = [
         displayName: 'Disable',
         shortName: 'disable',
         importLine:
-          'https://ccss.lasr.dev/src/css/customisable/avatarFrame/disable.css',
+          'https://ccss.lasr.dev/friends-client/avatarFrame/disable.css',
       },
     ],
   },
