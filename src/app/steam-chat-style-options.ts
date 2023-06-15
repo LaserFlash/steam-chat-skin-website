@@ -12,7 +12,8 @@ export class SteamChatStyleOptionSelectable extends SteamChatStyleOption {
   public selectedOptionIndex = 0;
 }
 
-export const friendsBaseImport = 'https://ccss.lasr.dev/friends-client/friends-client.css';
+export const friendsBaseImport =
+  'https://ccss.lasr.dev/friends-client/friends-client.css';
 
 export const SteamChatCustomisationOptions: SteamChatStyleOptionSelectable[] = [
   {
@@ -59,7 +60,7 @@ export const SteamChatCustomisationOptions: SteamChatStyleOptionSelectable[] = [
         displayName: 'Round Avatar',
         shortName: 'RoundAvatar',
         importLine:
-          'https://ccss.lasr.dev/friends-cliente/avatarStyle/roundAvatar.css',
+          'https://ccss.lasr.dev/friends-client/avatarStyle/roundAvatar.css',
       },
       {
         displayName: 'Squircle Avatar',
