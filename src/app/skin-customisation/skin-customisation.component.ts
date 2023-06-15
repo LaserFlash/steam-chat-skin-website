@@ -58,19 +58,4 @@ export class SkinCustomisationComponent implements AfterViewInit, OnInit {
 
     this.FILESAVER.createAndSaveFromArray(friendsImports, 'friends.custom.css');
   }
-
-  /**
-   * Generate css theme for linux or macOS
-   *  Both of these cannot have any import statements
-   */
-  public saveGeneratedCSSUnixReady() {
-    this.CSSBUILDER.generateWebkit([
-      {
-        selectedOptions: this.customisationOptions,
-        baseUrl: friendsBaseImport,
-      },
-    ]).then((css) => {
-      this.FILESAVER.createAndSaveFromArray(css, 'webkit.css');
-    });
-  }
 }

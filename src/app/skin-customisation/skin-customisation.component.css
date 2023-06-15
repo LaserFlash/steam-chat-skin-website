@@ -48,6 +48,7 @@
 
 .download-icon {
   width: 1em;
+  margin-right: 4px;
 }
 
 @media only screen and (max-width: 959px) {
