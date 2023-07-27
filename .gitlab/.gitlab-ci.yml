@@ -18,7 +18,7 @@ image: node:18
   needs: [Install]
   only:
     - merge_requests
-    - master
+    - ${CI_DEFAULT_BRANCH}
     - web
     - schedules
 
@@ -28,7 +28,7 @@ image: node:18
   needs: [Install]
   only:
     - merge_requests
-    - master
+    - ${CI_DEFAULT_BRANCH}
     - web
     - schedules
 
@@ -36,7 +36,7 @@ image: node:18
   extends: .base
   stage: deploy
   only:
-    - master
+    - ${CI_DEFAULT_BRANCH}
     - web
 
 # Install
@@ -47,7 +47,7 @@ Install:
   stage: install
   only:
     - merge_requests
-    - master
+    - ${CI_DEFAULT_BRANCH}
     - web
     - schedules
   cache:
