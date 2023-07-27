@@ -86,14 +86,7 @@
     }
   },
   "cli": {
-    "analytics": false
-  },
-  "schematics": {
-    "@angular-eslint/schematics:application": {
-      "setParserOptionsProject": true
-    },
-    "@angular-eslint/schematics:library": {
-      "setParserOptionsProject": true
-    }
+    "analytics": false,
+    "schematicCollections": ["@angular-eslint/schematics"]
   }
 }

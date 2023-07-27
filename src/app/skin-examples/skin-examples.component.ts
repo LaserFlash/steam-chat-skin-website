@@ -22,7 +22,6 @@ export class SkinExamplesComponent implements OnInit {
     },
     { fileName: 'assets/images/lightRoundOutline', alt: 'A white theme' },
   ];
-  constructor() {}
 
   public ngOnInit() {
     this.previewImages = this.shuffle(this.previewImages);

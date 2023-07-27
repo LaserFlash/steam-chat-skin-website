@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import {
   currentUser,
   offlineUsers,
@@ -12,7 +12,7 @@ import {
   templateUrl: './steam-preview.component.html',
   styleUrls: ['./steam-preview.component.css'],
 })
-export class SteamPreviewComponent implements OnInit {
+export class SteamPreviewComponent {
   public styles = [];
   public CURRENT_USER: User = currentUser;
   public ONLINE_USERS: User[] = onlineUsers;
@@ -23,9 +23,6 @@ export class SteamPreviewComponent implements OnInit {
     ...this.INGAME_USERS,
     this.OFFLINE_USERS[0],
   ];
-  constructor() {}
-
-  public ngOnInit() {}
 
   public updateTheme(newStyles: string[]) {
     this.styles = newStyles;

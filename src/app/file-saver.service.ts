@@ -5,8 +5,6 @@ import * as FileSaver from 'file-saver';
   providedIn: 'root',
 })
 export class FileSaverService {
-  constructor() {}
-
   /**
    * Given an array produce produce a download output
    *

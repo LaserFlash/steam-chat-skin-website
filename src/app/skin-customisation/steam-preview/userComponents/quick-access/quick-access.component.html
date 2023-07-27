@@ -2,14 +2,7 @@
   <ng-container *ngFor="let user of users">
     <div class="favoriteElement Panel Focusable">
       <div
-        class="
-          friend
-          online
-          quickAccessFriend
-          friendStatusHover
-          Panel
-          Focusable
-        "
+        class="friend online quickAccessFriend friendStatusHover Panel Focusable"
         draggable="true"
         [ngClass]="statusToClass(user.status)"
       >
@@ -26,12 +19,7 @@
             />
             <div
               *ngIf="isAway(user.status)"
-              class="
-                friendsnooze_SnoozeContainer_1Dsum
-                online
-                SnoozeContainer
-                friendsnooze_Medium_1iYPl friendsnooze_Dim_rpZ9b
-              "
+              class="friendsnooze_SnoozeContainer_1Dsum online SnoozeContainer friendsnooze_Medium_1iYPl friendsnooze_Dim_rpZ9b"
             >
               <div
                 data-text="Z"

@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import utils from '../utils';
 import { User, Status } from '../users';
 
@@ -7,10 +7,8 @@ import { User, Status } from '../users';
   templateUrl: './current-user.component.html',
   styleUrls: ['./current-user.component.css'],
 })
-export class CurrentUserComponent implements OnInit {
+export class CurrentUserComponent {
   @Input() user: User;
-  constructor() {}
-  ngOnInit(): void {}
 
   public statusToDisplayName(status: Status[]) {
     return utils.statusToDisplayName(status);

@@ -5,8 +5,6 @@ import { SteamChatStyleOptionSelectable } from './steam-chat-style-options';
   providedIn: 'root',
 })
 export class SteamChatCSSBuilderService {
-  constructor() {}
-
   public generateImportArray(
     selectedOptions: SteamChatStyleOptionSelectable[],
     baseUrl: string
