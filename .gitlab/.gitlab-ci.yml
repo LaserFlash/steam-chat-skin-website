@@ -67,6 +67,7 @@ Lint:
   extends: .lint-stage
   script:
     - npm run lint
+    - npm run format
 
 # Build check
 Build Site:

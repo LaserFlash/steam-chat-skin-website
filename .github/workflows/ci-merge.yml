@@ -31,8 +31,10 @@ jobs:
         with:
           path: node_modules
           key: ${{hashFiles('package-lock.json')}}
-      - name: TSlint
+      - name: ESlint
         run: npm run lint
+      - name: Prettier
+        run: npm run format
 
   Build-Site:
     runs-on: ubuntu-latest
